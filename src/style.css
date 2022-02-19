@@ -1,0 +1,36 @@
+:root
+{
+    --color-dark :#12081f;
+    --color-blue-btn:#0d96f2;
+    --color-dark-heading: #232129;
+    --color--main-dark:#09091b;
+    --color-main-secondary-dark:#161627;
+    --color-yellow: #f6d854;
+    --color-red:#f05133;
+    --color-grey: #E7e3E2;
+    --color-dark-more: #161622;
+    --color-light-blue: #c5f1fe;
+    --color-white: #eff0f2;
+
+}
+
+.container {
+    margin: auto;
+    max-width: 80%;
+    font-family: sans-serif;
+  }
+  
+  .heading {
+    color: rebeccapurple;
+  }
+  .nav-links {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+  }
+  .nav-link-item {
+    padding-right: 2rem;
+  }
+  .nav-link-text {
+    color: black;
+  }
