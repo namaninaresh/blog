@@ -1,5 +1,6 @@
 import * as React from 'react'
 import Layout from '../components/layout'
+import { graphql } from 'gatsby'
 
 const BlogPost = () => {
   return (
@@ -8,8 +9,6 @@ const BlogPost = () => {
     </Layout>
   )
 }
-
-export default BlogPost
 
 export const query = graphql`
   query ($id: String) {
@@ -22,3 +21,5 @@ export const query = graphql`
     }
   }
 `
+export default BlogPost
+
