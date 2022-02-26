@@ -21,7 +21,7 @@ body{
     height: 100%;
     padding: 0;
     margin: 0;
-    background: var(--color--main-dark);
+    background: var(--color--main-dark); 
     color: var(--color-grey);
 }
 
@@ -37,23 +37,196 @@ body{
         max-width: 90%;
         font-family: sans-serif;
       }
+    }
+  .header
+  {
+    top:0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 1px 0 rgba(22, 8, 43, .1);
+    padding: 0 1rem;
+    z-index: 1000;
+
+
+  }
+
+  .backdrop
+  {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      height: 100%;
       
+      background: rgba(0, 0, 0, 0.4); 
+      z-index: 100;
   }
-  .heading {
-    color: rebeccapurple;
+
+
+  
+
+
+  /* nav */
+
+  @media (min-width:768px)
+  {
+    .nav{
+      display: none;
+    }
+    .toolbar_togglerIcon
+    {
+      display: none;
+    }
   }
-  .nav-links {
+
+  .nav 
+  {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 50%;
+    height: 100vh;
+    padding: 1rem 1rem 3rem;
+    background-color: var(--color--main-dark);  
+    box-shadow: 1px 0 0 rgba(22, 8, 43, .1);
+    z-index: 11111;
+    transition: .4s;
+
+  }
+  .nav__container
+  {
+    height: 100%;
     display: flex;
-    list-style: none;
-    padding-left: 0;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: auto;
+    scrollbar-width: none;
   }
-  .nav-link-item {
-    padding-right: 2rem;
+
+  .nav__container::-webkit-scrollbar
+  {
+    display: none;
   }
-  .nav-link-text {
-    color: black;
+  .nav__logo
+  {
+    font-weight: 500;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: var(--color-blue-btn) !important;
+    margin-bottom: 5rem;
+    /* justify-content: center; */
+  }
+
+  
+  .nav__list,.nav__items
+  {
+    display: grid;
+
+  }
+
+  .nav__list
+  {
+    row-gap: 1.5rem;
+  }
+
+  .nav__items
+  {
+    row-gap:1.7rem;
+    padding-left: 0.5rem;
+  }
+
+  .nav__subtitle
+  {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+  }
+
+  .nav__link
+  {
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    color: var(--color-grey);
+    cursor: pointer;
+   
+    
+  }
+  .nav__link:hover .nav__name
+  {
+    color: var(--color-blue-btn);
+  }
+
+
+
+  .nav__icon
+  {
+    margin-right: 1rem;
+    width: 21px;
+    height: 21px;
+  }
+
+  .nav__name
+  {
+    font-size: 1rem;
+    font-weight: 500;
+    white-space: normal;
+    flex:1;
+
+  }
+
+  .nav__dropdown
+  {
+    overflow: hidden  ;
+    max-height: 21px ;
+
+   transition: .4s ease-in-out;
+
+  }
+  .nav__dropdown-colapse
+  {
+    background-color:var(--color-dark-more);
+    border-radius: .25rem;
+  
+    margin-top: 1rem;
+  }
+  .nav__dropdown-content
+  {
+    display: grid;
+
+    row-gap: .5rem;
+    padding: .75rem 2.5rem .75rem 1.8rem;
+  }
+  .nav__dropdown-content a:hover
+  {
+    color: var(--color-blue-btn);
+  }
+  .nav__dropdown-item
+  {
+    text-decoration: none;
+    padding: 0.5rem 0 ;
+    color: var(--color-grey);
+    
+  }
+  .nav__dropdown-item:hover{
+    color: white;
+  }
+  .nav__dropdown:hover
+  {
+    max-height: 100rem ;
+  }
+  .nav__dropdown:hover .nav__dropdown-icon .feather
+  {
+    transform: rotate(90deg);
+   
+    
+  }
+  .show-menu
+  {
+    right: 0;
   }
   
+
 
   /* Toolbar */
 
@@ -70,13 +243,7 @@ body{
     width: 50px;
     height: 50px;
   }
-  .closeSideDrawer
-  {
-      background: url(images/x.svg) no-repeat center  !important;
-      margin: 1rem 0  0 1rem;
-      width: 50px;
-      height: 50px;
-  }
+
   hr
   {
     border: .1px solid var(--color-dark-more);
@@ -117,131 +284,66 @@ body{
       flex: 1;
   }
   
-  .toolbar__nav-items a
-  {
-    color: var(--color-grey);
-    text-decoration: none;
-  }
-  .toolbar__nav-items a:hover,
-  .toolbar__nav-items a:active
-  {
-      color: var(--color-blue-btn);
-  }
 
-  /** side bar **/
 
-  .side-drawer
-  {
-      height: 100%;
-      background: var(--color--main-dark);
-      box-shadow: 2px 0p 5px rgba(0, 0, 0, 0.5);
-      top: 0;
-      right: 0;
-      width: 70%;
-      position: fixed;
-      z-index: 1000 ;
-      max-width: 400px;
-      transform: translateX(-100%);
-      transition: transform 0.5s ease-out !important;
-     
-  }
+  /* nav desktop */
 
-  .side-drawer.open
+  @media (max-width:768px)
   {
-    transform: translateX(0%);
-  }
-
-  .side-drawer  a
-  {
-      color: var(--color-white);
-      text-decoration: none;
-      
-  }
-  .side-drawer ul 
-  {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      
-  }
-
-  .side-drawer li
-  {
-      padding: 1rem 0;
-  }
-  .side-drawer a:hover,
-  .side-drawer a:active
-  {
-      color: var(--color-blue-btn);
-  }
-
-  .backdrop
-  {
-      position: fixed;
-      width: 100%;
-      top: 0;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.3);
-      z-index: 100;
-  }
-
-  @media (max-width: 768px){
-
-    .toolbar__nav-items
+    .nav__menu
     {
-        display: none;
+      display: none;
     }
-      
   }
 
-  @media (min-width:769px)
-  {
-      .side-drawer
-      {
-          display: none;
-
-      }
-      .toolbar_togglerIcon
-      {
-          display: none;
-      }
-      .nav__subitems  {
-        display: none !important;
-        position: absolute;
-        top: 45px;
-    }
-    .nav__subitems li
+@media (min-width:768px)
 {
-    padding: 0.4rem 0 !important;
-    margin: 0 !important;
-}
-
+   
+ nav ul {
+  padding: 0;
+         margin: 0;
+  list-style: none;
+  position: relative;
+  } 
+ nav ul li {
+  display:inline-block;
   }
+ nav a {
+  display:block;
+  padding:0 10px; 
+  color:#FFF;
+  line-height: 60px;
+  text-decoration:none;
+ }
+ nav a:hover
+ {
+   color: var(--color-blue-btn);
+ }
 
-  
-
-@media (max-width:768px)
+ nav ul ul {
+  display: none;
+  position: absolute; 
+  top: 60px; 
+ } 
+ nav ul ul li a
 {
-    .nav__subitems  {
-        display: none !important;
-        margin-top: 1rem;
-        
-        
-    }
-    .nav__subitems li
-{
-
-    padding: 0.4rem 0 !important;
+  line-height: 40px;
 }
+nav ul li:focus-within > ul,
+ nav ul li:hover > ul {
+  display:inherit;
+ } 
+ nav ul ul li {
+  width:230px;
+  float:none;
+  display:list-item;
+  position: relative;
+ }
+
+ .nav__dropdown:hover > ul
+ {
+   display: inherit;
+ }
+
 }
-
-
-nav ul li:hover > ul {
-	display:inherit !important;
-}
-
-
-
  
- 
-  

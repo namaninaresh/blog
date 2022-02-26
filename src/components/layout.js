@@ -26,6 +26,7 @@ const Layout = ({ pageTitle, children }) => {
     let backdrop;
 
     const drawerToggler =() =>{
+      console.log(sideDrawerOpen)
        setSideDrawer(!sideDrawerOpen)
     }
   
@@ -49,13 +50,14 @@ const Layout = ({ pageTitle, children }) => {
         
         <div  className='container' style={{height:'100%'}}> 
 
-        <Toolbar drawerToggler={drawerToggler} navItems ={navItems} />
-   {sideDrawer} 
-   {backdrop}
        
-    
+       <Toolbar drawerToggler={drawerToggler}     sideDrawerOpen={sideDrawerOpen} />
+      
+
         <main>
-          <h1 className="heading">{pageTitle}</h1>
+          <h1 className="heading">{pageTitle}
+         
+          </h1>
           {children}
         </main>
       </div>
