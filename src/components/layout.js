@@ -2,6 +2,7 @@ import * as React from 'react'
 import {  Link,useStaticQuery, graphql } from 'gatsby';
 import Toolbar from './Toolbar/Toolbar';
 import SideDrawer from './Toolbar/SideDrawer';
+import Footer from './Toolbar/Footer';
 
 // ... import statements
 
@@ -47,21 +48,26 @@ const Layout = ({ pageTitle, children }) => {
         backdrop =  <div className='backdrop' onClick={drawerToggler}></div>;
     }
     return (
-        
+        <>
+      <Toolbar drawerToggler={drawerToggler}     sideDrawerOpen={sideDrawerOpen} />
+      
+
         <div  className='container' style={{height:'100%'}}> 
 
        
-       <Toolbar drawerToggler={drawerToggler}     sideDrawerOpen={sideDrawerOpen} />
-      
-
+       
         <main>
-          <h1 className="heading">{pageTitle}
+          {/* <h1 className="heading">{pageTitle}
          
-          </h1>
+          </h1> */}
           {children}
         </main>
       </div>
+
+      <Footer/>
+      </>
     )
+    
   }
   
   export default Layout

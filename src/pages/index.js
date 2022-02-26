@@ -4,25 +4,73 @@ import { Link, graphql } from 'gatsby'
 import Layout from '../components/layout'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 
+const PostItem = ({node})=> 
+{
+  return(
+   
+  
+    <div className='post__item border-outline'>
+          <a href={`/${node.slug}`}>{node.frontmatter.title}</a>
+  
+          <div className='post__body'>
+            <p>Checking the network cables, modem and router Checking the network cables, modem and router Checking the network cables, modem and router
+            Checking the network cables, modem and router Checking the network cables,
+            Checking the network cables, modem and router Checking the network cables,
+            Checking the network cables, modem and router Checking the network cables,
+  
+            </p>
+  
+          </div>
+  
+          <div className='post__tags'>
+                  <ul>
+                    <li className='border-outline'>React</li>
+                  </ul>
+                  <p className='post__date'>Posted: {node.frontmatter.date}</p>
+          </div>
+    </div>
+  
+  );
+}
+
+
+
 const BlogPage = ({data}) => {
-  console.log(data)
+  
   return (
     <Layout pageTitle="My Blog Posts">
-    {
-        data.allMdx.nodes.map((node) => (
-          <article key={node.id}>
-            <h2>
-              <Link to={`/${node.slug}`}>
-                {node.frontmatter.title}
-              </Link>
-            </h2>
-            <p>Posted: {node.frontmatter.date}</p>
 
-            <p>Updated on : {node.parent.modifiedTime}</p>
-        
-          </article>
-        ))
-      }
+
+<div className='articleContainer'>
+<h1 className="heading">Articles
+         
+         </h1>
+{
+        data.allMdx.nodes.map((node) => <PostItem node={node} key={node.id}/> )
+
+}
+{
+        data.allMdx.nodes.map((node) => <PostItem node={node} key={node.id}/> )
+
+}
+</div>
+<div className='sidebarContainer'>
+<h1 className="heading">Tags    </h1>
+
+<div className='tags'>
+  <ul>
+    <li><Link to="#">Git</Link></li>
+    <li><Link to="#">Python</Link></li>
+    <li><Link to="#">Javascript</Link></li>
+    <li><Link to="#">Data Structures</Link></li>
+    <li><Link to="#">Java</Link></li>
+    <li><Link to="#">Other</Link></li>
+  </ul>
+
+</div>
+</div>
+
+ 
     </Layout>
   )
 }

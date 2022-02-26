@@ -30,7 +30,7 @@ return(
         <nav className='toolbar__navigation'>
           
 
-            <div className='toolbar__logo'><Link to='/' >Naresh Namani</Link></div>
+            <div className='toolbar__logo'>Naresh Namani</div>
             <div className='spacer'></div>
             <ul className='nav__menu'>
     <li><Link to='/'>Home</Link></li>
