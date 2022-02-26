@@ -1,7 +1,8 @@
 import * as React from 'react'
 
 import { Link, graphql } from 'gatsby'
-import Layout from '../components/layout'
+import Layout from '../components/layout';
+import TagIcon  from '../components/Icons/TagIcons';
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 
 const PostItem = ({node})=> 
@@ -59,12 +60,56 @@ const BlogPage = ({data}) => {
 
 <div className='tags'>
   <ul>
-    <li><Link to="#">Git</Link></li>
-    <li><Link to="#">Python</Link></li>
-    <li><Link to="#">Javascript</Link></li>
-    <li><Link to="#">Data Structures</Link></li>
-    <li><Link to="#">Java</Link></li>
-    <li><Link to="#">Other</Link></li>
+    <li>
+      
+      
+      
+      <Link to="#" className='git'>
+        <i className='tag__icons '>
+        <TagIcon name='git' color='#f05133' />
+        </i>
+      <span>Git</span></Link></li>
+      <li>
+      
+      
+      
+      <Link to="#" className='python'>
+        <i className='tag__icons '>
+        <TagIcon name='python'  color='#306998' />
+        </i>
+      <span>Python</span></Link></li><li>
+      
+      
+      
+      <Link to="#" className='ds'>
+        <i className='tag__icons '>
+        <TagIcon name='ds'  />
+        </i>
+      <span>Data Structures</span></Link></li><li>
+      
+      
+      
+      <Link to="#" className='algo'>
+        <i className='tag__icons '>
+        <TagIcon name='algo'  />
+        </i>
+      <span>Algo</span></Link></li><li>
+      
+      
+      
+      <Link to="#" className='react'>
+        <i className='tag__icons '>
+        <TagIcon name='react' color='#61DBFB'  />
+        </i>
+      <span>React</span></Link></li><li>
+      
+      
+      
+      <Link to="#" className='js'>
+        <i className='tag__icons '>
+        <TagIcon name='js' color='#F0DB4F' />
+        </i>
+      <span>Javascript</span></Link></li>
   </ul>
 
 </div>

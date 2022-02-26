@@ -55,13 +55,13 @@ return(
     <div className={classesList} id='navbar'>
         <nav className="nav__container">
             <div>
-                <Link  to='/' className='nav__link nav__logo' onClick={drawerToggler}>
+                <span   className='nav__link nav__logo' onClick={drawerToggler}>
                      {/* <span > Naresh Namani</span> */}
 
                      <i className='nav__icon closeButton' >
                      <Icon name="close" width={20} height={20} />
                      </i>
-                </Link>
+                </span>
                 <div className='nav__list'>
                     <div className='nav__items'>
         
