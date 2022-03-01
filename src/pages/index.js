@@ -3,7 +3,6 @@ import * as React from 'react'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/layout';
 import TagIcon  from '../components/Icons/TagIcons';
-import { MDXRenderer } from 'gatsby-plugin-mdx'
 
 const PostItem = ({node})=> 
 {
@@ -11,7 +10,7 @@ const PostItem = ({node})=>
    
   
     <div className='post__item border-outline'>
-          <a href={`/${node.slug}`}>{node.frontmatter.title}</a>
+          <Link href={`/${node.slug}`}>{node.frontmatter.title}</Link>
   
           <div className='post__body'>
             <p>Checking the network cables, modem and router Checking the network cables, modem and router Checking the network cables, modem and router
@@ -41,6 +40,8 @@ const BlogPage = ({data}) => {
   return (
     <Layout pageTitle="My Blog Posts">
 
+        <section className='home__layout'>
+
 
 <div className='articleContainer'>
 <h1 className="heading">Articles
@@ -50,10 +51,7 @@ const BlogPage = ({data}) => {
         data.allMdx.nodes.map((node) => <PostItem node={node} key={node.id}/> )
 
 }
-{
-        data.allMdx.nodes.map((node) => <PostItem node={node} key={node.id}/> )
 
-}
 </div>
 <div className='sidebarContainer'>
 <h1 className="heading">Tags    </h1>
@@ -114,6 +112,7 @@ const BlogPage = ({data}) => {
 
 </div>
 </div>
+        </section>
 
  
     </Layout>

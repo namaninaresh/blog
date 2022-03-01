@@ -27,7 +27,6 @@ const Layout = ({ pageTitle, children }) => {
     let backdrop;
 
     const drawerToggler =() =>{
-      console.log(sideDrawerOpen)
        setSideDrawer(!sideDrawerOpen)
     }
   

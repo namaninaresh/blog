@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `blog-app`,
+    title: `Naresh Namani blog`,
     author: {
       name: `Naresh Namani`,
       summary: `Blog to learning programming Languages and tricks`,
@@ -22,6 +22,8 @@ module.exports = {
     },
     "gatsby-plugin-sharp",
     "gatsby-plugin-mdx",
+    `gatsby-plugin-react-helmet`,
+    `gatsby-transformer-sharp`,
     
 
     ]

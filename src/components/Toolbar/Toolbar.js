@@ -43,7 +43,7 @@ return(
       </ul>
     </li>
     <li><Link to='/about'>About me</Link></li>
-    <li><Link to='/'>Contact</Link></li>
+    {/* <li><Link to='/'>Contact</Link></li> */}
   </ul>
             <div className='toolbar_togglerIcon' onClick={drawerToggler}>
 
@@ -104,12 +104,12 @@ return(
                         </Link>
                        
                         
-                        <Link to='/' className='nav__link'>
+                        {/* <Link to='/' className='nav__link'>
                         <i className='nav__icon contact'>
                         <Icon name="contact" color='#0d96f2'  />
                         </i>
                             <span className='nav__name'>Contact</span>
-                        </Link>
+                        </Link> */}
                     </div>
 
                 </div>
