@@ -4,7 +4,8 @@ import { graphql,Link } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import {MDXProvider} from '@mdx-js/react'
 import Callouts from '../components/Callouts';
-const shortcodes = { Callouts }
+import Accordation from '../components/Accordation'
+const shortcodes = { Callouts,Accordation}
 
 const BlogPost = ({data,location}) => {
   console.log(data)

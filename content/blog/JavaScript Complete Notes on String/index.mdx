@@ -1,0 +1,69 @@
+---
+title: "JavaScript : Complete Notes on Strings"
+date: "2022-03-02T23:46:37.121Z"
+description: "this is the second blog post desctiption "
+---
+
+## Introduction 
+A string is a sequence of charaters together encoded/surrounded in single quotes( ' ' ) or double quotes( " " ) or back ticks ( `` )
+
+> ``` 'Single Qotes String '  ||   "Double Quotes String" || `Back tick String`  ```
+
+As we know string contains escape charaters that can be interpreted when the string is printing
+
+> //expected => I'm Naresh
+>
+> ``` console.log('I'm Naresh') ``` // error
+>
+> ``` console.log('I \'m Naresh') ```
+
+*** 
+## String Properties
+
+#### 1. String Length
+In JavaScript Length is a Property of the String object and it is used to find the length/size of that string object.
+
+we can use this length property is Strings and Arrays
+
+>``` console.log('Hello'.length); //5```
+>
+> ``` console.log([1,2,3].length); //3```
+
+<Callouts name="warning">String is a property ,not a method in JavaScript </Callouts>
+
+#### 2. String Constructor
+This property is used to return the string Constructor function for the object
+
+#### 3. String Propotype
+
+This property return the Propotype of the object which is derived from the object
+
+
+
+
+*** 
+## String Methods
+#### 1.  charAt(index)
+This method returns the Character at specified index of the String.
+
+console.log("Hello World".charAt(1));
+
+#### 2. indexOf(value, index)
+is used ot return the index  of the argument value in the String. It return the first occurance value only.If the value is not found in the String , then it returns the -1 as index.
+
+    console.log('Trian'.indexOf('a',0));
+
+
+### Summary
+1. length is a property of String
+2. charAt(index) - finds the charater at a specified index.
+
+
+<Accordation heading="String Contructor">
+String() function used to convert the object into the String
+
+String(Boolean(1));  
+</Accordation>
+
+
+
