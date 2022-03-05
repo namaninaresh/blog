@@ -571,8 +571,19 @@ footer{
   background: var(--color-dark-nav);
   padding: 2rem;  
 
-  margin-top: 2rem;
+  margin-top: 10rem;
  
+}
+
+.footer__logo
+{
+  font-size: 1.5rem;
+  margin-top: 5vh;
+  letter-spacing: 2px;
+  font-weight: 400;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--color-white);
 }
 .thankyou
 {
@@ -768,7 +779,9 @@ font-weight: 100;
   display: flex;
   justify-content: center;
   align-content: center;
-  margin-top: 10vh;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  /* margin-top: 10vh; */
 }
 .wrapper .icon
 {
@@ -912,7 +925,17 @@ border: 1px solid var(--color-border); */
   background-color: #02274d;
   padding: 0.7rem 1.2rem;
   border-radius: 5px;
+  overflow: scroll;
+  margin: 0;
   color: var(--color-blueGray-500);
+}
+
+@media (min-width:768px)
+{
+  .blogPage blockquote
+  {
+    overflow: visible;
+  }
 }
 .blogPage__header
 {
@@ -1069,3 +1092,4 @@ border: 1px solid var(--color-border); */
 {
   background-color: red !important;
 }
+

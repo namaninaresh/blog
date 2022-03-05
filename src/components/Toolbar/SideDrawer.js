@@ -1,6 +1,6 @@
 
 import React from "react";
-
+import {Link} from 'gatsby'
 const sideDrawer =props=>{
 
     let classesList = "nav "
@@ -12,88 +12,88 @@ const sideDrawer =props=>{
         <div className={classesList} id='navbar'>
         <nav className="nav__container">
             <div>
-                <a  href='#' className='nav__link nav__logo'>
+                <Link  to="#" className='nav__link nav__logo'>
                         o
                         <span> Naresh Namani</span>
-                </a>
+                </Link>
                 <div className='nav__list'>
                     <div className='nav__items'>
                         <h3 className='nav__subtitle'>Profile</h3>
-                        <a href='#' className='nav__link'>
+                        <Link to="#" className='nav__link'>
                             <span className='nav__name'>Home </span>
-                        </a>
+                        </Link>
                         <div className='nav__dropdown'>
-                        <a href='#' className='nav__link'>
+                        <Link to="#" className='nav__link'>
                             <span className='nav__name'>Profile</span>
-                        </a>
+                        </Link>
                         <div className='nav__dropdown-colapse'>
                         <div className='nav__dropdown-content'>
-                        <a href='#' className='nav__dropdown-item'>
+                        <Link to="#" className='nav__dropdown-item'>
                           Passwords
-                        </a>
-                        <a href='#' className='nav__dropdown-item'>
+                        </Link>
+                        <Link to="#" className='nav__dropdown-item'>
                           Mail
-                        </a>
-                        <a href='#' className='nav__dropdown-item'>
+                        </Link>
+                        <Link to="#" className='nav__dropdown-item'>
                           Accounts
-                        </a>
+                        </Link>
                         </div>
                         </div>
                         </div>
 
                        
                         
-                        <a href='#' className='nav__link'>
+                        <Link to="#" className='nav__link'>
                             <span className='nav__name'>Contact</span>
-                        </a>
+                        </Link>
                     </div>
 
                     <div className='nav__items'>
                         <h3 className='nav__subtitle'>Topics</h3>
 
                         <div className='nav__dropdown'>
-                        <a href='#' className='nav__link'>
+                        <Link to="#" className='nav__link'>
                             <span className='nav__name'>Notifications</span>
-                        </a>
+                        </Link>
 
                         <div className='nav__dropdown-colapse'>
                         <div className='nav__dropdown-content'>
-                        <a href='#' className='nav__dropdown-item'>
+                        <Link to="#" className='nav__dropdown-item'>
                           Bocked
-                        </a>
-                        <a href='#' className='nav__dropdown-item'>
+                        </Link>
+                        <Link to="#" className='nav__dropdown-item'>
                           Sulence
-                        </a>
-                        <a href='#' className='nav__dropdown-item'>
+                        </Link>
+                        <Link to="#" className='nav__dropdown-item'>
                           Muted
-                        </a>
-                        <a href='#' className='nav__dropdown-item'>
+                        </Link>
+                        <Link to="#" className='nav__dropdown-item'>
                           Program
-                        </a>
+                        </Link>
                         </div>
                         </div>
                         </div>
 
                        
                         
-                        <a href='#' className='nav__link'>
+                        <Link to="#" className='nav__link'>
                             <span className='nav__name'>Java</span>
-                        </a>
-                        <a href='#' className='nav__link'>
+                        </Link>
+                        <Link to="#" className='nav__link'>
                             <span className='nav__name'>Python</span>
-                        </a>
-                        <a href='#' className='nav__link'>
+                        </Link>
+                        <Link to="#" className='nav__link'>
                             <span className='nav__name'>Data Structures</span>
-                        </a>
-                        <a href='#' className='nav__link'>
+                        </Link>
+                        <Link to="#" className='nav__link'>
                             <span className='nav__name'>JavaScript</span>
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>
-            <a href='#' className='nav__link nav__logout'>
+            <Link to="#" className='nav__link nav__logout'>
                             <span className='nav__name'>Logout</span>
-                        </a>
+                        </Link>
         </nav>
 
     </div>

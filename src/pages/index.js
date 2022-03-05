@@ -10,7 +10,7 @@ const PostItem = ({node})=>
    
   
     <div className='post__item border-outline'>
-          <Link href={`/${node.slug}`}>{node.frontmatter.title}</Link>
+          <Link to={`/${node.slug}`}>{node.frontmatter.title}</Link>
   
           <div className='post__body'>
             <p>Checking the network cables, modem and router Checking the network cables, modem and router Checking the network cables, modem and router

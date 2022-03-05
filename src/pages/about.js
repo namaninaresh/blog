@@ -1,6 +1,5 @@
-import { Link } from "gatsby";
+
 import * as React from "react";
-import Icon from "../components/Icons/Icon";
 import Layout from "../components/layout";
 
 const AboutPage = () => {
@@ -8,8 +7,8 @@ const AboutPage = () => {
     <Layout pageTitle="About Me">
       <div className="about">
         <h3 className="heading">About Me</h3>
-        <p className="heading__description">
-          Learn about me </p>
+        {/* <p className="heading__description">
+          Learn about me </p> */}
           <div className="about__section">
             <div className="about__pic"></div>
 
@@ -46,40 +45,7 @@ const AboutPage = () => {
             </div>
           </div>
           <div>
-            <div className="about__social">
-              <div className="wrapper">
-                <div className="icon facebook">
-                  <div className="tooltip"> Facebook</div>
-                  <span>
-                    <i><Icon name="facebook" /></i>
-                  </span>
-                </div>
-                <div className="icon facebook">
-                  <div className="tooltip"> Twitter</div>
-                  <span>
-                    <i><Icon  name="twitter"/></i>
-                  </span>
-                </div>
-                <div className="icon facebook">
-                  <div className="tooltip"> Instagram</div>
-                  <span>
-                    <i><Icon  name="insta"/></i>
-                  </span>
-                </div>
-                <Link to="#" className="icon facebook">
-                  <div className="tooltip"> Github</div>
-                  <span>
-                    <i><Icon  name="github"/></i>
-                  </span>
-                </Link>
-                <Link to="/" className="icon facebook">
-                  <div className="tooltip"> dribble</div>
-                  <span>
-                    <i><Icon  name="dribble"/></i>
-                  </span>
-                </Link>
-              </div>
-            </div>
+            
           </div>
         
       </div>
