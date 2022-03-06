@@ -10,7 +10,7 @@ import TagIcon  from '../components/Icons/TagIcons';
 const shortcodes = { Callouts,Accordation}
 
 const BlogPost = ({data,location}) => {
-  console.log(data)
+
   return (
     <Layout pageTitle={data.mdx.frontmatter.title}>
    

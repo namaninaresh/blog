@@ -42,6 +42,7 @@ return(
         <li><Link to='/'>Java</Link></li>
       </ul>
     </li>
+    <li><Link to='/tags'>Tags</Link></li>
     <li><Link to='/about'>About me</Link></li>
     {/* <li><Link to='/'>Contact</Link></li> */}
   </ul>
@@ -96,6 +97,12 @@ return(
                         </div>
                         </div>
                         </div>
+                        <Link to='/tags' className='nav__link'>
+                        <i className='nav__icon contact'>
+                        <Icon name="tags" color='#0d96f2'  />
+                        </i>
+                            <span className='nav__name'>Tags</span>
+                        </Link>
                         <Link to='/about' className='nav__link'>
                         <i className='nav__icon contact'>
                         <Icon name="user" color='#0d96f2'  />

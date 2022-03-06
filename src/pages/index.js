@@ -66,14 +66,14 @@ const BlogPage = ({data}) => {
       
       
       
-      <Link to="#" className='git'>
+      <Link to="/tags/git" className='git'>
         <i className='tag__icons '>
         <TagIcon name='git'  />
         </i>
       <span>Git</span></Link></li>
       <li>
       
-      <Link to="#" className='python'>
+      <Link to="/tags/python" className='python'>
         <i className='tag__icons '>
         <TagIcon name='python'   />
         </i>
