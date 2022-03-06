@@ -64,12 +64,7 @@ const Code = props => {
         </button>
       </div>
       <div
-        style={{
-          overflow: "hidden",
-          background: "#011627",
-          borderRadius: "0.5rem",
-        
-        }}
+            className="code__highlightBox"
       >
         <Highlight
           {...defaultProps}

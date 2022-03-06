@@ -21,12 +21,16 @@ const PostItem = ({node})=>
             </p>
   
           </div>
-  
+    
+      
           <div className='post__tags'>
                   <ul>
-                    <li className='border-outline'>React</li>
+                  {node.frontmatter.tags.map((tag,index) => <i className='tag__icons ' key={index}>
+        <TagIcon name={tag}   />
+        </i> )}
+                    
                   </ul>
-                  <p className='post__date'>Posted: {node.frontmatter.date}</p>
+                  <p className='post__date'> {node.frontmatter.date}</p>
           </div>
     </div>
   
@@ -64,16 +68,14 @@ const BlogPage = ({data}) => {
       
       <Link to="#" className='git'>
         <i className='tag__icons '>
-        <TagIcon name='git' color='#f05133' />
+        <TagIcon name='git'  />
         </i>
       <span>Git</span></Link></li>
       <li>
       
-      
-      
       <Link to="#" className='python'>
         <i className='tag__icons '>
-        <TagIcon name='python'  color='#306998' />
+        <TagIcon name='python'   />
         </i>
       <span>Python</span></Link></li><li>
       
@@ -97,7 +99,7 @@ const BlogPage = ({data}) => {
       
       <Link to="#" className='react'>
         <i className='tag__icons '>
-        <TagIcon name='react' color='#61DBFB'  />
+        <TagIcon name='react'   />
         </i>
       <span>React</span></Link></li><li>
       
@@ -105,7 +107,7 @@ const BlogPage = ({data}) => {
       
       <Link to="#" className='js'>
         <i className='tag__icons '>
-        <TagIcon name='js' color='#F0DB4F' />
+        <TagIcon name='js' />
         </i>
       <span>Javascript</span></Link></li>
   </ul>
@@ -131,6 +133,7 @@ export const query = graphql`
         frontmatter {
           date(formatString: "MMMM D, YYYY")
           title
+          tags
         }
         id
         slug
