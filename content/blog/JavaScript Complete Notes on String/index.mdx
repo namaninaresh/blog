@@ -17,6 +17,7 @@ As we know string contains escape charaters that can be interpreted when the str
 >
 > ``` console.log('I \'m Naresh') ```
 
+
 *** 
 ## String Properties
 
@@ -39,6 +40,15 @@ This property is used to return the string Constructor function for the object
 This property return the Propotype of the object which is derived from the object
 
 
+```jsx highlights=1,3-4 file=index.js 
+// here's a button in React!
+<button
+  onClick={() => {
+    alert("Hello MDX!");
+  }}>
+  test
+</button>
+```
 
 
 *** 
@@ -51,7 +61,13 @@ console.log("Hello World".charAt(1));
 #### 2. indexOf(value, index)
 is used ot return the index  of the argument value in the String. It return the first occurance value only.If the value is not found in the String , then it returns the -1 as index.
 
-    console.log('Trian'.indexOf('a',0));
+```jsx file=style.jsx
+const Title = styled.h1(`
+  font-size: 1.5em;
+  text-align: center;
+  color: palevioletred;
+`);
+```
 
 
 ### Summary
@@ -59,11 +75,6 @@ is used ot return the index  of the argument value in the String. It return the 
 2. charAt(index) - finds the charater at a specified index.
 
 
-<Accordation heading="String Contructor">
-String() function used to convert the object into the String
-
-String(Boolean(1));  
-</Accordation>
 
 
 

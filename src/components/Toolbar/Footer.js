@@ -18,7 +18,7 @@ const Footer= props =>(
      
 
        <div className='center'>
-                <p className='thankyou'>Mde with </p><i className='nav__icon ' >
+                <p className='thankyou'>Made with </p><i className='nav__icon ' >
                    <Icon name="love" width={20} height={20} fill='#cb0303d4' color='#cb0303d4'/>
                      </i>
             </div>
