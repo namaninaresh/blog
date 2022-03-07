@@ -7,6 +7,7 @@ import Icon from '../Icons/Icon';
 const Toolbar = props => {
 
     const [sideDrawerOpen, setSideDrawer] = React.useState(false);
+    const [themeValue, setTheme] = React.useState()
 
     let classesList = "nav ";
     let backdrop=null;
@@ -14,7 +15,21 @@ const Toolbar = props => {
     const drawerToggler =() =>{
        setSideDrawer(!sideDrawerOpen)
     }
+
+    React.useEffect(() => {
+      const value= localStorage.getItem("theme" );
+        if(value !== null)  
+        
+        {setTheme(value);
+            document.documentElement.className=value;
+        }
+      });
   
+    const updateTheme=(value)=>{
+        document.documentElement.className=value;
+        localStorage.setItem("theme" , value);
+        setTheme(value);
+    }
  
     if(sideDrawerOpen) 
     {
@@ -44,6 +59,16 @@ return(
     </li>
     <li><Link to='/tags'>Tags</Link></li>
     <li><Link to='/about'>About me</Link></li>
+
+    <li> <label>
+        
+          <select value={themeValue} className='theme__toggler' onChange={(event)=>setTheme(event.target.value)}>
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+            <option value="default">Default</option>
+          </select>
+        </label></li>
+
     {/* <li><Link to='/'>Contact</Link></li> */}
   </ul>
             <div className='toolbar_togglerIcon' onClick={drawerToggler}>
@@ -109,6 +134,18 @@ return(
                         </i>
                             <span className='nav__name'>About me</span>
                         </Link>
+                    <hr></hr>
+                        <li className='theme'> Theme  <label>
+           
+          <select value={themeValue} className='theme__toggler' onChange={(event)=>updateTheme(event.target.value)}>
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+            <option value="default">Default</option>
+          </select>
+        </label></li>
+                  
+
+                    
                        
                         
                         {/* <Link to='/' className='nav__link'>
