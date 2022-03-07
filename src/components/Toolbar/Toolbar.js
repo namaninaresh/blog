@@ -7,7 +7,7 @@ import Icon from '../Icons/Icon';
 const Toolbar = props => {
 
     const [sideDrawerOpen, setSideDrawer] = React.useState(false);
-    const [themeValue, setTheme] = React.useState("default")
+    //const [themeValue, setTheme] = React.useState("default")
 
     let classesList = "nav ";
     let backdrop=null;
@@ -16,7 +16,7 @@ const Toolbar = props => {
        setSideDrawer(!sideDrawerOpen)
     }
 
-    React.useEffect(() => {
+    /*React.useEffect(() => {
       const value= localStorage.getItem("theme" );
         if(value !== null)  
         
@@ -29,7 +29,7 @@ const Toolbar = props => {
         document.documentElement.className=value;
         localStorage.setItem("theme" , value);
         setTheme(value);
-    }
+    } */
  
     if(sideDrawerOpen) 
     {
@@ -59,7 +59,7 @@ return(
     </li>
     <li><Link to='/tags'>Tags</Link></li>
     <li><Link to='/about'>About me</Link></li>
-    <li><Link  to='#'>
+    {/*<li><Link  to='#'>
       <Icon  name={themeValue || "default"} color= {themeValue ==='light' ? '#000' : '#fff' }/>
     </Link>
       <ul className="dropdown dropdown__theme">
@@ -67,7 +67,7 @@ return(
         <li onClick={()=>updateTheme("dark")}>Dark</li>
         <li onClick={()=>updateTheme("default")}>Default</li>
       </ul>
-    </li>
+    </li>  */}
 
     <li> <label>
          
@@ -144,7 +144,7 @@ return(
                         </i>
                             <span className='nav__name'>About me</span>
                         </Link>
-                        <div className='nav__dropdown'>
+                       {/* <div className='nav__dropdown'>
                         <div className='nav__link'>
                         <i className='nav__icon topic'>
                         <Icon name={themeValue} color='#0d96f2'  />
@@ -164,7 +164,7 @@ return(
       </ul>
                         </div>
                         </div>
-                        </div>
+                        </div> */}
                     <hr></hr>
                         {/* <li className='theme'> Theme  <label>
            
