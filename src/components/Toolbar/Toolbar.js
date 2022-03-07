@@ -7,7 +7,7 @@ import Icon from '../Icons/Icon';
 const Toolbar = props => {
 
     const [sideDrawerOpen, setSideDrawer] = React.useState(false);
-    const [themeValue, setTheme] = React.useState()
+    const [themeValue, setTheme] = React.useState("default")
 
     let classesList = "nav ";
     let backdrop=null;
@@ -49,7 +49,7 @@ return(
             <div className='spacer'></div>
             <ul className='nav__menu'>
     <li><Link to='/'>Home</Link></li>
-    <li><Link  to='/'>Topic
+    <li><Link  to='#'>Topic
     </Link>
       <ul className="dropdown">
         <li><Link to='/'>Javascript</Link></li>
@@ -59,20 +59,30 @@ return(
     </li>
     <li><Link to='/tags'>Tags</Link></li>
     <li><Link to='/about'>About me</Link></li>
+    <li><Link  to='#'>
+      <Icon  name={themeValue || "default"} color= {themeValue ==='light' ? '#000' : '#fff' }/>
+    </Link>
+      <ul className="dropdown dropdown__theme">
+        <li onClick={()=>updateTheme("light")}>Light</li>
+        <li onClick={()=>updateTheme("dark")}>Dark</li>
+        <li onClick={()=>updateTheme("default")}>Default</li>
+      </ul>
+    </li>
 
     <li> <label>
-        
-          <select value={themeValue} className='theme__toggler' onChange={(event)=>setTheme(event.target.value)}>
+         
+
+          {/* <select value={themeValue} className='theme__toggler'  onChange={(event)=>updateTheme(event.target.value)}>
             <option value="light">Light</option>
             <option value="dark">Dark</option>
             <option value="default">Default</option>
-          </select>
+          </select> */}
         </label></li>
 
     {/* <li><Link to='/'>Contact</Link></li> */}
   </ul>
             <div className='toolbar_togglerIcon' onClick={drawerToggler}>
-
+              <Icon name="menu" width={24} height={24} />
                 </div>
            
         </nav>
@@ -134,15 +144,36 @@ return(
                         </i>
                             <span className='nav__name'>About me</span>
                         </Link>
+                        <div className='nav__dropdown'>
+                        <div className='nav__link'>
+                        <i className='nav__icon topic'>
+                        <Icon name={themeValue} color='#0d96f2'  />
+                        </i>
+                            <span className='nav__name'>Theme</span>
+
+                            <i className='nav__icon nav__dropdown-icon'>
+                            <Icon name="dropdown" width={16} height={16} color='#0d96f2' />
+                            </i>
+                        </div>
+                        <div className='nav__dropdown-colapse'>
+                        <div className='nav__dropdown-content'>
+                        <ul className="dropdown dropdown__theme">
+        <li onClick={()=>updateTheme("light")}> <Icon name="light" width={16} height={16} color='#0d96f2' />  Light</li>
+        <li onClick={()=>updateTheme("dark")}> <Icon name="dark" width={16} height={16} color='#0d96f2' />  Dark</li>
+        <li onClick={()=>updateTheme("default")}>  <Icon name="default" width={16} height={16} color='#0d96f2' />  Default</li>
+      </ul>
+                        </div>
+                        </div>
+                        </div>
                     <hr></hr>
-                        <li className='theme'> Theme  <label>
+                        {/* <li className='theme'> Theme  <label>
            
           <select value={themeValue} className='theme__toggler' onChange={(event)=>updateTheme(event.target.value)}>
             <option value="light">Light</option>
             <option value="dark">Dark</option>
             <option value="default">Default</option>
           </select>
-        </label></li>
+        </label></li> */}
                   
 
                     

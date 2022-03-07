@@ -1,4 +1,4 @@
-:root.default
+:root
 {
   --color-primary-bg: #011e3c;
   --color-secondary-bg:#0b1929;
@@ -61,22 +61,22 @@
 
 :root.light
 {
-  --color-primary-bg: #FEF9EF;
+  --color-primary-bg: #ededed;
   --color-blockquote-bg:#23222b;
-  --color-secondary-bg:#23222b;
-  --color-block-bg:#23222b82;
+  --color-secondary-bg:#e0e0e0;
+  --color-block-bg:#ffffff82;
   --color-block-bg-secondary:#011e3c;
-  --color-border:#4b4b4b;
+  --color-border:#b7ddf8;
   --color-blue-primary:#0173e6;
-  --color-dark:#011e3c;
-  --color-dark-nav: #0073c8;
+
+  --color-dark-nav: #f2f2f2;
   --color-ash:#1e1e1e;
   --color-black-dark:#121212;
   --color-blue-dark:#091b32;
   --color-blue-btn:#0d96f2;
-  --color-dark :#12081f;
+  --color-dark :rgb(238, 238, 238);
   --color-white: #eff0f2;
-  --color-grey: #E7e3E2;
+  --color-grey: #3f3f3f;
 
   --color-black: #fff;
   --color-white: #000;
@@ -116,6 +116,42 @@
     --gray-7: #21262d;
     --gray-8: #161b22;
     --gray-9: #0d1117;
+}
+.light .tag__icons svg
+{
+  fill: black !important;
+}
+.light .toolbar_togglerIcon svg
+{
+  stroke: black;
+}
+
+.light .closeButton svg
+{
+  stroke: black;
+}
+@media (max-width:768px)
+{
+  .light .theme__toggler
+{
+  background: var(--color-blue-btn);
+}
+}
+.light .counter
+{
+  background: #727272 !important;
+}
+.light .nav__menu a
+{
+  color:rgb(72, 72, 72);
+}
+.light .about__social svg
+{
+  stroke: var(--color-blue-btn) !important;
+}
+.light .about__social .icon:hover::before, .light .about__social .icon:hover::after, .light .about__social .tooltip, .light .footer__logo
+{
+  color:var(--color-blue-btn)
 }
 :root.dark
 {
@@ -265,6 +301,7 @@ main
     }
   .header
   {
+    
     top:0;
     left: 0;
     width: 100%;
@@ -298,9 +335,9 @@ main
     .nav{
       display: none;
     }
-    .toolbar_togglerIcon
+    .toolbar_togglerIcon 
     {
-      display: none;
+      display: none !important;
     }
   }
 
@@ -468,11 +505,17 @@ main
       background: var(--color-dark-nav);
      
       height: 60px ;
+      -webkit-box-shadow: -2px 11px 62px -21px rgba(0,0,0,0.29);
+-moz-box-shadow: -2px 11px 62px -21px rgba(0,0,0,0.29);
+box-shadow: -2px 11px 62px -21px rgba(0,0,0,0.29);
   }
   .toolbar_togglerIcon
   {
-    background: url(images/menu.svg) no-repeat   right !important; 
+    /* background: url(images/menu.svg) no-repeat   right !important;  */
     width: 50px;
+    display: grid;
+    justify-content: end;
+    align-items: center;
     height: 50px;
 
   }
@@ -620,7 +663,10 @@ nav ul li:focus-within > ul,
   margin: 1.5rem 0;
   padding: 1rem  1.6rem;
 }
-
+.tags .post__item
+{
+  margin: 1rem 0;
+}
 .post__item .tag__icons
 {
   padding: 0 0.4rem;
@@ -1446,9 +1492,7 @@ pre
 
 .theme__toggler 
 {
-
-  
-    appearance: none;
+  appearance: none;
   
     background-color: var(--color-block-bg);
     border: none;
@@ -1464,6 +1508,31 @@ pre
     line-height: inherit;
     outline: none;
     border: 1px solid var(--color-blue-btn);
+}
 
+.dropdown__theme li
+{
+  padding: 0.4rem 1rem;
+  cursor: pointer;
+}
+.dropdown__theme
+{
+  width: 100px;
+  overflow: hidden;
+}
+@media (max-width:768px)
+{
   
+  .dropdown__theme 
+  {
+    margin: 0;
+    padding: 0;
+    background: transparent !important;
+  }
+  .dropdown__theme li
+  {
+    width: 100%;
+
+    list-style: none;
+  }
 }

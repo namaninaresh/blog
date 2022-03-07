@@ -4,15 +4,12 @@ import Layout from "../components/layout";
 
 const AboutPage = () => {
 
-  const clickFun=()=>{
-    document.documentElement.className = 'light';
-  }
 
   return (
     <Layout pageTitle="About Me">
       <div className="about">
         <h3 className="heading">About Me</h3>
-        <button onClick={()=>clickFun()}>Toggle</button>
+       
         {/* <p className="heading__description">
           Learn about me </p> */}
           <div className="about__section">
