@@ -678,7 +678,7 @@ border-radius: 1rem;
 }
 .tags ul li a:hover
 {
-  border: 2px dotted var(--color-blue-primary);
+  border: 1.5px dotted var(--color-blue-primary);
 }
 
 

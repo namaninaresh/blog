@@ -3,39 +3,7 @@ import * as React from 'react'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/layout';
 import TagIcon  from '../components/Icons/TagIcons';
-
-const PostItem = ({node})=> 
-{
-  return(
-   
-  
-    <div className='post__item border-outline'>
-          <Link to={`/${node.slug}`}>{node.frontmatter.title}</Link>
-  
-          <div className='post__body'>
-            <p>Checking the network cables, modem and router Checking the network cables, modem and router Checking the network cables, modem and router
-            Checking the network cables, modem and router Checking the network cables,
-            Checking the network cables, modem and router Checking the network cables,
-            Checking the network cables, modem and router Checking the network cables,
-  
-            </p>
-  
-          </div>
-    
-      
-          <div className='post__tags'>
-                  <ul>
-                  {node.frontmatter.tags.map((tag,index) => <i className='tag__icons ' key={index}>
-        <TagIcon name={tag}   />
-        </i> )}
-                    
-                  </ul>
-                  <p className='post__date'> {node.frontmatter.date}</p>
-          </div>
-    </div>
-  
-  );
-}
+import PostItem from '../components/postItem';
 
 
 
@@ -81,7 +49,7 @@ const BlogPage = ({data}) => {
       
       
       
-      <Link to="#" className='ds'>
+      <Link to="/tags/ds" className='ds'>
         <i className='tag__icons '>
         <TagIcon name='ds'  />
         </i>
@@ -89,7 +57,7 @@ const BlogPage = ({data}) => {
       
       
       
-      <Link to="#" className='algo'>
+      <Link to="/tags/algo" className='algo'>
         <i className='tag__icons '>
         <TagIcon name='algo'  />
         </i>
@@ -97,7 +65,7 @@ const BlogPage = ({data}) => {
       
       
       
-      <Link to="#" className='react'>
+      <Link to="/tags/react" className='react'>
         <i className='tag__icons '>
         <TagIcon name='react'   />
         </i>
@@ -105,7 +73,7 @@ const BlogPage = ({data}) => {
       
       
       
-      <Link to="#" className='js'>
+      <Link to="/tags/js" className='js'>
         <i className='tag__icons '>
         <TagIcon name='js' />
         </i>
@@ -133,6 +101,7 @@ export const query = graphql`
         frontmatter {
           date(formatString: "MMMM D, YYYY")
           title
+          description
           tags
         }
         id
