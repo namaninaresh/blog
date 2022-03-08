@@ -4,7 +4,7 @@ import { Link, graphql } from "gatsby"
 import Layout from '../components/layout';
 import TagIcon  from '../components/Icons/TagIcons';
 import PostItem from '../components/postItem';
-import Seo from "../components/seo";
+import Seo from "../components/Seo";
 
 
 function TagsPage ({data})

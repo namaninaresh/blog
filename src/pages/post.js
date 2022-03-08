@@ -7,7 +7,7 @@ import Callouts from '../components/Callouts';
 import Accordation from '../components/Accordation'
 
 import TagIcon  from '../components/Icons/TagIcons';
-import Seo from '../components/seo'
+import Seo from '../components/Seo'
 const shortcodes = { Callouts,Accordation}
 
 const BlogPost = ({data,location}) => {
