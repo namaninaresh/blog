@@ -82,7 +82,7 @@ return(
     {/* <li><Link to='/'>Contact</Link></li> */}
   </ul>
             <div className='toolbar_togglerIcon' onClick={drawerToggler}>
-              <Icon name="menu" width={24} height={24} />
+              <Icon name="menu" width={24} height={24} color='#027ffe' />
                 </div>
            
         </nav>
@@ -96,8 +96,12 @@ return(
 
                      <i className='nav__icon closeButton' >
                      <Icon name="close" width={20} height={20} />
+                 
                      </i>
-                </span>
+
+                    
+                </span> <hr></hr>
+               
                 <div className='nav__list'>
                     <div className='nav__items'>
         
@@ -144,6 +148,8 @@ return(
                         </i>
                             <span className='nav__name'>About me</span>
                         </Link>
+
+                        <hr></hr>
                        {/* <div className='nav__dropdown'>
                         <div className='nav__link'>
                         <i className='nav__icon topic'>
@@ -165,7 +171,7 @@ return(
                         </div>
                         </div>
                         </div> */}
-                    <hr></hr>
+            
                         {/* <li className='theme'> Theme  <label>
            
           <select value={themeValue} className='theme__toggler' onChange={(event)=>updateTheme(event.target.value)}>

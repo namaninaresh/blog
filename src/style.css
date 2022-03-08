@@ -12,10 +12,10 @@
   --color-ash:#1e1e1e;
   --color-black-dark:#121212;
   --color-blue-dark:#091b32;
-  --color-blue-btn:#0d96f2;
+  --color-blue-btn:#027ffe;
   --color-dark :#12081f;
   --color-white: #eff0f2;
-  --color-grey: #E7e3E2;
+  --color-grey: #dadada;
 
   --color-blockquote-bg:#02274d;
   --color-black: #000;
@@ -375,7 +375,7 @@ main
     font-size: 1.2rem;
     text-transform: uppercase;
     color: var(--color-blue-btn) !important;
-    margin-bottom: 5rem;
+    margin-bottom: 1rem;
     /* justify-content: center; */
   }
 
@@ -389,6 +389,7 @@ main
   .nav__list
   {
     row-gap: 1.5rem;
+    margin-top: 5rem;
   }
 
   .nav__items
@@ -489,6 +490,7 @@ main
   .show-menu
   {
     right: 0;
+    border-left: 1px solid hsla(210, 99%, 50%, 0.2); 
   }
   .dropdown
   {
@@ -503,7 +505,8 @@ main
       width: 100%;
      
       background: var(--color-dark-nav);
-     
+     border-bottom: 1px solid hsla(210, 99%, 50%, 0.2); 
+    
       height: 60px ;
       -webkit-box-shadow: -2px 11px 62px -21px rgba(0,0,0,0.29);
 -moz-box-shadow: -2px 11px 62px -21px rgba(0,0,0,0.29);
@@ -522,7 +525,8 @@ box-shadow: -2px 11px 62px -21px rgba(0,0,0,0.29);
 
   hr
   {
-    border: 0.1px solid var(--color-blue-dark);
+    border: 0.1px solid hsla(210, 99%, 50%,0.1); 
+    width: 100%;
   
   }
   .toolbar__navigation
@@ -542,12 +546,11 @@ box-shadow: -2px 11px 62px -21px rgba(0,0,0,0.29);
     }
     
   }
-  .toolbar__logo{
-      margin-top: 0.5rem;
-  }
+  
   .toolbar__logo 
   {
-    color: var(--white);
+    margin-top: 0.5rem;
+    color: var(--color-blue-btn);
     text-decoration: none;
     font-size: 1.3rem;
     font-weight: 500;
@@ -685,7 +688,7 @@ nav ul li:focus-within > ul,
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   line-height: 30px;
-  opacity: .55;
+  opacity: 0.76;
 
 }
 .post__tags
@@ -716,7 +719,7 @@ nav ul li:focus-within > ul,
 .post__date
 {
   font-size: 0.8rem;
-  opacity: .32;
+  opacity: .7;
 }
 
 @media (min-width:768px)
@@ -734,6 +737,7 @@ footer{
   padding: 2rem;  
 
   margin-top: 10rem;
+  border-top: 1px solid hsla(210, 99%, 50%, 0.2); 
  
 }
 
@@ -745,7 +749,7 @@ footer{
   font-weight: 400;
   text-decoration: none;
   text-transform: uppercase;
-  color: var(--color-white);
+  color: var(--color-blue-btn);
 }
 .thankyou
 {
@@ -815,16 +819,16 @@ border-radius: 1rem;
 }
 .tags ul li .git:hover
 {
-  border:2px dotted  #f05133;
+  border:1px dotted  #f05133;
 }
 
 .tags ul li .react:hover
 {
-  border: 2px dotted #61DBFB;
+  border: 1px dotted #61DBFB;
 }
 .tags ul li .js:hover
 {
-  border: 1.5px dotted #F0DB4F;
+  border: 1px dotted #F0DB4F;
 }
 .tags ul li a i 
 {
@@ -833,7 +837,7 @@ border-radius: 1rem;
 }
 .tags ul li a:hover
 {
-  border: 1.5px dotted var(--color-blue-primary);
+  border: 1px dotted var(--color-blue-primary);
 }
 
 
@@ -848,7 +852,6 @@ border-radius: 1rem;
  background-size: 100%;
  background-repeat: no-repeat;
 
-
  box-shadow: 10px 10px 34px 24px rgba(0,0,0,0.13);
 -webkit-box-shadow: 10px 10px 34px 24px rgba(0,0,0,0.13);
 -moz-box-shadow: 10px 10px 34px 24px rgba(0,0,0,0.13);
@@ -857,6 +860,7 @@ border-radius: 1rem;
 .about__description
 { 
   background: var(--color-block-bg);
+  border: 1px solid hsla(210, 99%, 50%, 0.2); 
   line-height: 25px;
   padding: 1rem ;
   border-radius: 5px;
@@ -1064,7 +1068,8 @@ border: 1px solid var(--color-border); */
 .blogPage h1{
   font-size: 32px;
   margin-bottom: 24px;
-  font-weight: bold;
+  font-weight: 500;
+  color: var(--color-gray-300);
 }
 .blogPage h2
 {
