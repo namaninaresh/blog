@@ -7,7 +7,7 @@ import Icon from '../Icons/Icon';
 const Toolbar = props => {
 
     const [sideDrawerOpen, setSideDrawer] = React.useState(false);
-    //const [themeValue, setTheme] = React.useState("default")
+    const [themeValue, setTheme] = React.useState("default")
 
     let classesList = "nav ";
     let backdrop=null;
@@ -16,7 +16,7 @@ const Toolbar = props => {
        setSideDrawer(!sideDrawerOpen)
     }
 
-    /*React.useEffect(() => {
+    React.useEffect(() => {
       const value= localStorage.getItem("theme" );
         if(value !== null)  
         
@@ -29,7 +29,7 @@ const Toolbar = props => {
         document.documentElement.className=value;
         localStorage.setItem("theme" , value);
         setTheme(value);
-    } */
+    } 
  
     if(sideDrawerOpen) 
     {
@@ -150,7 +150,7 @@ return(
                         </Link>
 
                         <hr></hr>
-                       {/* <div className='nav__dropdown'>
+                        <div className='nav__dropdown'>
                         <div className='nav__link'>
                         <i className='nav__icon topic'>
                         <Icon name={themeValue} color='#0d96f2'  />
@@ -164,13 +164,13 @@ return(
                         <div className='nav__dropdown-colapse'>
                         <div className='nav__dropdown-content'>
                         <ul className="dropdown dropdown__theme">
-        <li onClick={()=>updateTheme("light")}> <Icon name="light" width={16} height={16} color='#0d96f2' />  Light</li>
-        <li onClick={()=>updateTheme("dark")}> <Icon name="dark" width={16} height={16} color='#0d96f2' />  Dark</li>
+      {/*  <li onClick={()=>updateTheme("light")}> <Icon name="light" width={16} height={16} color='#0d96f2' />  Light</li>
+        */} <li onClick={()=>updateTheme("dark")}> <Icon name="dark" width={16} height={16} color='#0d96f2' />  Dark</li>
         <li onClick={()=>updateTheme("default")}>  <Icon name="default" width={16} height={16} color='#0d96f2' />  Default</li>
       </ul>
                         </div>
                         </div>
-                        </div> */}
+                        </div> 
             
                         {/* <li className='theme'> Theme  <label>
            
