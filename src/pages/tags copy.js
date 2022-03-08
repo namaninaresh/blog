@@ -1,5 +1,5 @@
-import React, { useState } from "react"
-import { Link, graphql,useStaticQuery } from "gatsby"
+import React from "react"
+import { Link, graphql } from "gatsby"
 
 import Layout from '../components/layout';
 import TagIcon  from '../components/Icons/TagIcons';

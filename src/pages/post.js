@@ -1,18 +1,20 @@
 import * as React from 'react'
 import Layout from '../components/layout'
-import { graphql,Link } from 'gatsby'
+import { graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import {MDXProvider} from '@mdx-js/react'
 import Callouts from '../components/Callouts';
 import Accordation from '../components/Accordation'
 
 import TagIcon  from '../components/Icons/TagIcons';
+import Seo from '../components/seo'
 const shortcodes = { Callouts,Accordation}
 
 const BlogPost = ({data,location}) => {
 
   return (
     <Layout pageTitle={data.mdx.frontmatter.title}>
+      <Seo title={data.mdx.frontmatter.title} description={data.mdx.frontmatter.description} />
    
     <div className='blogPage '>
      <div className='blogPage__header'>
@@ -45,6 +47,7 @@ export const query = graphql`
         title
         date(formatString: "MMMM D, YYYY")
         tags
+        description
       }
       body
     }

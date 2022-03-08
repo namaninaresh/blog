@@ -2,14 +2,16 @@ module.exports = {
   siteMetadata: {
     title: `Naresh Namani blog`,
     author: {
-      name: `Naresh Namani`,
-      summary: `Blog to learning programming Languages and tricks`,
+      name: `@NareshNamani6`,
+      summary: `An Visualized and interactive tutorials to learn programming languages in a easy way. `,
     },
-    description: `A starter blog demonstrating prgoramming lanaguages tricks.`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
-    social: {
-      twitter: `kylemathews`,
-    },
+    description: `An Visualized and interactive tutorials to learn programming languages in a easy way. `,
+    siteUrl: `https://nareshnamaniblog.gatsbyjs.io/`,
+    titleTemplate: "%s · Naresh Namani ",
+    image: "/profile.jpg", 
+    keywords: `naresh namani blog, naresh namani, programming blog, learn programming`,
+    twitterUsername: `@NareshNamani6`,
+  
   },
     plugins: [
       `gatsby-plugin-image`,

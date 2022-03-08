@@ -1,12 +1,14 @@
 
 import * as React from "react";
 import Layout from "../components/layout";
+import Seo from "../components/seo";
 
 const AboutPage = () => {
 
 
   return (
-    <Layout pageTitle="About Me">
+    <Layout pageTitle="About Naresh Namani">
+      <Seo  title='About ' description={"Get to know about Naresh Namani"} />
       <div className="about">
         <h3 className="heading">About Me</h3>
        

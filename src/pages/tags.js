@@ -4,6 +4,7 @@ import { Link, graphql } from "gatsby"
 import Layout from '../components/layout';
 import TagIcon  from '../components/Icons/TagIcons';
 import PostItem from '../components/postItem';
+import Seo from "../components/seo";
 
 
 function TagsPage ({data})
@@ -21,6 +22,7 @@ const [selectionName, setName] = useState();
   
 return (
   <Layout pageTitle="My Blog Posts">
+    <Seo  title="Articles on tags selected" description={"Articles based on the interests of selected tags to learn "}/>
   <div>
   
     <div className="tags">

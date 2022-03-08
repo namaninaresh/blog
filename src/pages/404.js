@@ -1,7 +1,7 @@
 
 import * as React from "react";
 import Layout from "../components/layout";
-import ship from '../images/ship.svg';
+// import ship from '../images/ship.svg';
 
 const AboutPage = () => {
   return (

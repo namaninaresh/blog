@@ -45,20 +45,20 @@ return(
         <nav className='toolbar__navigation'>
           
 
-            <Link to='/' className='toolbar__logo'>Naresh Namani</Link>
+            <Link to='/' role={"link"} className='toolbar__logo'>Naresh Namani</Link>
             <div className='spacer'></div>
             <ul className='nav__menu'>
-    <li><Link to='/'>Home</Link></li>
-    <li><Link  to='#'>Topic
+    <li><Link to='/' role={"link"}>Home</Link></li>
+    <li><Link  to='#' role={"link"}>Topic 
     </Link>
       <ul className="dropdown">
-        <li><Link to='/'>Javascript</Link></li>
-        <li><Link to='/'>Data Structures</Link></li>
-        <li><Link to='/'>Java</Link></li>
+        <li><Link to='/' role={"link"}>Javascript</Link></li>
+        <li><Link to='/' role={"link"}>Data Structures</Link></li>
+        <li><Link to='/' role={"link"}>Java</Link></li>
       </ul>
     </li>
-    <li><Link to='/tags'>Tags</Link></li>
-    <li><Link to='/about'>About me</Link></li>
+    <li><Link to='/tags' role={"link"}>Tags</Link></li>
+    <li><Link to='/about' role={"link"}>About me</Link></li>
     {/*<li><Link  to='#'>
       <Icon  name={themeValue || "default"} color= {themeValue ==='light' ? '#000' : '#fff' }/>
     </Link>
@@ -101,7 +101,7 @@ return(
                 <div className='nav__list'>
                     <div className='nav__items'>
         
-                        <Link to='/' className='nav__link'>
+                        <Link to='/' className='nav__link' role={"link"}>
                             <i className='nav__icon home'>
                             <Icon name="home" color='#0d96f2'  />
                             </i>
@@ -120,25 +120,25 @@ return(
                         </div>
                         <div className='nav__dropdown-colapse'>
                         <div className='nav__dropdown-content'>
-                        <Link to='/' className='nav__dropdown-item'>
+                        <Link to='/' className='nav__dropdown-item' role={"link"}>
                           Java
                         </Link>
                         <Link to='/' className='nav__dropdown-item'>
                           Data Structures
                         </Link>
-                        <Link to='/' className='nav__dropdown-item'>
+                        <Link to='/' className='nav__dropdown-item' role={"link"}>
                           Javascript
                         </Link>
                         </div>
                         </div>
                         </div>
-                        <Link to='/tags' className='nav__link'>
+                        <Link to='/tags' className='nav__link' role={"link"}>
                         <i className='nav__icon contact'>
                         <Icon name="tags" color='#0d96f2'  />
                         </i>
                             <span className='nav__name'>Tags</span>
                         </Link>
-                        <Link to='/about' className='nav__link'>
+                        <Link to='/about' className='nav__link' role={"link"}>
                         <i className='nav__icon contact'>
                         <Icon name="user" color='#0d96f2'  />
                         </i>

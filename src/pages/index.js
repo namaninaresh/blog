@@ -4,6 +4,7 @@ import { Link, graphql } from 'gatsby'
 import Layout from '../components/layout';
 import TagIcon  from '../components/Icons/TagIcons';
 import PostItem from '../components/postItem';
+import Seo from '../components/seo';
 
 
 
@@ -11,6 +12,7 @@ const BlogPage = ({data}) => {
   
   return (
     <Layout pageTitle="My Blog Posts">
+      <Seo  title='Naresh Namani' description={"An Visualized and interactive tutorials to learn programming languages in a easy way"}/>
 
         <section className='home__layout'>
 

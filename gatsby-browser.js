@@ -4,7 +4,6 @@ import "./src/normalize.css"
 // custom CSS styles
 import "./src/style.css"
 
- import them from "prism-react-renderer/themes/vsDark"
 // import "prismjs/themes/prism-tomorrow.css"
 
 // import "prismjs/themes/prism-solarizedlight.css"
