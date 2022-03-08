@@ -13,7 +13,7 @@ if(showAccordation) classesName+=" accordation__open";
 return(
   
     <div className={classesName} >
-        <div className='accordation__header' onClick={()=> setAccordationStatus(!showAccordation)}>
+        <div className='accordation__header' onClick={()=> setAccordationStatus(!showAccordation)} role={"list"}>
         <h4 className='accordation__heading '   >{heading}</h4>
        
         <Icon  name='dropdown'/>
