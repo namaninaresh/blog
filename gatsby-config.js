@@ -84,13 +84,13 @@ module.exports = {
         "icons": [
         
           {
-            "src": "path/to/maskable_icon.png",
+            "src": "src/images/maskable_icon.png",
             "sizes": "196x196",
             "type": "image/png",
             "purpose": "any"
           },
           {
-            "src": "path/to/maskable_icon.png",
+            "src": "src/images/maskable_icon.png",
             "sizes": "196x196",
             "type": "image/png",
             "purpose": "maskable" // <-- New property value `"maskable"`
