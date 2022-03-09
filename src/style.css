@@ -215,6 +215,14 @@
 .dark .show-menu{
   background: #0e0c0f !important;
 }
+.dark .code , .dark .code__highlightBox , .dark pre
+{
+  background: #1a191d  !important;
+}
+.dark .blogPage h3
+{
+  color: var(--color-blue-btn);
+}
 
 
 html{
@@ -566,7 +574,20 @@ box-shadow: -2px 11px 62px -21px rgba(0,0,0,0.29);
     }
     
   }
-  
+  .dark .toolbar__logo
+  {
+    color: var(--color-grey);
+  }
+  .dark .toolbar_togglerIcon svg
+  {
+    stroke: var(--color-grey) !important;
+  }
+  .dark .toolbar {
+    border-bottom: 1px solid hsla(0 , 0%, 89%, 0.1);
+  }
+  .dark footer{
+    border-top: 1px solid hsla(0 , 0%, 89%, 0.1);
+  }
   .toolbar__logo 
   {
     margin-top: 0.5rem;
@@ -667,6 +688,7 @@ nav ul li:focus-within > ul,
 }
 .post__item{
   background-color: var(--color-block-bg);
+  line-height: 1.5;
   
 }
 
@@ -875,6 +897,10 @@ border-radius: 1rem;
  box-shadow: 10px 10px 34px 24px rgba(0,0,0,0.13);
 -webkit-box-shadow: 10px 10px 34px 24px rgba(0,0,0,0.13);
 -moz-box-shadow: 10px 10px 34px 24px rgba(0,0,0,0.13);
+}
+.dark .about__description
+{
+  border: 1px solid hsla(0 , 0%, 89%, 0.1);
 }
 
 .about__description
@@ -1103,8 +1129,6 @@ border: 1px solid var(--color-border); */
   font-size: 16px;
 
   color: var(--color-gray-100);
-
-
 }
 .blogPage h4
 {font-size: 16px;

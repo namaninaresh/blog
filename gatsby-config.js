@@ -74,8 +74,8 @@ module.exports = {
         name: "Naresh Namani Blog",
         short_name: "NN Blog",
         start_url: "/",
-        background_color: "#011e3c",
-        theme_color: "#011e3c",
+        background_color: "#0e0c0f",
+        theme_color: "#0e0c0f",
         // Enables "Add to Homescreen" prompt and disables browser UI (including back button)
         // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
         display: "standalone",
@@ -87,7 +87,8 @@ module.exports = {
       },
      
     },
-    'gatsby-plugin-offline'
+    'gatsby-plugin-offline',
+  
     
 
     ]
