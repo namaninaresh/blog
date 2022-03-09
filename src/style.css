@@ -889,14 +889,14 @@ border-radius: 1rem;
 .about__pic
 {
  background:var(--color-dark-nav);
- background-image: url(images/profile.jpeg) ;
+ background-image: url(images/profile.jpg) ;
  background-position: center;
  background-size: 100%;
  background-repeat: no-repeat;
 
- box-shadow: 10px 10px 34px 24px rgba(0,0,0,0.13);
+ /* box-shadow: 10px 10px 34px 24px rgba(0,0,0,0.13);
 -webkit-box-shadow: 10px 10px 34px 24px rgba(0,0,0,0.13);
--moz-box-shadow: 10px 10px 34px 24px rgba(0,0,0,0.13);
+-moz-box-shadow: 10px 10px 34px 24px rgba(0,0,0,0.13); */
 }
 .dark .about__description
 {
@@ -931,12 +931,30 @@ font-weight: 100;
   {
     margin-top: 2.5rem;
   }
+
+
+  .about__pic-outline
+  {
+    width: 12rem;
+      height: 12rem;
+      margin:0 auto;
+      /* border: 1rem solid var(--color-block-bg); */
+      background: var(--color-block-bg);
+      border-radius: 50%;
+      display: grid;
+      align-content: center;
+      border: 1px solid hsla(0 , 0%, 89%, 0.1);
+      box-shadow: 10px 10px 34px 24px rgba(0,0,0,0.13);
+  -webkit-box-shadow: 10px 10px 34px 24px rgba(0,0,0,0.13);
+  -moz-box-shadow: 10px 10px 34px 24px rgba(0,0,0,0.13); 
+      
+  }
   .about__pic
   {
     width: 10rem;
     height: 10rem;
     margin: auto;
-    border: 1rem solid var(--color-block-bg);
+    /* border: 1rem solid var(--color-block-bg); */
    
     border-radius: 50%;
   }
@@ -945,6 +963,7 @@ font-weight: 100;
     margin-top: 1.5rem;
   }
 }
+
 
 @media (min-width:768px)
 {
@@ -960,17 +979,39 @@ font-weight: 100;
 
 }
 
+
+.about__pic-outline
+{
+  width: 20rem;
+    height: 20rem;
+    border: 1px solid hsla(0 , 0%, 89%, 0.1);
+    background: var(--color-block-bg);
+    border-radius: 50%;
+    display: grid;
+    align-content: center;
+    box-shadow: 10px 10px 34px 24px rgba(0,0,0,0.13);
+-webkit-box-shadow: 10px 10px 34px 24px rgba(0,0,0,0.13);
+-moz-box-shadow: 10px 10px 34px 24px rgba(0,0,0,0.13); 
+    
+}
+
+
+
 .about__pic
 {
  background:var(--color-dark-nav);
- background-image: url(images/profile.jpeg) ;
+ background-image: url(images/profile.jpg) ;
  background-position: center;
  background-size: 100%;
  background-repeat: no-repeat;
- width: 35%;
- height: 25rem;
 
- border-radius: 10px;
+    width: 18rem;
+    height: 18rem;
+    margin: 0 auto;
+    /* border: 1rem solid var(--color-block-bg); */
+   
+    border-radius: 50%;
+ /* border-radius: 10px; */
  box-shadow: 10px 10px 34px 24px rgba(0,0,0,0.13);
 -webkit-box-shadow: 10px 10px 34px 24px rgba(0,0,0,0.13);
 -moz-box-shadow: 10px 10px 34px 24px rgba(0,0,0,0.13);

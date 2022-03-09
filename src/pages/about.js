@@ -15,7 +15,7 @@ const AboutPage = () => {
         {/* <p className="heading__description">
           Learn about me </p> */}
           <div className="about__section">
-            <div className="about__pic"></div>
+            <div className="about__pic-outline"><div className="about__pic"></div></div>
 
             <div className="about__description">
               <p>

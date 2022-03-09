@@ -13,6 +13,7 @@ module.exports = {
     twitterUsername: `@NareshNamani6`,
   
   },
+ 
     plugins: [
       `gatsby-plugin-image`,
     {
