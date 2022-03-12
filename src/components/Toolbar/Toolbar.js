@@ -143,6 +143,13 @@ return(
                         </i>
                             <span className='nav__name'>Tags</span>
                         </Link>
+
+                        <Link to='/learn' className='nav__link' role={"link"}>
+                        <i className='nav__icon contact'>
+                        <Icon name="tags" color='#0d96f2'  />
+                        </i>
+                            <span className='nav__name'>Learn</span>
+                        </Link>
                         <Link to='/about' className='nav__link' role={"link"}>
                         <i className='nav__icon contact'>
                         <Icon name="user" color='#0d96f2'  />

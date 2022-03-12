@@ -489,7 +489,7 @@ main
     border-radius: 5px;
 
     row-gap: .5rem;
-    padding: .75rem 2.5rem .75rem 1.8rem;
+    padding: .75rem 1.5rem .75rem 1.8rem;
   }
   .nav__dropdown-content a:hover
   {
@@ -1627,4 +1627,33 @@ pre
 
     list-style: none;
   }
+}
+
+
+/* learn **/
+
+
+.learn .nav__dropdown-item
+{
+  padding: 0.2rem 0;
+}
+.learn .dot
+{
+  margin-right: 10px;
+    min-width: 5px;
+    /* color: red; */
+    background: var(--color-blue-btn);
+    display: inline-block;
+    min-height: 5px;
+    border-radius: 50%;
+
+}
+.learn .nav__dropdown .nav__dropdown 
+{
+ margin: 0.3rem 0;
+}
+
+.learn .nav__dropdown .nav__dropdown .dot
+{
+  display: none;
 }

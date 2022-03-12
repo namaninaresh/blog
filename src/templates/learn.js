@@ -8,6 +8,9 @@ import Accordation from '../components/Accordation'
 
 import TagIcon  from '../components/Icons/TagIcons';
 import Seo from '../components/Seo'
+import Icon from '../components/Icons/Icon';
+import LearnSideDrawer from '../components/Toolbar/learnSideDrawer'
+
 const shortcodes = { Callouts,Accordation}
 
 
@@ -45,11 +48,15 @@ const PostItem = ({node})=>
 
 const Tags = ({data,location , pageContext}) => {
 let alldata = data.allMdx.edges;
+//console.log(alldata)
+const index = alldata.findIndex(item => item.node.slug === data.mdx.slug);
 
-console.log(pageContext)
-const index = alldata.findIndex(({node}) =>  node.id === pageContext.id)
+//console.log(index)
 
-console.log(index);
+const [sideDrawerOpen, setSideDrawer] = React.useState(false);
+const drawerToggler =() =>{
+  setSideDrawer(!sideDrawerOpen)
+}
 
   return (
     <Layout pageTitle={data.mdx.frontmatter.title}>
@@ -66,7 +73,9 @@ console.log(index);
       </i>
         ))
       }
-   
+      <div className='toolbar_togglerIcon' onClick={drawerToggler} >
+              <Icon name="menu" width={24} height={24} color='#027ffe' />
+                </div>
     {/* <p> Posted on : {data.mdx.frontmatter.date}</p> */}
    <p><Link to={`/learn/`+pageContext.nextPostId || pageContext.previousPostId} >{pageContext.nextPostId || pageContext.previousPostId}</Link></p>
    </div>
@@ -75,6 +84,7 @@ console.log(index);
 <MDXRenderer>{data.mdx.body}</MDXRenderer>
 </MDXProvider>
   </div>
+  <LearnSideDrawer show={sideDrawerOpen} drawerToggler={drawerToggler} slug={data.mdx.slug}/>
 </Layout>
   )
 }
@@ -83,7 +93,7 @@ console.log(index);
 export default Tags
 
 export const pageQuery = graphql`
-  query ($id: String) {
+  query ($id: String , $filePath: String) {
     mdx(id: {eq: $id}) {
       frontmatter {
         title
@@ -92,8 +102,9 @@ export const pageQuery = graphql`
         description
       }
       body
+      slug
     }
-    allMdx(filter: {fileAbsolutePath: {regex: "/css/"}}) {
+    allMdx(filter: {fileAbsolutePath: {regex: $filePath}}) {
       edges {
         node {
           slug

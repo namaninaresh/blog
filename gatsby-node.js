@@ -72,7 +72,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         }
         learnGroup: allMdx(
           filter: {fileAbsolutePath: {regex: "/content/docs/"}}
-          sort: {fields: [frontmatter___date], order: DESC}
+          sort: {fields: [frontmatter___date], order: ASC}
           limit: 1000
         ) {
           nodes {
@@ -139,7 +139,7 @@ const learnEdges = result.data.learnGroup.nodes
 learnEdges.forEach((item,index) =>{
 
   const previousPostId = index === 0 ? null : learnEdges[index - 1].slug
-      const nextPostId = index === posts.length - 1 ? null : learnEdges[index + 1].slug
+      const nextPostId = index === learnEdges.length - 1 ? null : learnEdges[index + 1].slug
 
 
   //returnPrevNextid(learnEdges , item.slug)
@@ -147,7 +147,8 @@ learnEdges.forEach((item,index) =>{
       path:`/learn/${item.slug}`,
       component:learnTemplate,
       context:{
-        id: item.id,    
+        id: item.id, 
+        filePath:    `/${item.slug.split("/")[0]}/`,
         previousPostId,
         nextPostId,
       }
