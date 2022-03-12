@@ -2,8 +2,10 @@
 import * as React from "react";
 import Layout from "../components/layout";
 import Seo from "../components/Seo";
+import { graphql, Link } from 'gatsby'
 
-const AboutPage = () => {
+const AboutPage = ({data}) => {
+
   return (
     <Layout pageTitle="Learning">
       <Seo title={"Learning Page"}  />
@@ -16,7 +18,9 @@ const AboutPage = () => {
               
               <p>
 
-                Learn Page Loading...
+                <Link to="css">Css</Link>
+
+                <Link to="js">Javascript</Link>
               </p>
             </div>
           </div>
@@ -30,3 +34,6 @@ const AboutPage = () => {
 };
 
 export default AboutPage;
+
+
+

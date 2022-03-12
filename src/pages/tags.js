@@ -86,6 +86,7 @@ query {
     }
   }
   allMdx(
+    filter: {fileAbsolutePath: {regex: "/content/blog/"}}
     limit: 2000
     sort: { fields: [frontmatter___date], order: DESC }
   

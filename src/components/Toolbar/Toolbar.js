@@ -58,6 +58,7 @@ return(
       </ul>
     </li>
     <li><Link to='/tags' role={"link"}>Tags</Link></li>
+    <li><Link to='/learn' role={"link"}>Learn</Link></li>
     <li><Link to='/about' role={"link"}>About me</Link></li>
     {/*<li><Link  to='#'>
       <Icon  name={themeValue || "default"} color= {themeValue ==='light' ? '#000' : '#fff' }/>

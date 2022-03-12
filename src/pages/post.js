@@ -1,6 +1,6 @@
 import * as React from 'react'
 import Layout from '../components/layout'
-import { graphql } from 'gatsby'
+import { graphql,Link} from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import {MDXProvider} from '@mdx-js/react'
 import Callouts from '../components/Callouts';
@@ -10,7 +10,9 @@ import TagIcon  from '../components/Icons/TagIcons';
 import Seo from '../components/Seo'
 const shortcodes = { Callouts,Accordation}
 
-const BlogPost = ({data,location}) => {
+const BlogPost = ({data,location , pageContext}) => {
+
+  console.log(pageContext)
 
   return (
     <Layout pageTitle={data.mdx.frontmatter.title}>
@@ -29,7 +31,7 @@ const BlogPost = ({data,location}) => {
         }
      
       <p> Posted on : {data.mdx.frontmatter.date}</p>
-     
+     <p><Link to={pageContext.nextPostId} >{pageContext.nextPostId}</Link></p>
      </div>
     <hr></hr>
     <MDXProvider components={shortcodes}>

@@ -7,25 +7,81 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   // Define a template for blog post
   const blogPost = path.resolve(`./src/pages/post.js`);
   const tagTemplate = path.resolve("./src/templates/tags.js")
+  const learnTemplate = path.resolve("./src/templates/learn.js")
+
+  const returnPrevNextid = ( allEdges, slug )=>{
+
+
+    console.log(slug)
+
+    let filterdArr = [];
+
+    
+
+
+
+    allEdges.forEach(item=>
+      {
+        let arr = item.slug.split("/")[0];
+
+        if(arr === slug.split("/")[0])
+        {
+          filterdArr.push(item);
+        }
+
+      })
+    
+      console.log(filterdArr);
+
+     let index = filterdArr.findIndex(item=> item.slug=== slug);
+
+
+    let prvId = null;
+    let nexId = null;
+
+    if(((index-1) > 0) && ((index -1) < filterdArr.length))
+    {
+      prvId = index-1;
+    }
+
+    console.log("prevId "+ prvId);
+
+
+  }
 
   // Get all markdown blog posts sorted by date
   const result = await graphql(
     `
-    {
+      {
+        
+        allMdx(
+          filter: {fileAbsolutePath: {regex: "/content/blog/"}}
+          sort: {fields: [frontmatter___date], order: DESC}
+          limit: 1000
+        ) {
+          nodes {
+            id
+            slug
+          }
+        }
       
-      allMdx(sort: {fields: [frontmatter___date], order: ASC}, limit: 1000) {
-        nodes {
-          id
-          slug
+        tagsGroup: allMdx(limit: 2000) {
+          group(field: frontmatter___tags) {
+            fieldValue
+          }
         }
-      }
-    
-      tagsGroup: allMdx(limit: 2000) {
-        group(field: frontmatter___tags) {
-          fieldValue
+        learnGroup: allMdx(
+          filter: {fileAbsolutePath: {regex: "/content/docs/"}}
+          sort: {fields: [frontmatter___date], order: DESC}
+          limit: 1000
+        ) {
+          nodes {
+            id
+            slug
+          }
         }
-      }
-    } 
+     
+      } 
     `
   )
 
@@ -75,6 +131,30 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       },
     })
   })
+
+  //extract folder wise mdx
+const learnEdges = result.data.learnGroup.nodes
+
+
+learnEdges.forEach((item,index) =>{
+
+  const previousPostId = index === 0 ? null : learnEdges[index - 1].slug
+      const nextPostId = index === posts.length - 1 ? null : learnEdges[index + 1].slug
+
+
+  //returnPrevNextid(learnEdges , item.slug)
+    createPage({
+      path:`/learn/${item.slug}`,
+      component:learnTemplate,
+      context:{
+        id: item.id,    
+        previousPostId,
+        nextPostId,
+      }
+    })
+
+})
+
 }
 
 
