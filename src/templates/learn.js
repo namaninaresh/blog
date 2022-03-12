@@ -73,8 +73,9 @@ const drawerToggler =() =>{
       </i>
         ))
       }
-      <div className='toolbar_togglerIcon' onClick={drawerToggler} >
-              <Icon name="menu" width={24} height={24} color='#027ffe' />
+      <div className='toolbar_togglerIcon content__holder' onClick={drawerToggler} >
+                Menu
+               <Icon name="sidebar" width={24} height={24} color='#027ffe' /> 
                 </div>
     {/* <p> Posted on : {data.mdx.frontmatter.date}</p> */}
    <p><Link to={`/learn/`+pageContext.nextPostId || pageContext.previousPostId} >{pageContext.nextPostId || pageContext.previousPostId}</Link></p>

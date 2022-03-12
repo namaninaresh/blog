@@ -5,7 +5,6 @@ import Icon from '../Icons/Icon';
 import learnNav from '../../data/learnNav.json';
 
 const NavDropdown = (props)=>{
-    console.log('inner',props)
     return <div className='nav__dropdown'>
     <div className='nav__link'>
  <span className='nav__name'><div className="dot"></div>{props.name}</span>
@@ -19,10 +18,8 @@ const NavDropdown = (props)=>{
     {
         props.items.map((item,index)=>{
 
-            if(item.link instanceof Object)
-            {
-                return <NavDropdown items={item.link} key={index} name={item.name}/>
-            }
+            if(item.link instanceof Object)  return <NavDropdown items={item.link} key={index} name={item.name}/>
+          
            return  <Link to='/' className='nav__dropdown-item' role={"link"} key={index}>
             {item.name}
           </Link>
@@ -38,10 +35,7 @@ const NavDropdown = (props)=>{
 const ListItem = ({name,link,folderName})=>{
 
 
-    if(link instanceof Object)
-    {   
-        return <NavDropdown items={link} name={name} />;
-    }
+    if(link instanceof Object)  return <NavDropdown items={link} name={name} />;
     
    return <Link to={`/learn/${folderName}/${link}`}  className='nav__link' role={"link"}>
     
