@@ -5,6 +5,84 @@ import Seo from "../components/Seo";
 import { graphql, Link } from 'gatsby'
 import TagIcon  from '../components/Icons/TagIcons';
 
+const list = [
+  {
+    name:"Css",
+    iconName:"css",
+    to:"css/intro"
+  },
+  {
+    name:"JavaScript",
+    iconName:"js",
+    to:"js/intro"
+  },
+  {
+    name:"Data Structures",
+    iconName:"ds",
+    to:"js/intro"
+  },
+  {
+    name:"Algorithms",
+    iconName:"algo",
+    to:"css/intro"
+  },
+  {
+    name:"Git",
+    iconName:"git",
+    to:"js/intro"
+  },
+  {
+    name:"React",
+    iconName:"react",
+    to:"js/intro"
+  },
+  {
+    name:"TypeScript",
+    iconName:"ts",
+    to:"js/intro"
+  },
+  {
+    name:"Webpack",
+    iconName:"webpack",
+    to:"css/intro"
+  },
+  {
+    name:"Python",
+    iconName:"python",
+    to:"js/intro"
+  },
+  {
+    name:"VsCode",
+    iconName:"vscode",
+    to:"js/intro"
+  },
+  {
+    name:"Django",
+    iconName:"django",
+    to:"css/intro"
+  },
+  {
+    name:"Boostrap",
+    iconName:"bootstrap",
+    to:"js/intro"
+  },
+  {
+    name:"Gatsby",
+    iconName:"gatsby",
+    to:"js/intro"
+  }
+]
+
+const ItemCompo = ({name,iconName,to})=><Link className="learn__programming_item" to={to}>
+  <div className="learn__programming_item__outline">
+  <div className="learn__programming_icon">
+   <TagIcon name={iconName} size={45} />    
+   
+   </div>
+  </div>
+  <span>{name}</span>
+  </Link>
+
 const AboutPage = ({data}) => {
 
   return (
@@ -13,139 +91,15 @@ const AboutPage = ({data}) => {
       <div className="about">
         <h3 className="heading">Learning Page</h3>
         
-          <div className="about__section">
+          <div className="learn__section">
             
             <div className="learn__content">
-              
-               <Link className="learn__programming_item" to="css/intro">
-               <div className="learn__programming_item__outline">
-               <div className="learn__programming_icon">
-                <TagIcon name={"css"} size={45} />    
-                
-                </div>
-               </div>
-               <Link to="css/intro">Css</Link>
-               </Link>
-            
-            
-               <div className="learn__programming_item">
-               <div className="learn__programming_item__outline">
-               <div className="learn__programming_icon">
-                <TagIcon name={"js"} size={45} />    
-                
-                </div>
-               </div>
-               <Link to="js/intro">JavaScript</Link>
-               </div>
 
-               <div className="learn__programming_item">
-               <div className="learn__programming_item__outline">
-               <div className="learn__programming_icon">
-                <TagIcon name={"ds"} size={45} />    
-                
-                </div>
-               </div>
-               <Link to="css/intro">Data Structures</Link>
-               </div>
+    {
+      list.map((item,index)=> <ItemCompo {...item} key={index}/>)
+    }
 
-               <div className="learn__programming_item">
-               <div className="learn__programming_item__outline">
-               <div className="learn__programming_icon">
-                <TagIcon name={"algo"} size={45} />    
-                
-                </div>
-               </div>
-               <Link to="css/intro">Algorithms</Link>
-               </div>
 
-               <div className="learn__programming_item">
-               <div className="learn__programming_item__outline">
-               <div className="learn__programming_icon">
-                <TagIcon name={"git"} size={45} />    
-                
-                </div>
-               </div>
-               <Link to="css/intro">Git</Link>
-               </div>
-
-               <div className="learn__programming_item">
-               <div className="learn__programming_item__outline">
-               <div className="learn__programming_icon">
-                <TagIcon name={"react"} size={45} />    
-                
-                </div>
-               </div>
-               <Link to="css/intro">React</Link>
-               </div>
-
-               <div className="learn__programming_item">
-               <div className="learn__programming_item__outline">
-               <div className="learn__programming_icon">
-                <TagIcon name={"ts"} size={45} />    
-                
-                </div>
-               </div>
-               <Link to="css/intro">TypeScript</Link>
-               </div>
-
-               <div className="learn__programming_item">
-               <div className="learn__programming_item__outline">
-               <div className="learn__programming_icon">
-                <TagIcon name={"webpack"} size={45} />    
-                
-                </div>
-               </div>
-               <Link to="css/intro">Webpack</Link>
-               </div>
-               <div className="learn__programming_item">
-               <div className="learn__programming_item__outline">
-               <div className="learn__programming_icon">
-                <TagIcon name={"python"} size={45} />    
-                
-                </div>
-               </div>
-               <Link to="css/intro">Python</Link>
-               </div>
-
-               <div className="learn__programming_item">
-               <div className="learn__programming_item__outline">
-               <div className="learn__programming_icon">
-                <TagIcon name={"vscode"} size={45} />    
-                
-                </div>
-               </div>
-               <Link to="css/intro">VsCode</Link>
-               </div>
-
-               <div className="learn__programming_item">
-               <div className="learn__programming_item__outline">
-               <div className="learn__programming_icon">
-                <TagIcon name={"django"} size={45} />    
-                
-                </div>
-               </div>
-               <Link to="css/intro">Django</Link>
-               </div>
-
-               <div className="learn__programming_item">
-               <div className="learn__programming_item__outline">
-               <div className="learn__programming_icon">
-                <TagIcon name={"bootstrap"} size={45} />    
-                
-                </div>
-               </div>
-               <Link to="css/intro">BootStrap</Link>
-               </div>
-
-               <div className="learn__programming_item">
-               <div className="learn__programming_item__outline">
-               <div className="learn__programming_icon">
-                <TagIcon name={"gatsby"} size={45} />    
-                
-                </div>
-               </div>
-               <Link to="css/intro">Gatsby</Link>
-               </div>
 
             </div>
           </div>

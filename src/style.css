@@ -1667,14 +1667,17 @@ pre
   display: inline-block;
  text-align: center;
   justify-content: center;
+  text-decoration: none;
+  text-align: center;
   align-items: center;
   margin: 0.4rem 1rem;
 }
-.learn__programming_item a 
+.learn__programming_item span
 {
-  text-decoration: none;
   margin-top: 1rem ;
   color: var(--color-grey);
+  text-align: center;
+  margin: auto;
 }
 
 .learn__programming_icon
@@ -1704,14 +1707,30 @@ pre
 .learn__content
 {
   display: grid;
-  grid-template-columns: repeat(8, [col-start] 1fr);
+
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit,minmax(6rem, 1fr));
+ 
 }
 
-@media (max-width:768px)
+@media (min-width:768px)
 {
   .learn__content
 {
-  display: grid;  grid-template-columns: 1fr  1fr;
-  /* grid-template-columns: 1fr 3fr; */
+  display: grid;
+ 
+
+  gap: 20px;
+  grid-auto-flow: dense;  
 }
+}
+
+.learn .nav__dropdown-colapse .nav__dropdown-item , .learn  .nav__dropdown-colapse .nav__name
+{
+  font-size: .7rem;
+
+}
+.learn .nav__dropdown-content
+{
+  padding: .75rem .2rem .75rem .8rem;
 }

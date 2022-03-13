@@ -9,7 +9,7 @@ import Accordation from '../components/Accordation'
 import TagIcon  from '../components/Icons/TagIcons';
 import Seo from '../components/Seo'
 import Icon from '../components/Icons/Icon';
-import LearnSideDrawer from '../components/Toolbar/learnSideDrawer'
+import LearnSideDrawer from '../components/Toolbar/LearnSideDrawer'
 
 const shortcodes = { Callouts,Accordation}
 
