@@ -4004,7 +4004,7 @@
     "color-name" "^1.0.0"
     "simple-swizzle" "^0.2.2"
 
-"color@^4.0.1", "color@^4.2.0", "color@^4.2.1":
+"color@^4.2.1":
   "integrity" "sha512-MFJr0uY4RvTQUKvPq7dh9grVOTYSFeXja2mBXioCGjnjJoXrAp9jJ1NQTDR73c9nwBSAQiNKloKl5zq9WB9UPw=="
   "resolved" "https://registry.npmjs.org/color/-/color-4.2.1.tgz"
   "version" "4.2.1"
@@ -6286,10 +6286,10 @@
   dependencies:
     "@babel/runtime" "^7.15.4"
 
-"gatsby-plugin-sharp@^4.0.0-next", "gatsby-plugin-sharp@^4.7.0":
-  "integrity" "sha512-l1C+TB2D04yZq7f35aj4irkkSsm4HIQEQVWAED2zkoL3RrUxQ2uRT4kakulv00SdGd5/i+7btc9xOPB25DGvgA=="
-  "resolved" "https://registry.npmjs.org/gatsby-plugin-sharp/-/gatsby-plugin-sharp-4.7.0.tgz"
-  "version" "4.7.0"
+"gatsby-plugin-sharp@^4.0.0-next", "gatsby-plugin-sharp@^4.9.1":
+  "integrity" "sha512-oHnuxIok0Ct3nktn53XQFX36QXwa4H9hjj5lkxaY3zh0giYJmFAsHyvus6DKzGQ14cTC3AkvaD+rqv4SGdjRcg=="
+  "resolved" "https://registry.npmjs.org/gatsby-plugin-sharp/-/gatsby-plugin-sharp-4.9.1.tgz"
+  "version" "4.9.1"
   dependencies:
     "@babel/runtime" "^7.15.4"
     "async" "^3.2.3"
@@ -6297,9 +6297,9 @@
     "debug" "^4.3.3"
     "filenamify" "^4.3.0"
     "fs-extra" "^10.0.0"
-    "gatsby-core-utils" "^3.7.0"
-    "gatsby-plugin-utils" "^3.1.0"
-    "gatsby-telemetry" "^3.7.0"
+    "gatsby-core-utils" "^3.9.1"
+    "gatsby-plugin-utils" "^3.3.0"
+    "gatsby-telemetry" "^3.9.1"
     "got" "^11.8.3"
     "lodash" "^4.17.21"
     "mini-svg-data-uri" "^1.4.3"
@@ -6307,7 +6307,7 @@
     "probe-image-size" "^6.0.0"
     "progress" "^2.0.3"
     "semver" "^7.3.5"
-    "sharp" "^0.29.3"
+    "sharp" "^0.30.1"
     "svgo" "1.3.2"
     "uuid" "3.4.0"
 
@@ -6324,7 +6324,7 @@
     "@babel/runtime" "^7.15.4"
     "babel-plugin-remove-graphql-queries" "^4.9.1"
 
-"gatsby-plugin-utils@^3.1.0", "gatsby-plugin-utils@^3.3.0":
+"gatsby-plugin-utils@^3.3.0":
   "integrity" "sha512-wmwSQ/IMVQ8lII015IRToeXzu4LsRayKhlrBpuCbzJJgzBEgTH5ezHkGnxAGKvMn7xP9Oekz6DX/XYwUnAe4ug=="
   "resolved" "https://registry.npmjs.org/gatsby-plugin-utils/-/gatsby-plugin-utils-3.3.0.tgz"
   "version" "3.3.0"
@@ -6339,6 +6339,31 @@
   dependencies:
     "@babel/runtime" "^7.15.4"
     "prop-types" "^15.7.2"
+
+"gatsby-remark-gifs@^1.1.0":
+  "integrity" "sha512-6p0ko6mzcyrpQ/7CSb1B66kctTeCNdT1OohxF4InQND9ujPj7tFc5lo96bp35qHDq+CeutqY8m15lwASydxZOw=="
+  "resolved" "https://registry.npmjs.org/gatsby-remark-gifs/-/gatsby-remark-gifs-1.1.0.tgz"
+  "version" "1.1.0"
+  dependencies:
+    "is-relative-url" "^3.0.0"
+    "unist-util-visit" "^2.0.3"
+
+"gatsby-remark-images@^6.9.1":
+  "integrity" "sha512-Z4/Agg/5a+MQYtepY3QmvUMoEBOuxN0p5SEYDAsVNklEK3lfG5TQ3VNFrM9AvauLCrYzSN4GY9K9x9BUH5oC2Q=="
+  "resolved" "https://registry.npmjs.org/gatsby-remark-images/-/gatsby-remark-images-6.9.1.tgz"
+  "version" "6.9.1"
+  dependencies:
+    "@babel/runtime" "^7.15.4"
+    "chalk" "^4.1.2"
+    "cheerio" "^1.0.0-rc.10"
+    "gatsby-core-utils" "^3.9.1"
+    "is-relative-url" "^3.0.0"
+    "lodash" "^4.17.21"
+    "mdast-util-definitions" "^4.0.0"
+    "potrace" "^2.1.8"
+    "query-string" "^6.14.1"
+    "unist-util-select" "^3.0.4"
+    "unist-util-visit-parents" "^3.1.1"
 
 "gatsby-remark-prismjs@^6.9.0":
   "integrity" "sha512-Dz9SNpG08LVMjAuuEpA+mpv/jV54025yYn9C76HwH8c+e54A9w2o+GHgOrR3hdlLfvDL5sVFU8DJFMtohMubCA=="
@@ -6375,7 +6400,7 @@
     "valid-url" "^1.0.9"
     "xstate" "^4.26.1"
 
-"gatsby-telemetry@^3.7.0", "gatsby-telemetry@^3.9.1":
+"gatsby-telemetry@^3.9.1":
   "integrity" "sha512-ChXTshfvo5njd/u6kSZErDUvc/uSmtOEuo7wrt/68Xjz2JVG6nsLlRxaZpx0DxnDAInouItMVX0VF40RAU7qKg=="
   "resolved" "https://registry.npmjs.org/gatsby-telemetry/-/gatsby-telemetry-3.9.1.tgz"
   "version" "3.9.1"
@@ -6452,7 +6477,7 @@
     "@babel/core" "^7.15.5"
     "@babel/runtime" "^7.15.4"
 
-"gatsby@^4.0.0-next", "gatsby@^4.9.3":
+"gatsby@^3.0.0 || ^4.0.0", "gatsby@^4.0.0-next", "gatsby@^4.9.3":
   "integrity" "sha512-XZFmdW30vm1+s/kSxFFhMVl33u2qesWPdLEFtrQgtAnFiVjI/ukS/95gVOilhIMYyiTtuhQXiBKygkTl08oKFw=="
   "resolved" "https://registry.npmjs.org/gatsby/-/gatsby-4.9.3.tgz"
   "version" "4.9.3"
@@ -9312,7 +9337,7 @@
   "resolved" "https://registry.npmjs.org/node-addon-api/-/node-addon-api-3.2.1.tgz"
   "version" "3.2.1"
 
-"node-addon-api@^4.2.0", "node-addon-api@^4.3.0":
+"node-addon-api@^4.3.0":
   "integrity" "sha512-73sE9+3UaLYYFmDsFZnqCInzPyh3MqIwZO9cw58yIqAZhONrrabrYyYe3TuIqtIiOuTXVhsGau8hcrhhwSsDIQ=="
   "resolved" "https://registry.npmjs.org/node-addon-api/-/node-addon-api-4.3.0.tgz"
   "version" "4.3.0"
@@ -10396,7 +10421,7 @@
   dependencies:
     "jimp" "^0.14.0"
 
-"prebuild-install@^7.0.0", "prebuild-install@^7.0.1":
+"prebuild-install@^7.0.1":
   "integrity" "sha512-QBSab31WqkyxpnMWQxubYAHR5S9B2+r81ucocew34Fkl98FhvKIF50jIJnNOBmAZfyNV7vE5T6gd3hTVWgY6tg=="
   "resolved" "https://registry.npmjs.org/prebuild-install/-/prebuild-install-7.0.1.tgz"
   "version" "7.0.1"
@@ -11594,20 +11619,6 @@
   "integrity" "sha512-LUMFi+RppPlrHzbqmFnINTrazo0lPNwhcgzuAXVVcfy/mqPDrQmHAyz5bvV0gDAuRFrk804V0HpQ6u9sZ0tBeg=="
   "resolved" "https://registry.npmjs.org/shallow-compare/-/shallow-compare-1.2.2.tgz"
   "version" "1.2.2"
-
-"sharp@^0.29.3":
-  "integrity" "sha512-fKWUuOw77E4nhpyzCCJR1ayrttHoFHBT2U/kR/qEMRhvPEcluG4BKj324+SCO1e84+knXHwhJ1HHJGnUt4ElGA=="
-  "resolved" "https://registry.npmjs.org/sharp/-/sharp-0.29.3.tgz"
-  "version" "0.29.3"
-  dependencies:
-    "color" "^4.0.1"
-    "detect-libc" "^1.0.3"
-    "node-addon-api" "^4.2.0"
-    "prebuild-install" "^7.0.0"
-    "semver" "^7.3.5"
-    "simple-get" "^4.0.0"
-    "tar-fs" "^2.1.1"
-    "tunnel-agent" "^0.6.0"
 
 "sharp@^0.30.1":
   "integrity" "sha512-mrMeKI5ECTdYhslPlA2TbBtU3nZXMEBcQwI6qYXjPlu1LpW4HBZLFm6xshMI1HpIdEEJ3UcYp5AKifLT/fEHZQ=="
@@ -12966,7 +12977,7 @@
   dependencies:
     "unist-util-is" "^3.0.0"
 
-"unist-util-visit-parents@^3.0.0":
+"unist-util-visit-parents@^3.0.0", "unist-util-visit-parents@^3.1.1":
   "integrity" "sha512-1KROIZWo6bcMrZEwiH2UrXDyalAa0uqzWCxCJj6lPOvTve2WkfgCytoDTPaMnodXh1WrXOq0haVYHj99ynJlsg=="
   "resolved" "https://registry.npmjs.org/unist-util-visit-parents/-/unist-util-visit-parents-3.1.1.tgz"
   "version" "3.1.1"

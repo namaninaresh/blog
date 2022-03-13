@@ -3,11 +3,10 @@ import * as React from "react";
 import Layout from "../components/layout";
 import Seo from "../components/Seo";
 
-const AboutPage = () => {
-
+const AboutPage = (props) => {
 
   return (
-    <Layout pageTitle="About Naresh Namani">
+    <Layout pageTitle="About Naresh Namani" pageName = {props.path}>
       <Seo  title='About ' description={"Get to know about Naresh Namani"} />
       <div className="about">
         <h3 className="heading">About Me</h3>

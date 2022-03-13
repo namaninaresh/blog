@@ -7,7 +7,7 @@ import PostItem from '../components/postItem';
 import Seo from "../components/Seo";
 
 
-function TagsPage ({data})
+function TagsPage ({data,path})
 {
 const [filteredData, setFilteredData] = useState([]);
 const [selectionName, setName] = useState();
@@ -21,7 +21,7 @@ const [selectionName, setName] = useState();
 
   
 return (
-  <Layout pageTitle="My Blog Posts">
+  <Layout pageTitle="My Blog Posts" pageName={path}>
     <Seo  title="Articles on tags selected" description={"Articles based on the interests of selected tags to learn "}/>
   <div>
   

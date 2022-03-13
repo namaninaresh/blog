@@ -4,8 +4,7 @@ import Icon from '../Icons/Icon';
 
 
 
-const Toolbar = props => {
-
+const Toolbar = ({pageName}) => {
     const [sideDrawerOpen, setSideDrawer] = React.useState(false);
     const [themeValue, setTheme] = React.useState("default")
 
@@ -48,18 +47,18 @@ return(
             <Link to='/' role={"link"} className='toolbar__logo'>Naresh Namani</Link>
             <div className='spacer'></div>
             <ul className='nav__menu'>
-    <li><Link to='/' role={"link"}>Home</Link></li>
-    <li><Link  to='#' role={"link"}>Topic 
+    <li><Link to='/' className={ pageName=== '/' ? 'active' :undefined} role={"link"}>Home</Link></li>
+   {/* <li><Link  to='#' role={"link"}>Topic 
     </Link>
       <ul className="dropdown">
         <li><Link to='/' role={"link"}>Javascript</Link></li>
         <li><Link to='/' role={"link"}>Data Structures</Link></li>
         <li><Link to='/' role={"link"}>Java</Link></li>
       </ul>
-    </li>
-    <li><Link to='/tags' role={"link"}>Tags</Link></li>
-    <li><Link to='/learn' role={"link"}>Learn</Link></li>
-    <li><Link to='/about' role={"link"}>About me</Link></li>
+    </li> */}
+    <li><Link to='/tags' className={ pageName?.includes('tag') ? 'active' :undefined} role={"link"}>Tags</Link></li>
+    <li><Link to='/learn' className={ pageName?.includes('learn') ? 'active' :undefined} role={"link"}>Learn</Link></li>
+    <li><Link to='/about' className={ pageName?.includes('about') ? 'active' :undefined} role={"link"}>About me</Link></li>
     {/*<li><Link  to='#'>
       <Icon  name={themeValue || "default"} color= {themeValue ==='light' ? '#000' : '#fff' }/>
     </Link>
@@ -112,7 +111,7 @@ return(
                             </i>
                             <span className='nav__name'>Home </span>
                         </Link>
-                        <div className='nav__dropdown'>
+                        {/*<div className='nav__dropdown'>
                         <div className='nav__link'>
                         <i className='nav__icon topic'>
                         <Icon name="topic" color='#0d96f2'  />
@@ -136,7 +135,7 @@ return(
                         </Link>
                         </div>
                         </div>
-                        </div>
+                        </div> */}
                         <Link to='/tags' className='nav__link' role={"link"}>
                         <i className='nav__icon contact'>
                         <Icon name="tags" color='#0d96f2'  />
@@ -146,7 +145,7 @@ return(
 
                         <Link to='/learn' className='nav__link' role={"link"}>
                         <i className='nav__icon contact'>
-                        <Icon name="tags" color='#0d96f2'  />
+                        <Icon name="learn" color='#0d96f2'  />
                         </i>
                             <span className='nav__name'>Learn</span>
                         </Link>

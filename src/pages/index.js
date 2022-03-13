@@ -9,10 +9,10 @@ import Seo from "../components/Seo"
 
 
 
-const BlogPage = ({data}) => {
-  
+const BlogPage = ({data,location,path}) => {
+
   return (
-    <Layout pageTitle="My Blog Posts">
+    <Layout pageTitle="My Blog Posts" pageName={path}>
       <Seo  title='Naresh Namani' description={"An Visualized and interactive tutorials to learn programming languages in a easy way"}/>
 
         <section className='home__layout'>

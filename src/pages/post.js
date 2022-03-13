@@ -5,14 +5,14 @@ import { MDXRenderer } from 'gatsby-plugin-mdx'
 import {MDXProvider} from '@mdx-js/react'
 import Callouts from '../components/Callouts';
 import Accordation from '../components/Accordation'
+import Video from '../components/Video'
 
 import TagIcon  from '../components/Icons/TagIcons';
 import Seo from '../components/Seo'
-const shortcodes = { Callouts,Accordation}
+const shortcodes = { Callouts,Accordation,Video}
 
 const BlogPost = ({data,location , pageContext}) => {
-
-  console.log(pageContext)
+  
 
   return (
     <Layout pageTitle={data.mdx.frontmatter.title}>
@@ -31,7 +31,7 @@ const BlogPost = ({data,location , pageContext}) => {
         }
      
       <p> Posted on : {data.mdx.frontmatter.date}</p>
-     <p><Link to={pageContext.nextPostId} >{pageContext.nextPostId}</Link></p>
+     {/* <p><Link to={pageContext.nextPostId} >{pageContext.nextPostId}</Link></p> */}
      </div>
     <hr></hr>
     <MDXProvider components={shortcodes}>

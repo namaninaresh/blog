@@ -19,8 +19,7 @@ import Footer from './Toolbar/Footer';
 ; */
 
 
-const Layout = ({ pageTitle, children }) => {
-   
+const Layout = (props) => {
     const [sideDrawerOpen, setSideDrawer] = React.useState(false);
 
    // let sideDrawer;
@@ -40,7 +39,7 @@ const Layout = ({ pageTitle, children }) => {
     }
     return (
         <>
-      <Toolbar drawerToggler={drawerToggler}     sideDrawerOpen={sideDrawerOpen} />
+      <Toolbar drawerToggler={drawerToggler}   pageName={props.pageName}  sideDrawerOpen={sideDrawerOpen} />
       
 
         <div  className='container' style={{height:'100%'}}> 
@@ -51,7 +50,7 @@ const Layout = ({ pageTitle, children }) => {
           {/* <h1 className="heading">{pageTitle}
          
           </h1> */}
-          {children}
+          {props.children}
         </main>
       </div>
 

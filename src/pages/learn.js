@@ -2,7 +2,7 @@
 import * as React from "react";
 import Layout from "../components/layout";
 import Seo from "../components/Seo";
-import { graphql, Link } from 'gatsby'
+import {  Link } from 'gatsby'
 import TagIcon  from '../components/Icons/TagIcons';
 
 const list = [
@@ -83,10 +83,10 @@ const ItemCompo = ({name,iconName,to})=><Link className="learn__programming_item
   <span>{name}</span>
   </Link>
 
-const AboutPage = ({data}) => {
+const LearnPage = ({data,path}) => {
 
   return (
-    <Layout pageTitle="Learning">
+    <Layout pageTitle="Learning" pageName={path}>
       <Seo title={"Learning Page"}  />
       <div className="about">
         <h3 className="heading">Learning Page</h3>
@@ -112,7 +112,7 @@ const AboutPage = ({data}) => {
   );
 };
 
-export default AboutPage;
+export default LearnPage;
 
 
 
