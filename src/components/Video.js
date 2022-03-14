@@ -50,13 +50,13 @@ function App(props) {
   };
 
   const revert = () => {
-    videoRef.current.currentTime -= 1;
+    videoRef.current.currentTime -= 5;
   };
 
-  window.setInterval(function () {
-    setCurrentTime(videoRef.current?.currentTime);
-    setProgress((videoRef.current?.currentTime / videoTime) * 100);
-  }, 1000);
+  // window.setInterval(function () {
+  //   setCurrentTime(videoRef.current?.currentTime);
+  //   setProgress((videoRef.current?.currentTime / videoTime) * 100);
+  // }, 1000);
 
   return (
     <div className="app">
