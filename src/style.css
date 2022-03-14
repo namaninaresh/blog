@@ -1783,3 +1783,128 @@ pre
 
 }
 
+
+.videoPlayer
+{
+
+    width: 100%;
+  
+}
+
+.app
+{
+  position: relative;
+
+  margin: 1rem 0;
+}
+/* Video */
+
+.video {
+width: 100%;
+}
+
+/* Controls */
+
+.controlsContainer {
+  position: absolute;
+  /* display: flex;
+  flex-direction: column; */
+  margin: 0;
+  top: 0;
+  /* align-items: center; */
+  width: 100%;
+  height: 100%;
+  /* padding: 0 40px; */
+  z-index: 20;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  /* padding-top: 18rem; */
+  margin: auto;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+  height: 100%;
+}
+
+.addBackdrop
+{
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.controlsIcon {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  margin-left: 10rem;
+  margin-right: 10rem;
+}
+
+.controlsIcon--small {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  margin-left: 10rem;
+  margin-right: 10rem;
+}
+
+/* The time controls section */
+
+.timecontrols {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  position: absolute;
+  bottom: 4rem;
+  margin-left: 10vw;
+}
+
+.time_progressbarContainer {
+  background-color: gray;
+  border-radius: 15px;
+  width: 75vw;
+  height: 5px;
+  z-index: 30;
+  position: relative;
+  margin: 0 20px;
+}
+
+.time_progressBar {
+  border-radius: 15px;
+  background-color: indigo;
+  height: 100%;
+}
+
+.controlsTime {
+  color: white;
+}
+.controlsIcons
+{
+  background: var(--color-blue-btn);
+ 
+  border-radius: 50%;
+  padding:1rem;
+}
+.opacity_4
+{
+  opacity: 0.4;
+}
+
+.revert 
+{
+  transform: rotate(178deg) !important;
+}
+@media (max-width:768px)
+{
+  .opacity_4
+{
+  opacity: 0;
+}
+.opacity_1
+{
+  opacity: 1;
+}
+
+
+}
