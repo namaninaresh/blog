@@ -6,7 +6,12 @@ import Layout from "../components/layout";
 const AboutPage = () => {
   return (
     <Layout pageTitle="404 Page">
-      <div className="error">
+      <div id="main">
+    	<div class="fof">
+        		<h1>Error 404</h1>
+    	</div>
+</div>
+      {/* <div className="error">
        
       <div class="ocean">
   <div class="wave"></div>
@@ -23,7 +28,7 @@ const AboutPage = () => {
            </div>
         </div>
         
-      </div>
+  </div> */}
     </Layout>
   );
 };
