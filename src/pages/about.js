@@ -62,7 +62,7 @@ const AboutPage = (props) => {
                     </figcaption>
                   </Link>
                 </figure>
-              </li>
+              </li> 
 
               <li>
                 <figure>

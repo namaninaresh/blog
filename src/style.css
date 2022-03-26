@@ -594,7 +594,7 @@ box-shadow: -2px 11px 62px -21px rgba(0,0,0,0.29);
   .toolbar__logo 
   {
     margin-top: 0.5rem;
-    color: var(--color-blue-btn);
+    color: var(--color-gray-200);
     text-decoration: none;
     font-size: 1.3rem;
     font-weight: 500;
