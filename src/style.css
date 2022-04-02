@@ -1819,7 +1819,10 @@ pre
 
 
 /* learn **/
-
+.learn .blogPage ul
+{
+  list-style: disc !important;
+}
 
 .learn .nav__dropdown-item
 {

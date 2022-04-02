@@ -113,19 +113,12 @@ const navItems = learnNav[folderName].map((item,index)=><ListItem key={index} {.
    <div className='blogPage__header'>
    <h1 className='blogPage__heading'>{data.mdx.frontmatter.title}</h1>
 
-      {
-        data.mdx.frontmatter.tags.map((tag,index)=> (
-          <i className='tag__icons ph-1' key={index}>
-      <TagIcon name={tag} />
-      </i>
-        ))
-      }
       <div className='toolbar_togglerIcon content__holder' onClick={drawerToggler} >
                 Menu
                <Icon name="sidebar" width={24} height={24} color='#027ffe' /> 
                 </div>
     {/* <p> Posted on : {data.mdx.frontmatter.date}</p> */}
-   <p><Link to={`/learn/`+ (pageContext.nextPostId || pageContext.previousPostId)} >{pageContext.nextPostId || pageContext.previousPostId}</Link></p>
+   {/* <p><Link to={`/learn/`+ (pageContext.nextPostId || pageContext.previousPostId)} >{pageContext.nextPostId || pageContext.previousPostId}</Link></p> */}
    </div>
   <hr></hr>
   <MDXProvider components={shortcodes}>
