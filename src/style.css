@@ -2267,11 +2267,7 @@ body.dark-theme {
 
 /*=============== REUSABLE CSS CLASSES ===============*/
 
-*
-{
-  margin: 0;
-  padding: 0;
-}
+
 
 .grid {
   display: grid;
@@ -2489,6 +2485,12 @@ body.dark-theme {
   font-weight: 200;
   
 }
+
+.profile .h3 , .profile .h2, .profile p
+{
+  padding: 0 ;
+  margin: 0 !important;
+}
 /*=============== FILTERS TABS===============*/
 .filters__content {
   margin: 2rem 0 2.5rem;
@@ -2523,7 +2525,6 @@ body.dark-theme {
 /*=============== PROJECTS ===============*/
 .projects__card {
   position: relative;
-  border-radius: 1rem;
   overflow: hidden;
 }
 
@@ -2624,6 +2625,10 @@ body.dark-theme {
 /* Activate button filter */
 .filter-tab-active {
   background-color: var(--color-blockquote-bg)
+}
+.skills__area span
+{
+  color: var(--color-gray-400);
 }
 
 /*=============== FOOTER ===============*/

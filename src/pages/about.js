@@ -3,9 +3,10 @@ import * as React from "react";
 import Icon from "../components/Icons/Icon";
 import Layout from "../components/layout";
 import Seo from "../components/Seo";
+import TagIcon from '../components/Icons/TagIcons';
 
 const AboutPage = (props) => {
-  const [tabActive, setTabStatus] = React.useState("projects");
+  const [tabActive, setTabStatus] = React.useState("skills");
 
   return (
     <Layout pageTitle="About Naresh Namani" pageName={props.path}>
@@ -131,7 +132,7 @@ const AboutPage = (props) => {
               data-content
               id="projects"
             >
-              <article class="projects__card">
+              <div class="projects__card">
                 <img
                   src="https://cdn.dribbble.com/users/6205537/screenshots/14398869/media/321a3fe4165f1622161808b2d8828b05.jpg?compress=1&resize=1200x900&vertical=top"
                   alt=""
@@ -151,13 +152,14 @@ const AboutPage = (props) => {
                     </a>
                   </div>
                 </div>
-              </article>
+              </div>
 
-              <article class="projects__card">
+              <article class="projects__card" >
                 <img
                   src="https://cdn.dribbble.com/users/6205537/screenshots/14394174/media/5c374442cad32ccd3999245c67b4402d.jpg?compress=1&resize=1200x900&vertical=top"
                   alt=""
                   class="projects__img"
+                  data-aos="zoom-in"
                 />
 
                 <div class="projects__modal">
@@ -219,7 +221,7 @@ const AboutPage = (props) => {
                 </div>
               </article>
 
-              <article class="projects__card">
+              <article class="projects__card" data-aos="zoom-in">
                 <img
                   src="https://cdn.dribbble.com/users/6205537/screenshots/14398869/media/a13c230eb4ed979c046febe5229cc60b.jpg?compress=1&resize=1200x900&vertical=top"
                   alt=""
@@ -259,7 +261,7 @@ const AboutPage = (props) => {
 
                       <div>
                         <h3 class="skills__name">HTML</h3>
-                        <span class="skills__level">Basic</span>
+                        <span class="skills__level">Advanced</span>
                       </div>
                     </div>
 
@@ -267,10 +269,11 @@ const AboutPage = (props) => {
                       <i class="ri-checkbox-circle-line"></i>
 
                       <div>
-                        <h3 class="skills__name">CSS</h3>
-                        <span class="skills__level">Advanced</span>
+                        <h3 class="skills__name">React</h3>
+                        <span class="skills__level">Intermediate</span>
                       </div>
                     </div>
+                    
 
                     <div class="skills__data">
                       <i class="ri-checkbox-circle-line"></i>
@@ -283,12 +286,12 @@ const AboutPage = (props) => {
                   </div>
 
                   <div class="skills__group">
-                    <div class="skills__data">
+                  <div class="skills__data">
                       <i class="ri-checkbox-circle-line"></i>
 
                       <div>
-                        <h3 class="skills__name">React</h3>
-                        <span class="skills__level">Intermediate</span>
+                        <h3 class="skills__name">CSS</h3>
+                        <span class="skills__level">Advanced</span>
                       </div>
                     </div>
 
@@ -318,25 +321,30 @@ const AboutPage = (props) => {
 
                 <div class="skills__box">
                   <div class="skills__group">
+                   
+
+                  <div class="skills__data">
+                      
+                      <div>
+                        <h3 class="skills__name"> 
+  Python</h3>
+                        <span class="skills__level">Basic</span>
+                      </div>
+                    </div>
+
                     <div class="skills__data">
-                      <i class="ri-checkbox-circle-line"></i>
 
                       <div>
-                        <h3 class="skills__name">PHP</h3>
+                        <h3 class="skills__name"> Node Js</h3>
                         <span class="skills__level">Intermediate</span>
                       </div>
                     </div>
 
-                    <div class="skills__data">
-                      <i class="ri-checkbox-circle-line"></i>
+                  </div>
 
-                      <div>
-                        <h3 class="skills__name">MySQL</h3>
-                        <span class="skills__level">Advance</span>
-                      </div>
-                    </div>
+                  <div class="skills__group">
 
-                    <div class="skills__data">
+                  <div class="skills__data">
                       <i class="ri-checkbox-circle-line"></i>
 
                       <div>
@@ -344,26 +352,7 @@ const AboutPage = (props) => {
                         <span class="skills__level">Intermediate</span>
                       </div>
                     </div>
-                  </div>
-
-                  <div class="skills__group">
-                    <div class="skills__data">
-                      <i class="ri-checkbox-circle-line"></i>
-
-                      <div>
-                        <h3 class="skills__name">Python</h3>
-                        <span class="skills__level">Basic</span>
-                      </div>
-                    </div>
-
-                    <div class="skills__data">
-                      <i class="ri-checkbox-circle-line"></i>
-
-                      <div>
-                        <h3 class="skills__name">Node Js</h3>
-                        <span class="skills__level">Intermediate</span>
-                      </div>
-                    </div>
+                 
                   </div>
                 </div>
               </div>

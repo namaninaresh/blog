@@ -59,6 +59,8 @@ return(
     <li><Link to='/tags' className={ pageName?.includes('tag') ? 'active' :undefined} role={"link"}>Tags</Link></li>
     <li><Link to='/learn' className={ pageName?.includes('learn') ? 'active' :undefined} role={"link"}>Learn</Link></li>
     <li><Link to='/about' className={ pageName?.includes('about') ? 'active' :undefined} role={"link"}>About me</Link></li>
+    <li onClick={()=>updateTheme(themeValue === "default" ? "dark":"default")} style={{padding:"0 1rem "}}>  <Icon name={themeValue ==="default" ? "light":"dark"} width={16} height={16} color='#0d96f2' /> </li>
+    
     {/*<li><Link  to='#'>
       <Icon  name={themeValue || "default"} color= {themeValue ==='light' ? '#000' : '#fff' }/>
     </Link>
@@ -173,7 +175,7 @@ return(
                         <ul className="dropdown dropdown__theme">
       {/*  <li onClick={()=>updateTheme("light")}> <Icon name="light" width={16} height={16} color='#0d96f2' />  Light</li>
         */} <li onClick={()=>updateTheme("dark")}> <Icon name="dark" width={16} height={16} color='#0d96f2' />  Dark</li>
-        <li onClick={()=>updateTheme("default")}>  <Icon name="default" width={16} height={16} color='#0d96f2' />  Default</li>
+        <li onClick={()=>updateTheme("light")}>  <Icon name="default" width={16} height={16} color='#0d96f2' />  Default</li>
       </ul>
                         </div>
                         </div>
@@ -182,7 +184,7 @@ return(
                         {/* <li className='theme'> Theme  <label>
            
           <select value={themeValue} className='theme__toggler' onChange={(event)=>updateTheme(event.target.value)}>
-            <option value="light">Light</option>
+            <option value="default">default</option>
             <option value="dark">Dark</option>
             <option value="default">Default</option>
           </select>
