@@ -5,162 +5,372 @@ import Layout from "../components/layout";
 import Seo from "../components/Seo";
 
 const AboutPage = (props) => {
+  const [tabActive, setTabStatus] = React.useState("projects");
+
   return (
     <Layout pageTitle="About Naresh Namani" pageName={props.path}>
       <Seo title="About " description={"Get to know about Naresh Namani"} />
-      <div className="about">
-        <h3 className="heading">About Me</h3>
 
-        {/* <p className="heading__description">
-          Learn about me </p> */}
-        <div className="about__section">
-          <div className="about__pic-outline">
-            <div className="about__pic"></div>
-          </div>
+      <div class="profile container " style={{ marginTop: "1rem" }}>
+        <div className="profile__dev">
+          <div className="profile_dev container">
+            <div class="profile__border">
+              <div className="about__pic"></div>
+            </div>
 
-          <div className="about__description">
-            <p style={{ textAlign: "center" }}>
-              Hi, I'm <span>NARESH NAMANI </span>
-              
-            </p>
-            <p>Im a front end developer and I love to code the beautiful websites
-              and learning new technologies</p>
-            <div className="about__exp">
-              <div class="icon">
-                <Icon name="work" />
+            <div className="profile_desc">
+              <div>
+                <h2 class="profile__name">
+                  Naresh Namani <i className="username">@nareshnamai</i>
+                </h2>
+                <p style={{ padding: "1rem 0" }}>
+                
+                  <Icon name="work" /> Working in Tcs
+                </p>
+                <p>2+ working Years</p>
+
+                <div className="download">
+                  <a
+                    href="https://api.whatsapp.com/send?phone=+91 8686506505&text=Hello, how are you ?"
+                    target="_blank"
+                    class="button "
+                  >
+                    <Icon name="whatsapp" />
+                  </a>
+
+                  <a
+                    download=""
+                    href="assets/pdf/nareshnamani.pdf"
+                    class="button "
+                  >
+                    <Icon name="download" />
+                  </a>
+                </div>
               </div>
-              <span class="open-sans-font educationyear">Present</span>
-              <div class="content">
-                <h5>Front End Developer </h5>
-                <p>- Tata Consultancy Services</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="profile__container grid">
+          <div class="profile__data">
+            <div class="profile__border">
+              <div class="profile__perfil">
+                <div
+                  className="about__pic"
+                  style={{ width: "100%", height: "100%" }}
+                ></div>
               </div>
             </div>
 
-            <p></p>
-          </div>
-        </div>
-        <div className="skills__section">
-          <h3>Skills</h3>
-          <p style={{paddingLeft:"1rem"}}>    HTML ,CSS , JavaScript , React , Java</p>
-          
-        </div>
-
-        <div className="designs__section">
-          <h3>UI Designs</h3>
-          <div>
-            <ul class="gallery caption-2">
-              <li>
-                <figure>
-                  <Link to="#">
-                    <img
-                      src="https://cdn.dribbble.com/users/6205537/screenshots/14504142/media/2347750585629f1b8bddafc6d33b5959.png"
-                      alt=""
-                    />
-                    <figcaption>
-                      <h1>UPSkill - Learning Portal Ui</h1>
-                      <p></p>
-                    </figcaption>
-                  </Link>
-                </figure>
-              </li> 
-
-              <li>
-                <figure>
-                  <Link to="#">
-                    <img
-                      src="https://cdn.dribbble.com/users/6205537/screenshots/14398869/media/321a3fe4165f1622161808b2d8828b05.jpg?compress=1&resize=1200x900&vertical=top"
-                      alt=""
-                    />
-                    <figcaption>
-                      <h1>Image Title</h1>
-                      <p>By: Someone</p>
-                    </figcaption>
-                  </Link>
-                </figure>
-              </li>
-
-              <li>
-                <figure>
-                  <Link to="#">
-                    <img
-                      src="https://cdn.dribbble.com/users/6205537/screenshots/14394174/media/5c374442cad32ccd3999245c67b4402d.jpg?compress=1&resize=1200x900&vertical=top"
-                      alt=""
-                    />
-                    <figcaption>
-                      <h1>Image Title</h1>
-                      <p>By: Someone</p>
-                    </figcaption>
-                  </Link>
-                </figure>
-              </li>
-
-              <li>
-                <figure>
-                  <Link to="#">
-                    <img
-                      src="https://cdn.dribbble.com/users/6205537/screenshots/14504622/media/1340bf7572895589e403db637ae9e963.png?compress=1&resize=1200x900&vertical=top"
-                      alt=""
-                    />
-                    <figcaption>
-                      <h1>Image Title</h1>
-                      <p>By: Someone</p>
-                    </figcaption>
-                  </Link>
-                </figure>
-              </li>
-
-              <li>
-                <figure>
-                  <Link to="#">
-                    <img
-                      src="https://cdn.dribbble.com/users/6205537/screenshots/14394174/media/73f475e230b3501b2683d7fdd7d4c200.jpg?compress=1&resize=1200x900&vertical=top"
-                      alt=""
-                    />
-                    <figcaption>
-                      <h1>Image Title</h1>
-                      <p>By: Someone</p>
-                    </figcaption>
-                  </Link>
-                </figure>
-              </li>
-
-              <li >
-                <figure>
-                  <Link to="#">
-                    <img
-                      src="https://cdn.dribbble.com/users/6205537/screenshots/14398869/media/a13c230eb4ed979c046febe5229cc60b.jpg?compress=1&resize=1200x900&vertical=top"
-                      alt=""
-                    />
-                    <figcaption>
-                      <h1>Image Title</h1>
-                      <p>By: Someone</p>
-                    </figcaption>
-                  </Link>
-                </figure>
-              </li>
-              <li >
-                <figure>
-                  <Link to="#">
-                    <img
-                      src="https://cdn.dribbble.com/users/6205537/screenshots/14398869/media/199d1ba644728cbda38f7a5f64b1b13f.jpg?compress=1&resize=1200x900&vertical=top"
-                      alt=""
-                    />
-                    <figcaption>
-                      <h1>Image Title</h1>
-                      <p>By: Someone</p>
-                    </figcaption>
-                  </Link>
-                </figure>
-              </li>
-            </ul>
+            <h2 class="profile__name">Naresh Namani</h2>
+            <i className="username">@nareshnamai</i>
+            <p style={{ padding: "1rem 0" }}>
+             
+              <Icon name="work" /> Working in Tcs
+            </p>
           </div>
 
-          <div className="center">
-            <Link to="https://dribbble.com/naresh_namani" target={"_blank"} className="about__see-more"> <Icon name="dribble"/> See more on Dribble</Link>
+          <div class="profile__info grid">
+            <div class="profile__info-group">
+              <h3 class="profile__info-number">3</h3>
+              <p class="profile__info-description">
+                Years of <br /> work
+              </p>
+            </div>
+          </div>
+
+          <div class="profile__buttons">
+            <a download="" href="assets/pdf/Naresh-Namani.pdf" class="button">
+              Download CV <i class="ri-download-line"></i>
+            </a>
+
+            <div class="profile__buttons-small">
+              <a
+                href="https://api.whatsapp.com/send?phone=+91 8686506505&text=Hello, more information!"
+                target="_blank"
+                class="button button__small button_whatsapp"
+              >
+                <i class="ri-whatsapp-line">
+                 
+                  <Icon name="whatsapp" />
+                </i>
+              </a>
+            </div>
           </div>
         </div>
-        <div></div>
       </div>
+
+      <main class="main">
+        <section class="filters container">
+          <ul class="filters__content">
+            <button
+              class={`filters__button ${
+                tabActive === "projects" && "filter-tab-active"
+              }`}
+              data-target="#projects"
+              onClick={() => setTabStatus("projects")}
+            >
+              UI Designs
+            </button>
+            <button
+              class={`filters__button ${
+                tabActive === "skills" && "filter-tab-active"
+              }`}
+              data-target="#skills"
+              onClick={() => setTabStatus("skills")}
+            >
+              Skills
+            </button>
+          </ul>
+
+          <div class="filters__sections">
+            <div
+              class={`projects__content grid  ${
+                tabActive === "projects" && "filters__active"
+              }`}
+              data-content
+              id="projects"
+            >
+              <article class="projects__card">
+                <img
+                  src="https://cdn.dribbble.com/users/6205537/screenshots/14398869/media/321a3fe4165f1622161808b2d8828b05.jpg?compress=1&resize=1200x900&vertical=top"
+                  alt=""
+                  class="projects__img"
+                />
+
+                <div class="projects__modal">
+                  <div>
+                    {/* <span class="projects__subtitle">Web</span> */}
+                    <h3 class="projects__title">Payment Site</h3>
+                    <a
+                      href="https://cdn.dribbble.com/users/6205537/screenshots/14398869/media/321a3fe4165f1622161808b2d8828b05.jpg?compress=1&resize=1200x900&vertical=top"
+                      target={"_blank"}
+                      class="projects__button button button__small"
+                    >
+                      <Icon name="external_link" />
+                    </a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="projects__card">
+                <img
+                  src="https://cdn.dribbble.com/users/6205537/screenshots/14394174/media/5c374442cad32ccd3999245c67b4402d.jpg?compress=1&resize=1200x900&vertical=top"
+                  alt=""
+                  class="projects__img"
+                />
+
+                <div class="projects__modal">
+                <div>
+                    {/* <span class="projects__subtitle">Web</span> */}
+                    <h3 class="projects__title">Payment Site</h3>
+                    <a
+                      href="https://cdn.dribbble.com/users/6205537/screenshots/14398869/media/321a3fe4165f1622161808b2d8828b05.jpg?compress=1&resize=1200x900&vertical=top"
+                      target={"_blank"}
+                      class="projects__button button button__small"
+                    >
+                      <Icon name="external_link" />
+                    </a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="projects__card">
+                <img
+                  src="https://cdn.dribbble.com/users/6205537/screenshots/14398869/media/a13c230eb4ed979c046febe5229cc60b.jpg?compress=1&resize=1200x900&vertical=top"
+                  alt=""
+                  class="projects__img"
+                />
+
+                <div class="projects__modal">
+                <div>
+                    {/* <span class="projects__subtitle">Web</span> */}
+                    <h3 class="projects__title">Payment Site</h3>
+                    <a
+                      href="https://cdn.dribbble.com/users/6205537/screenshots/14398869/media/321a3fe4165f1622161808b2d8828b05.jpg?compress=1&resize=1200x900&vertical=top"
+                      target={"_blank"}
+                      class="projects__button button button__small"
+                    >
+                      <Icon name="external_link" />
+                    </a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="projects__card">
+                <img
+                  src="https://cdn.dribbble.com/users/6205537/screenshots/14394174/media/73f475e230b3501b2683d7fdd7d4c200.jpg?compress=1&resize=1200x900&vertical=top"
+                  alt=""
+                  class="projects__img"
+                />
+
+                <div class="projects__modal">
+                <div>
+                    {/* <span class="projects__subtitle">Web</span> */}
+                    <h3 class="projects__title">Payment Site</h3>
+                    <a
+                      href="https://cdn.dribbble.com/users/6205537/screenshots/14398869/media/321a3fe4165f1622161808b2d8828b05.jpg?compress=1&resize=1200x900&vertical=top"
+                      target={"_blank"}
+                      class="projects__button button button__small"
+                    >
+                      <Icon name="external_link" />
+                    </a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="projects__card">
+                <img
+                  src="https://cdn.dribbble.com/users/6205537/screenshots/14398869/media/a13c230eb4ed979c046febe5229cc60b.jpg?compress=1&resize=1200x900&vertical=top"
+                  alt=""
+                  class="projects__img"
+                />
+
+                <div class="projects__modal">
+                <div>
+                    {/* <span class="projects__subtitle">Web</span> */}
+                    <h3 class="projects__title">Payment Site</h3>
+                    <a
+                      href="https://cdn.dribbble.com/users/6205537/screenshots/14398869/media/321a3fe4165f1622161808b2d8828b05.jpg?compress=1&resize=1200x900&vertical=top"
+                      target={"_blank"}
+                      class="projects__button button button__small"
+                    >
+                      <Icon name="external_link" />
+                    </a>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div
+              class={`skills__content grid  ${
+                tabActive === "skills" && "filters__active"
+              }`}
+              data-content
+              id="skills"
+            >
+              <div class="skills__area">
+                <h3 class="skills__title">Frontend Developer</h3>
+
+                <div class="skills__box">
+                  <div class="skills__group">
+                    <div class="skills__data">
+                      <i class="ri-checkbox-circle-line"></i>
+
+                      <div>
+                        <h3 class="skills__name">HTML</h3>
+                        <span class="skills__level">Basic</span>
+                      </div>
+                    </div>
+
+                    <div class="skills__data">
+                      <i class="ri-checkbox-circle-line"></i>
+
+                      <div>
+                        <h3 class="skills__name">CSS</h3>
+                        <span class="skills__level">Advanced</span>
+                      </div>
+                    </div>
+
+                    <div class="skills__data">
+                      <i class="ri-checkbox-circle-line"></i>
+
+                      <div>
+                        <h3 class="skills__name">JavaScript</h3>
+                        <span class="skills__level">Intermediate</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="skills__group">
+                    <div class="skills__data">
+                      <i class="ri-checkbox-circle-line"></i>
+
+                      <div>
+                        <h3 class="skills__name">React</h3>
+                        <span class="skills__level">Intermediate</span>
+                      </div>
+                    </div>
+
+                    <div class="skills__data">
+                      <i class="ri-checkbox-circle-line"></i>
+
+                      <div>
+                        <h3 class="skills__name">Bootstrap</h3>
+                        <span class="skills__level">Intermediate</span>
+                      </div>
+                    </div>
+
+                    <div class="skills__data">
+                      <i class="ri-checkbox-circle-line"></i>
+
+                      <div>
+                        <h3 class="skills__name">Git</h3>
+                        <span class="skills__level">Intermediate</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="skills__area">
+                <h3 class="skills__title">Backend Developer</h3>
+
+                <div class="skills__box">
+                  <div class="skills__group">
+                    <div class="skills__data">
+                      <i class="ri-checkbox-circle-line"></i>
+
+                      <div>
+                        <h3 class="skills__name">PHP</h3>
+                        <span class="skills__level">Intermediate</span>
+                      </div>
+                    </div>
+
+                    <div class="skills__data">
+                      <i class="ri-checkbox-circle-line"></i>
+
+                      <div>
+                        <h3 class="skills__name">MySQL</h3>
+                        <span class="skills__level">Advance</span>
+                      </div>
+                    </div>
+
+                    <div class="skills__data">
+                      <i class="ri-checkbox-circle-line"></i>
+
+                      <div>
+                        <h3 class="skills__name">Firebase</h3>
+                        <span class="skills__level">Intermediate</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="skills__group">
+                    <div class="skills__data">
+                      <i class="ri-checkbox-circle-line"></i>
+
+                      <div>
+                        <h3 class="skills__name">Python</h3>
+                        <span class="skills__level">Basic</span>
+                      </div>
+                    </div>
+
+                    <div class="skills__data">
+                      <i class="ri-checkbox-circle-line"></i>
+
+                      <div>
+                        <h3 class="skills__name">Node Js</h3>
+                        <span class="skills__level">Intermediate</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
     </Layout>
   );
 };
