@@ -6,7 +6,7 @@ import Seo from "../components/Seo";
 import TagIcon from '../components/Icons/TagIcons';
 
 const AboutPage = (props) => {
-  const [tabActive, setTabStatus] = React.useState("skills");
+  const [tabActive, setTabStatus] = React.useState("projects");
 
   return (
     <Layout pageTitle="About Naresh Namani" pageName={props.path}>

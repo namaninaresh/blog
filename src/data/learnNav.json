@@ -55,15 +55,90 @@
             },
             {
                 "name":"Roadmap",
+                "link":"roadmap"
+            },
+            {
+                "name":"Programming languages",
                 "link":"intro"
             },
             {
-                "name":"Why",
+                "name":"Time Complexity and space",
                 "link":"intro"
             },
+           
             {
-                "name":"Stack",
-                "link":"intro"
+                "name":"Arrays",
+                "link":[
+                    {
+                        "name":"Basics",
+                        "link":"intro"
+                    },
+                    {
+                        "name":"Insertion",
+                        "link":"intro"
+                    },
+                    {
+                        "name":"Removing",
+                        "link":"intro"
+                    },
+                    {
+                        "name":"Searching",
+                        "link":"intro"
+                    },
+                    {
+                        "name":"Replacing",
+                        "link":"intro"
+                    }
+                ]
+            },
+            {
+                "name":"Linked Lists",
+                "link":[
+                    {
+                        "name":"Introduction",
+                        "link":"intro"
+                    },
+                    {
+                        "name":"Basics",
+                        "link":"intro"
+                    },
+                    {
+                        "name":"Adding Last",
+                        "link":"intro"
+                    },
+                    {
+                        "name":"Adding First",
+                        "link":"intro"
+                    },
+                    {
+                        "name":"Finding Element index",
+                        "link":"intro"
+                    },
+                    {
+                        "name":"Removing First",
+                        "link":"intro"
+                    },
+                    {
+                        "name":"Removing Last",
+                        "link":"intro"
+                    },
+                    {
+                        "name":"Finding Size",
+                        "link":"intro"
+                    },
+                    {
+                        "name":"Converting Linked List to Arrays",
+                        "link":"intro"
+                    },
+                    {
+                        "name":"Types of Linked List",
+                        "link":"intro"
+                    },
+                    {
+                        "name":"Reversing a Linked List ",
+                        "link":"intro"
+                    }
+                ]
             }
 
         ]

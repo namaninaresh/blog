@@ -1819,6 +1819,27 @@ pre
 
 
 /* learn **/
+@media (min-width:768px)
+{
+  .learn .nav__dropdown
+{
+  padding:  1rem 0;
+}
+}
+.learn  .blogPage a
+{
+  text-decoration: none;
+  line-height: 2rem;
+  color: var(--color-gray-200);
+}
+.learn a:hover
+{
+  color: var(--color-blue-primary);
+}
+.learn .blogPage strong
+{
+  color: var(--color-gray-200);
+}
 .learn .blogPage ul
 {
   list-style: disc !important;
@@ -2767,3 +2788,166 @@ body.dark-theme {
     margin: 4.5rem 0 2.5rem;
   }
 }
+
+/*** RadMap Acordation ***/
+.rmAccordation__section
+{
+  display: flex;
+  flex-direction: column;
+}
+
+.rmAccordation
+{
+  background-color: var(--color-primary-bg);
+  color: var(--gray-2);
+  cursor: pointer;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  border: none;
+  outline: none;
+  transition:  background-color 0.6s ease;
+
+
+}
+
+.rmAccordation:hover,
+.rmAccordation .active 
+{
+  background-color: var(--color-block-bg);
+}
+
+.rmAccordation__title 
+{
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.rmAccordation svg
+{
+  transition: transform 0.6s ease;
+}
+
+.rotate
+{
+  transform: rotate(90deg);
+}
+.rmAccordation__content
+{
+  overflow: hidden;
+  transition: max-height 0.6s ease;
+}
+.rmAccordation__text
+{
+  font-size: 1rem;
+  padding: 1rem;
+}
+
+
+
+.panel {
+  background-color: var(--color-block-bg);
+
+}
+.panel__label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background: none;
+  color: var(--color-gray-200);
+  border: none;
+  text-align: left;
+  padding: 1.5rem 1rem 1.5rem 2rem;
+  font-weight: 500;
+  font-size: 17px;
+  font-family: inherit;
+  transition: color 0.2s linear;
+  cursor: pointer;
+}
+.panel__label:focus {
+  outline: none;
+}
+
+.panel__label svg {
+  transform: rotate(-90deg);
+  transition: transform 0.35s cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+.panel[aria-expanded='true'] .panel__content {
+  opacity: 1;
+}
+.panel[aria-expanded='true'] .panel__label svg {
+  transform: rotate(0deg);
+}
+.panel__inner {
+  overflow: hidden;
+  will-change: height;
+  transition: height 0.4s cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+.panel__content {
+  margin: 5px 25px 25px;
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 0.3s linear 0.18s;
+}
+.panel:not(:last-child) {
+  margin-bottom: 3px;
+}
+
+
+/* Style the accordion section */
+.accordion__section {
+  display: flex;
+  flex-direction: column;
+  margin: 0.2rem 0;
+}
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  background-color: var(--color-block-bg);
+  color:var(--color-gray-200);
+  cursor: pointer;
+  padding: 0.2rem 1.4rem;
+  border-radius: 0.2rem;
+
+  display: flex;
+  align-items: center;
+  border: none;
+  outline: none;
+  transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+
+/* Style the accordion content title */
+.accordion__title {
+  font-weight: 600;
+  font-size: 14px;
+  text-align: left;
+}
+
+/* Style the accordion chevron icon */
+.accordion__icon {
+  margin-left: auto;
+  transition: transform 0.6s ease;
+}
+
+/* Style to rotate icon when state is active */
+.rotate {
+  transform: rotate(90deg);
+}
+
+/* Style the accordion content panel. Note: hidden by default */
+.accordion__content {
+  overflow: hidden;
+  background-color: var(--color-block-bg);
+  transition: max-height 0.6s ease;
+}
+
+/* Style the accordion content text */
+.accordion__text {
+  padding: 0 1rem;
+}
+
+/** End of Road Map Accordation***/
