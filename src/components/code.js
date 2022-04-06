@@ -3,16 +3,16 @@ import Highlight, { defaultProps } from "prism-react-renderer";
 import theme from "prism-react-renderer/themes/nightOwl";
 import rangeParser from "parse-numeric-range";
 
-const calculateLinesToHighlight = raw => {
+const calculateLinesToHighlight = (raw) => {
   const lineNumbers = rangeParser(raw);
   if (lineNumbers) {
-    return index => lineNumbers.includes(index + 1);
+    return (index) => lineNumbers.includes(index + 1);
   } else {
     return () => false;
   }
 };
 
-const copyToClipboard = str => {
+const copyToClipboard = (str) => {
   if (navigator.clipboard) {
     navigator.clipboard.writeText(str).then(
       function () {
@@ -28,44 +28,39 @@ const copyToClipboard = str => {
   }
 };
 
-const Code = props => {
+const Code = (props) => {
   const [isCopied, setIsCopied] = React.useState(false);
   const className = props.children.props.className || "";
   const code = props.children.props.children.trim();
   const language = className.replace(/language-/, "");
   const file = props.children.props.file;
+  const hideBar = Boolean(props.children.props.show);
   const highlights = calculateLinesToHighlight(
     props.children.props.highlights || ""
   );
 
   return (
-    <div className="code"
-     
-    >
+    <div className="code">
       <div className="code__header">
-        <div className="code__language"
-          
-        >{`${language}`}</div>
-        <div className="code__filename"
-          
-        >
-          {file && `${file}`}
-        </div>
-        <div style={{ flexGrow: "1" }}></div>
-        <button
-          onClick={() => {
-            copyToClipboard(code);
-            setIsCopied(true);
-            setTimeout(() => setIsCopied(false), 1000);
-          }}
-          className="code__copy"
-        >
-          {isCopied ? "🎉 Copied!" : "Copy"}
-        </button>
+        {!hideBar && (
+          <>
+            <div className="code__language">{`${language}`}</div>
+            <div className="code__filename">{file && `${file}`}</div>
+            <div style={{ flexGrow: "1" }}></div>
+            <button
+              onClick={() => {
+                copyToClipboard(code);
+                setIsCopied(true);
+                setTimeout(() => setIsCopied(false), 1000);
+              }}
+              className="code__copy"
+            >
+              {isCopied ? "🎉 Copied!" : "Copy"}
+            </button>
+          </>
+        )}
       </div>
-      <div
-            className="code__highlightBox"
-      >
+      <div className="code__highlightBox">
         <Highlight
           {...defaultProps}
           code={code}
@@ -75,24 +70,30 @@ const Code = props => {
           {({ className, style, tokens, getLineProps, getTokenProps }) => (
             <pre
               className={className}
-              style={{
-                ...style,
-                backgroundColor: "transparent",
-                float: "left",
-                minWidth: "100%",
-              }}
+              style={
+                hideBar
+                  ? {
+                      ...style,
+                      backgroundColor: "transparent",
+                      float: "left",
+                      minWidth: "100%",
+                      padding: "0",
+                    }
+                  : {
+                      ...style,
+                      backgroundColor: "transparent",
+                      float: "left",
+                      minWidth: "100%",
+                    }
+              }
             >
-              {tokens.map((line, i) => 
-              
-              (
-                
+              {tokens.map((line, i) => (
                 <div
-               
                   {...getLineProps({ line, key: i })}
-                  className={`token-line ${highlights(i) && 'highlight'}`}
-                                  
+                  className={`token-line ${highlights(i) && "highlight"}`}
                 >
-                  {/* <i>1</i> */}{line.map((token, key) => ( 
+                  {/* <i>1</i> */}
+                  {line.map((token, key) => (
                     <span key={key} {...getTokenProps({ token, key })} />
                   ))}
                 </div>

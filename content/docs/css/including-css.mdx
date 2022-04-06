@@ -1,0 +1,131 @@
+---
+title: "Including CSS into HMTL"
+date: "2022-03-12"
+description: "This tuts shows how to include  css into html "
+tags: ["css"]
+type: "tuts"
+---
+
+There are three methods of including CSS into Html document.
+
+1. Inline Styles
+2. Internal / Embedded Style
+3. External Stye
+
+### 1. Inline Style :
+
+Inline styles are applying css styles direcly to tag using style attribute of a tag.
+
+```html show=false
+<h1 style="color:red; font-size:30px;">This is a heading</h1>
+```
+
+Inline styles takes <strong>highest priority</strong> compared to Internal and External .
+
+### 2. Internal /Embedded Style:
+
+Internal style sheets are defined in the Html head section using < style > element.
+
+```html show=false highlights=5,13,18
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>First Page</title>
+    <style>
+      body {
+        background-color: red;
+      }
+      p {
+        color: #fff;
+      }
+    </style>
+    <style>
+      h1 {
+        color: #010101;
+      }
+      p {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Welcome :)</h1>
+    <p>This is a text.</p>
+  </body>
+</html>
+```
+
+We can add multiple style elements inside one Html document.
+
+<Callouts name="warning">
+  Note: As you can see above, multiple styles applied to a p tag in the code.
+  Css has mechanisms to apply styles based on priority ,order and specificity.
+  In above case, it overrides #fff color code with red color as order of it is
+  newest.
+
+you will learning this in next section.
+
+</Callouts>
+
+### 3. External StyleSheet
+
+External StyleSheet contains all the css styles and rules for the tags inside a separate document. we can apply those styles not
+ony one html page , we can link this to others page to apply styles.
+
+- create a new file name it as "style.css"
+
+```css file=style.css
+body {
+  background: lightgreen;
+  color: #fffff1;
+}
+h1 {
+  font-size: 18px;
+  color: green;
+}
+```
+
+- link above style.css to our index.html page
+
+```html file=index.html highlights=5
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>First Page</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Welcome</h1>
+    <p>This is a text.</p>
+  </body>
+</html>
+```
+
+<Callouts name="info">
+  {" "}
+  rel attribute is completely optional. As Css is a default stylesheet language for
+  Html
+</Callouts>
+
+#### Example :
+
+```html file=index.html highlights=5,6,13
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>First Page</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      h1 {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="color : pink">Welcome</h1>
+    <p>This is a text.</p>
+  </body>
+</html>
+```
+
+#### Q : can you guess which color will be applied to h1 tag at the end ?

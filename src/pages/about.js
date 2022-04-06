@@ -3,7 +3,7 @@ import * as React from "react";
 import Icon from "../components/Icons/Icon";
 import Layout from "../components/layout";
 import Seo from "../components/Seo";
-import TagIcon from '../components/Icons/TagIcons';
+import TagIcon from "../components/Icons/TagIcons";
 
 const AboutPage = (props) => {
   const [tabActive, setTabStatus] = React.useState("projects");
@@ -25,7 +25,6 @@ const AboutPage = (props) => {
                   Naresh Namani <i className="username">@nareshnamai</i>
                 </h2>
                 <p style={{ padding: "1rem 0" }}>
-                
                   <Icon name="work" /> Working in Tcs
                 </p>
                 <p>2+ working Years</p>
@@ -66,7 +65,6 @@ const AboutPage = (props) => {
             <h2 class="profile__name">Naresh Namani</h2>
             <i className="username">@nareshnamai</i>
             <p style={{ padding: "1rem 0" }}>
-             
               <Icon name="work" /> Working in Tcs
             </p>
           </div>
@@ -92,7 +90,6 @@ const AboutPage = (props) => {
                 class="button button__small button_whatsapp"
               >
                 <i class="ri-whatsapp-line">
-                 
                   <Icon name="whatsapp" />
                 </i>
               </a>
@@ -154,7 +151,7 @@ const AboutPage = (props) => {
                 </div>
               </div>
 
-              <article class="projects__card" >
+              <article class="projects__card">
                 <img
                   src="https://cdn.dribbble.com/users/6205537/screenshots/14394174/media/5c374442cad32ccd3999245c67b4402d.jpg?compress=1&resize=1200x900&vertical=top"
                   alt=""
@@ -163,7 +160,7 @@ const AboutPage = (props) => {
                 />
 
                 <div class="projects__modal">
-                <div>
+                  <div>
                     {/* <span class="projects__subtitle">Web</span> */}
                     <h3 class="projects__title">Payment Site</h3>
                     <a
@@ -185,7 +182,7 @@ const AboutPage = (props) => {
                 />
 
                 <div class="projects__modal">
-                <div>
+                  <div>
                     {/* <span class="projects__subtitle">Web</span> */}
                     <h3 class="projects__title">Payment Site</h3>
                     <a
@@ -207,7 +204,7 @@ const AboutPage = (props) => {
                 />
 
                 <div class="projects__modal">
-                <div>
+                  <div>
                     {/* <span class="projects__subtitle">Web</span> */}
                     <h3 class="projects__title">Payment Site</h3>
                     <a
@@ -229,7 +226,7 @@ const AboutPage = (props) => {
                 />
 
                 <div class="projects__modal">
-                <div>
+                  <div>
                     {/* <span class="projects__subtitle">Web</span> */}
                     <h3 class="projects__title">Payment Site</h3>
                     <a
@@ -273,7 +270,6 @@ const AboutPage = (props) => {
                         <span class="skills__level">Intermediate</span>
                       </div>
                     </div>
-                    
 
                     <div class="skills__data">
                       <i class="ri-checkbox-circle-line"></i>
@@ -286,7 +282,7 @@ const AboutPage = (props) => {
                   </div>
 
                   <div class="skills__group">
-                  <div class="skills__data">
+                    <div class="skills__data">
                       <i class="ri-checkbox-circle-line"></i>
 
                       <div>
@@ -321,30 +317,23 @@ const AboutPage = (props) => {
 
                 <div class="skills__box">
                   <div class="skills__group">
-                   
-
-                  <div class="skills__data">
-                      
+                    <div class="skills__data">
                       <div>
-                        <h3 class="skills__name"> 
-  Python</h3>
+                        <h3 class="skills__name">Python</h3>
                         <span class="skills__level">Basic</span>
                       </div>
                     </div>
 
                     <div class="skills__data">
-
                       <div>
                         <h3 class="skills__name"> Node Js</h3>
                         <span class="skills__level">Intermediate</span>
                       </div>
                     </div>
-
                   </div>
 
                   <div class="skills__group">
-
-                  <div class="skills__data">
+                    <div class="skills__data">
                       <i class="ri-checkbox-circle-line"></i>
 
                       <div>
@@ -352,7 +341,6 @@ const AboutPage = (props) => {
                         <span class="skills__level">Intermediate</span>
                       </div>
                     </div>
-                 
                   </div>
                 </div>
               </div>

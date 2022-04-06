@@ -1,146 +1,138 @@
 {
-    
-        "css" : [
-            {
-                "name":"introduction",
-                "link":"intro"
-            }
-            ,
-            {
-                "name":"Importing Css",
-                "link":"importing-css"
-            },
-            {
-                "name":"Flexbox",
-                "link":[
-                    {
-                        "name":"Intro Flexbox",
-                        "link":[
-                            {
-                                "name":"why Flexbox",
-                                "link":"why-flexbox"
-                            },
-                            {
-                                "name":"useCases",
-                                "link":"usecases"
-                            }
-                        ]
-                    },
-                    {
-                        "name":"Flex Box something",
-                        "link":"flexbox-intro "
-                    }
-                ]
-            }
-        ],
-        "js" : [
-            {
-                "name":"introduction",
-                "link":"intro"
-            },
-            {
-                "name":"Basics",
-                "link":"intro"
-            },
-            {
-                "name":"Es6 Concepts",
-                "link":"intro"
-            }
-
-        ],
-        "ds" : [
-            {
-                "name":"introduction",
-                "link":"intro"
-            },
-            {
-                "name":"Roadmap",
-                "link":"roadmap"
-            },
-            {
-                "name":"Programming languages",
-                "link":"intro"
-            },
-            {
-                "name":"Time Complexity and space",
-                "link":"intro"
-            },
-           
-            {
-                "name":"Arrays",
-                "link":[
-                    {
-                        "name":"Basics",
-                        "link":"intro"
-                    },
-                    {
-                        "name":"Insertion",
-                        "link":"intro"
-                    },
-                    {
-                        "name":"Removing",
-                        "link":"intro"
-                    },
-                    {
-                        "name":"Searching",
-                        "link":"intro"
-                    },
-                    {
-                        "name":"Replacing",
-                        "link":"intro"
-                    }
-                ]
-            },
-            {
-                "name":"Linked Lists",
-                "link":[
-                    {
-                        "name":"Introduction",
-                        "link":"intro"
-                    },
-                    {
-                        "name":"Basics",
-                        "link":"intro"
-                    },
-                    {
-                        "name":"Adding Last",
-                        "link":"intro"
-                    },
-                    {
-                        "name":"Adding First",
-                        "link":"intro"
-                    },
-                    {
-                        "name":"Finding Element index",
-                        "link":"intro"
-                    },
-                    {
-                        "name":"Removing First",
-                        "link":"intro"
-                    },
-                    {
-                        "name":"Removing Last",
-                        "link":"intro"
-                    },
-                    {
-                        "name":"Finding Size",
-                        "link":"intro"
-                    },
-                    {
-                        "name":"Converting Linked List to Arrays",
-                        "link":"intro"
-                    },
-                    {
-                        "name":"Types of Linked List",
-                        "link":"intro"
-                    },
-                    {
-                        "name":"Reversing a Linked List ",
-                        "link":"intro"
-                    }
-                ]
-            }
-
-        ]
-    
+  "css": [
+    {
+      "name": "Introduction",
+      "link": "intro"
+    },
+    {
+      "name": "Including CSS",
+      "link": "including-css"
+    },
+    {
+      "name": "How Css works ? ",
+      "link": "how-css-works"
+    }
+  ],
+  "js": [
+    {
+      "name": "introduction",
+      "link": "intro"
+    },
+    {
+      "name": "Roadmap",
+      "link": "roadmap"
+    },
+    {
+      "name": "JavaScript Execution",
+      "link": "js_execution"
+    },
+    {
+      "name": "JavaScript Glossary",
+      "link": "glossary"
+    },
+    {
+      "name": "String In-depth",
+      "link": "glossary"
+    },
+    {
+      "name": "Arrays In-depth",
+      "link": "glossary"
+    }
+  ],
+  "ds": [
+    {
+      "name": "introduction",
+      "link": "intro"
+    },
+    {
+      "name": "Roadmap",
+      "link": "roadmap"
+    },
+    {
+      "name": "Programming languages",
+      "link": "intro"
+    },
+    {
+      "name": "Time Complexity and space",
+      "link": "intro"
+    },
+    {
+      "name": "Linear Data Structures",
+      "link": "linear_data_structures"
+    },
+    {
+      "name": "Arrays",
+      "link": [
+        {
+          "name": "Basics",
+          "link": "arrays"
+        },
+        {
+          "name": "Insertion",
+          "link": "intro"
+        },
+        {
+          "name": "Removing",
+          "link": "intro"
+        },
+        {
+          "name": "Searching",
+          "link": "intro"
+        },
+        {
+          "name": "Replacing",
+          "link": "intro"
+        }
+      ]
+    },
+    {
+      "name": "Linked Lists",
+      "link": [
+        {
+          "name": "Introduction",
+          "link": "intro"
+        },
+        {
+          "name": "Basics",
+          "link": "intro"
+        },
+        {
+          "name": "Adding Last",
+          "link": "intro"
+        },
+        {
+          "name": "Adding First",
+          "link": "intro"
+        },
+        {
+          "name": "Finding Element index",
+          "link": "intro"
+        },
+        {
+          "name": "Removing First",
+          "link": "intro"
+        },
+        {
+          "name": "Removing Last",
+          "link": "intro"
+        },
+        {
+          "name": "Finding Size",
+          "link": "intro"
+        },
+        {
+          "name": "Converting Linked List to Arrays",
+          "link": "intro"
+        },
+        {
+          "name": "Types of Linked List",
+          "link": "intro"
+        },
+        {
+          "name": "Reversing a Linked List ",
+          "link": "intro"
+        }
+      ]
+    }
+  ]
 }

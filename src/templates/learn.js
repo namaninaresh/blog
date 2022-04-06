@@ -7,7 +7,6 @@ import Callouts from "../components/Callouts";
 import Accordation from "../components/Accordation";
 import AccordationRoadMap from "../components/AccordationRoadMap";
 
-import TagIcon from "../components/Icons/TagIcons";
 import Seo from "../components/Seo";
 import Icon from "../components/Icons/Icon";
 import LearnSideDrawer from "../components/Toolbar/LearnSideDrawer";
@@ -41,7 +40,7 @@ const NavDropdown = (props) => {
 
             return (
               <Link
-                to="/"
+                to={`/learn/${props.folderName}/${item.link}`}
                 className="nav__dropdown-item"
                 role={"link"}
                 key={index}
@@ -57,7 +56,8 @@ const NavDropdown = (props) => {
 };
 
 const ListItem = ({ name, link, folderName }) => {
-  if (link instanceof Object) return <NavDropdown items={link} name={name} />;
+  if (link instanceof Object)
+    return <NavDropdown items={link} name={name} folderName={folderName} />;
 
   return (
     <Link
@@ -69,29 +69,6 @@ const ListItem = ({ name, link, folderName }) => {
         <div className="dot"></div> {name}
       </span>
     </Link>
-  );
-};
-
-const PostItem = ({ node }) => {
-  return (
-    <div className="post__item border-outline">
-      <Link to={`/${node.slug}`}>{node.frontmatter.title}</Link>
-
-      <div className="post__body">
-        <p> {node.frontmatter.description}</p>
-      </div>
-
-      <div className="post__tags">
-        <ul>
-          {node.frontmatter.tags.map((tag, index) => (
-            <i className="tag__icons " key={index}>
-              <TagIcon name={tag} />
-            </i>
-          ))}
-        </ul>
-        <p className="post__date"> {node.frontmatter.date}</p>
-      </div>
-    </div>
   );
 };
 
