@@ -54,11 +54,11 @@
     },
     {
       "name": "Programming languages",
-      "link": "intro"
+      "link": "programming_language"
     },
     {
       "name": "Time Complexity and space",
-      "link": "intro"
+      "link": "time_space_complex"
     },
     {
       "name": "Linear Data Structures",

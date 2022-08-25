@@ -1,0 +1,110 @@
+---
+title: "Time and Space Complexities"
+date: "2021-07-24"
+description: "Time and Space Complexities"
+tags: ["ds"]
+type: "tuts"
+---
+
+Performance of an Algorithm is measured in Time and Space complexity.
+
+1. Time Complexity : way of representing the amount of time needed by a program to run to the completion.
+2. Space Complexity : amount of memory space required by an algorithm during a course of its execution. It is required in situations when limited memory is available and for the multi user system.
+
+<div class="tree-diagram">
+    <ul>  
+        <li>Time Complexity
+            <ul>
+                <li>Constant Time O(1)</li>
+                <li>Logarithmic time</li>
+                <li>Linear Time O(n)</li>
+                <li>Quadratic Time O(n2)</li>
+                <li>Exponential time</li>
+            </ul>
+        </li>
+    </ul>
+
+</div>
+
+1. Best Case : when the minimum amount of input is given
+2. Worst Case : when the maximum amount of input is given.
+
+<Callouts name="info ">
+  During analyses of algorithm, mostly we will consider worst case scenarios
+  only
+</Callouts>
+
+<Callouts name="warning ">
+  Assigning values to variables or return statement or print statements takes
+  constant time 1 unit represented in O(1) , it won't be dependent on length of
+  array or any other .
+</Callouts>
+
+```js file=index.js highlights=13 show=false
+int a = 5;      // 1
+
+for(int i=0;i<n;i++)   //n + 1  (n times loop runs, 1 time checks condition and fails)
+  System.out.println(i);  // 1
+----------------------------------
+Time Complexity :
+f(n) = 1 + (n+1) +1
+f(n) = n+3
+f(n) = n
+
+= O(n)
+
+```
+
+#### Rules of Time Complexity
+
+- \* Find the fastest growing term
+- \* Take out the coefficent
+
+2. Drop Constants
+
+```js file=index.js highlights=13 show=false
+{
+  for() { ... } // O(n)
+  for() { ... } // O(n)
+}
+----------------------------------
+Time Complexity :
+= O(n) + O(n)
+= O( ̶2̶n) //dropping constants,2 is deleted
+= O(n)
+
+= O(n)
+
+```
+
+3. Drop non-dominate term / growing term
+
+```js file=index.js highlights=13 show=false
+
+f(n) = O(n) + O(n²)  // O(n²) is fast growing, O(n) is non dominate
+= O(n²)
+
+```
+
+3. Different inputs => Different variables (Nested Loops)
+
+```js file=index.js highlights=13 show=false
+
+for ( int i =0;i<a;i++) //O(n)
+{
+  for ( int j=0;j<b;j++) { } //O(n)
+}
+
+Time Complexity
+f(n)= O(a * b) // O(length of arrray a  * length of array b)
+f(n) = O(n * n )
+f(n) = O(n² )
+```
+
+#### Time Complexities in Order :
+
+O(1) < O(log n) < O(n) O(n log n) < O(n²) < O(2ⁿ) < O(n!)
+
+![How css Works Image](/time_complex.jpeg "css works")
+
+[image Source](https://www.bigocheatsheet.com/)
