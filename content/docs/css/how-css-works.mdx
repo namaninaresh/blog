@@ -6,4 +6,17 @@ tags: ["css"]
 type: "tuts"
 ---
 
-CSS workds
+Most fundamental concepts of css is Cascading ,Specificity, Inheritance and order of appearance which controls how css is applied
+to Html and how conflicts are resolved.
+
+#### How CSS Works
+
+1. Browser loads the Html (recieved from Network).
+2. It converts the Html components into the DOM (Document Object Model) which represents Documents in memory.
+3. Browser then loads all the resourses that are linked to the HTMl Document such as images, videos, linked CSS and lastly Javascript.
+4. Browser parses fetched CSS , these all declarations must go through all level of filtering and validations done by browser. It sorts all the different rules by their selector types.
+5. It converts all the CSS rules into the CSSOM (Css Object Model) link DOM .
+6. based on selector type and order of appearance , browser finds which styles needs to apply for which HTMl Dom Node.
+7. render tree combines both the HTMl DOM and CSSOM together displayed as webpage.
+
+![How css Works Image](/how-css-works.webp "css works")

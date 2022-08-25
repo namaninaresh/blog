@@ -1,0 +1,51 @@
+---
+title: "Anatomy of CSS"
+date: "2022-03-02T23:46:37.121Z"
+description: "Anatomy of CSS  "
+tags: ["css"]
+type: "tuts"
+---
+
+#### Rule Syntax
+
+```css show=false
+selector {
+  property-name: property-value;
+}
+```
+
+Selector is a Html component which you want to apply styles to it. property and its value is separated by colon ( : ) and each property in the declaration block is delimited by ( ; ) semicolon
+
+property-value can be single value or multiple values separated by space .
+
+selectors can be anything like tags( h1 - h6, p, span) or Classes (.mainHeading, .classTwo) or Id (#main, #about) , Universal selector ( \* ) , or even attributes.
+
+```css show=false
+h5 {
+  color: red;
+}
+h5 {
+  color: blue;
+}
+```
+
+This is called as <strong>Property Conflict </strong>. Multiple declaration of same property for same selector. Css parser parses and applies the style
+which is last defined .In this case , color blue is applied.
+
+### At-Rules
+
+At-Rules are css statements that instructs css how to behave . Begins with '@'
+
+<strong>@Charset </strong> - defines the character set used by stylesheets
+
+**@import** - used to imoprt an external style sheet into another.
+
+**@font-face** - enable the use of downloadble web fonts
+
+**@keyframes** - specifies the values for the animate properties at various points during the animation.
+
+**@media** - used to apply css styles to elements at different screens and windows sizes.
+
+**@support** - used to know the support capability of the browser . If it supports then its declaration will be executed.
+
+and there are many more **@namespace** , **@page** , **@counter-style**

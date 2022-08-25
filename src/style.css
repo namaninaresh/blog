@@ -1174,6 +1174,14 @@ border: 1px solid var(--color-border); */
   font-weight: 500;
 }
 
+img {
+  box-shadow: none !important;
+}
+
+.blogPage .gatsby-resp-image-wrapper {
+  margin: 2rem 0;
+}
+
 .blogPage blockquote {
   background-color: var(--color-blockquote-bg);
   padding: 0.7rem 1.2rem;
@@ -1561,6 +1569,9 @@ pre {
   bottom: 5rem;
   right: 1.5rem;
   font-size: 0.5rem;
+  justify-content: center;
+  align-self: center;
+  z-index: 1111;
 }
 .content__holder svg {
   stroke: #0d96f2 !important;
