@@ -1,0 +1,226 @@
+---
+title: "Bit Manipulation"
+date: "2021-07-24"
+description: "Bit Manipulation"
+tags: ["ds"]
+type: "tuts"
+---
+
+Bit Manipulation is the process of applying logical operation on a sequence of bits to achieve a required result.
+Tasks that require bit Manipulation include low-level device control, encryption algorithms and optimization.
+
+Bit Manipulation makes use of the <strong>Bitwise</strong> operation.
+
+AND [ & ] , OR [ | ] , XOR [ ^ ], NOT [~], Bit Shifts [ << , >> ]
+
+Every number is stored in a binary format that is 0 and 1 .Bitwise operators are used for performing manipulation of bits of the number.
+These can be used with any type of Integer data types.
+
+- byte (8 bits )
+- short ( 16 bits )
+- int ( 32 bits )
+- long (64 bits)
+- char (16 bits)
+
+## 1. Unary Bitwise Complement [ ~ ]:
+
+Basically means bit negation .It takes every single bit of the number and flips its value i.e., ~0 becomes 1 & vice versa. It is the 1's Complement of the number
+
+a = 5 = 0101 (In binary)
+
+~ 0101 = 1010
+
+1010 = 10 (In Decimal)
+
+## 2. Bitwise AND [ & ]:
+
+Unlike Bitwise Complement operator .other Bitwise operators need two operands.
+
+Bitwise AND is similar to logical AND in a sense that it results in 1 only when the two compared bits are both equal to 1 . otherwise, it results in 0.
+
+a = 5 = 0101 (In binary)
+
+b = 7 = 0111 (In binary)
+
+Bitwise AND operation of 5 and 7
+
+```css file=index.css show=false
+// Both 1 means 1 ,else all 0
+
+0  1  0  1
+0  1  1  1  &
+------------
+0  1  0  1   = 5 (In Decimal)
+```
+
+<Callouts name="success ">a & -1 = a (a is a imaginary number)</Callouts>
+
+## 3. Bitwise OR [ | ]:
+
+OR results in 1 when atleast one of the compared bits is 1 (or both ) otherwise it results in 0
+
+a = 5 = 0101 (In binary)
+
+b = 7 = 0111 (In binary)
+
+Bitwise OR operation of 5 and 7
+
+```css file=index.css show=false
+// In compared bits atleast or both 1 then 1, else 0
+
+0  1  0  1
+0  1  1  1  |
+------------
+0  1  1  1   = 7 (In Decimal)
+```
+
+<Callouts name="success ">a | 0 = a (a is a imaginary number)</Callouts>
+
+## 4. Bitwise Exclusive OR ( XOR ) [ ^ ]:
+
+Xclusive OR (XOR ) results in 1 only if both compared bits have a different value, otherwise it results in 0.
+
+a = 5 = 0101 (In binary)
+
+b = 7 = 0111 (In binary)
+
+Bitwise XOR operation of 5 and 7
+
+```css file=index.css show=false
+// In compared bits have diffferent then 1 , else 0
+
+0  1  0  1
+0  1  1  1  ^
+------------
+0  0  1  0   = 2 (In Decimal)
+```
+
+<Callouts name="success ">
+  <table>
+    <tr>
+      <td>a ^ 1 = ā = ~a </td>
+    </tr>
+    <tr>
+      <td>a ^ 0 = a </td>
+    </tr>
+    <tr>
+      <td>a ^ a = 0 </td>
+    </tr>
+  </table>
+  (a is a imaginary number)
+</Callouts>
+
+## 5. Signed Left Shift [ << ]:
+
+Signed Left Shift takes the bit pattern of the first operand and shifts it to the left by the number of places
+given by the second operand
+
+Ex: 5 << 3 :
+
+<strong>
+  Every bit in the binary representation of the Interger 5 is shifted by 3
+  positions to the left.
+</strong>
+
+00000101 becomes 00101000
+
+5 << 3 is 40 .
+
+That shows that shifting a number by one is equivalent to multiplying it by 2 or more.
+In general , left shifting a number by n positions is equivalent to manipulation by 2 ^ n.
+
+## 6. Signed Right Shift [ >> ]:
+
+Signed Right Shift takes the bit pattern of the first operand and shifts it to the right by the number of places
+given by the second operand
+
+However it preserves the sign ,Positive numbers remain positive and negative ones remain negative.similar to left shift,
+the right shift of n positions is equivalent to division by 2 ^ n or division by 2 ^ n-1 in case of add numbers.
+
+Ex: a =10 :
+
+a >> 1 = 5
+
+Ex : a= -10
+
+a >> 1 = -5
+
+we preserve the sign
+
+## 7. UnSigned Right Shift [ >>> ]:
+
+Unlike the Signed shift, the UnSigned one does not take sign bits into consideration. It just shifts all the bits to the right and pads the result with zeros
+from the left . That means that for negative numbers, the result is always Positive. Signed and UnSigned right shifts have the same result for the postive numbers
+
+Ex : a =10
+
+a >>> 1 = 5
+
+a= -10
+
+a >>> 1 = 2147483643
+
+<strong>Does NOT preserve the sign bit </strong>
+
+This operator shifts the first operand to the spectified number of bits ot the right . Excess bits shifted off to the right are <strong>discarded</strong>. Zero bits are shifted from the left . The sign bit becomes 0 ,so result is <strong>always non-negative</strong>.
+
+## 8. UnSigned Left Shift [ <<< ]:
+
+Unlike UnSigned Right shift , there is no "<<<" operator in Java , because the logical (<< ) and arithmetic left- shift (<<<) operations are identical.
+
+9 (base 10) : 00............1001 (base 2)
+
+9 >>> 2 (base 10) : 00............0010 (base 2) = 2 (base 10)
+
+However this is not the case for negative numbers
+
+For Ex: -9 >>> 2 yields 1073741821, which is different than -9 >> 2 (which yields -3)
+
+-9 (base 10) : 11.........110111 ( base 2)
+
+-9 >>> 2 (base 10 ): 0011............1101 (base 2) = 1073741821 (base 10)
+
+<table class="table-space table-border">
+  <tr>
+    <th>X</th>
+    <th>Y</th>
+    <th>X & Y</th>
+    <th>X | Y</th>
+    <th>X ^ Y</th>
+    <th>~ (X) </th>
+
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+  </tr>
+   <tr>
+    <td>0</td>
+    <td>1</td>
+    <td>0</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+  </tr>
+   <tr>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+  </tr>
+   <tr>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+  </tr>
+
+</table>

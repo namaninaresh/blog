@@ -57,6 +57,10 @@
       "link": "programming_language"
     },
     {
+      "name": "Bit Manipulation",
+      "link": "bit_manipulation"
+    },
+    {
       "name": "Time Complexity and space",
       "link": "time_space_complex"
     },

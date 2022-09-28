@@ -2789,3 +2789,17 @@ li.tree-diagram__root::before {
     padding-bottom: 2rem;
   }
 }
+table {
+  border-collapse: collapse;
+}
+.table-space th,
+td {
+  padding: 1vw 3.5vw;
+  text-align: center;
+}
+.table-border,
+.table-border tr,
+.table-border td,
+.table-border th {
+  border: 0.2px solid;
+}
