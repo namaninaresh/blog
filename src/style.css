@@ -217,8 +217,14 @@
   color: var(--color-blue-btn);
 }
 
-html {
+html,
+body {
   height: 100%;
+  text-rendering: optimizelegibility;
+  -webkit-font-smoothing: antialiased;
+}
+html {
+  scroll-padding-top: 2rem;
 }
 body {
   height: 100%;
@@ -259,9 +265,9 @@ h1 {
 }
 h2 {
   font-size: clamp(1.5rem, 1.29rem + 1.07vw, 2.25rem);
-}
-h2 {
+  margin-top: 2rem !important;
   position: relative;
+  text-rendering: optimizeLegibility;
 }
 .anchor-link {
   color: #666;
