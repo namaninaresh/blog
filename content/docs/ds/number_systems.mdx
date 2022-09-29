@@ -1,0 +1,318 @@
+---
+title: "Number Systems"
+date: "2022-09-28"
+description: "Number Systems"
+tags: ["ds"]
+type: "tuts"
+---
+
+Number Systems are the technique to represent numbers in the computer system architecture, every value that you are saving or getting into / from computer memory has a defined number syste.
+
+<div class="tree-diagram">
+    <ul>  
+        <li>Number Systems
+            <ul>
+                <li>Binary (Base 2 ) <br></br>
+                  use Digits : 0 & 1
+                </li>
+                <li>Octal (Base 8 ) <br></br>
+                  use Digits : 0 & 7</li>
+                <li>Decimal (Base 10 ) <br></br>
+                  use Digits : 0 & 9</li>
+                <li>HexaDecimal (Base 16 ) <br></br>
+                  use Digits : 0 & 9 <br></br>
+                  use Alphabets : A - F</li>
+            </ul>
+        </li>
+    </ul>
+
+</div>
+
+## Binary Number System
+
+The Binary Number System uses only two digits : 0 & 1.The Numbers in this system have a base of 2. Digits 0 and 1 are called bits and 8 bits together make a Byte.
+
+- 0 bit means No or False
+- 1 bit means Yes or True.
+
+The Binary Number system uses positional notation. each digit is multiplied by the appropriate power of two based on its position
+
+## Converting a number to Binary
+
+Decimal Number 0-9 are represented in Binary as 0, 1, 10, 11, 100, 101, 110, 111, 1000 and 1001.
+
+#### 1st Process - Remainder and Divisor.
+
+##### Steps :
+
+1. Divide the Number by 2
+2. Get the Integer quotient for next iteration.
+3. Get the Remainder for the binary digit.
+4. Repeat the steps until the quotient is equal to 0.
+
+<table class="table-space table-border">
+  <tr>
+    <th>Division By 2</th>
+    <th>Quotient</th>
+    <th>Remainder</th>
+    <th>Bit #</th>
+  </tr>
+  <tr>
+    <td>13 / 2</td>
+    <td>6</td>
+    <td>1 (LSB)</td>
+    <td>0</td>
+  </tr>
+   <tr>
+    <td>6 / 2</td>
+    <td>3</td>
+    <td>0</td>
+    <td>1</td>
+  </tr>
+   <tr>
+    <td>3 / 2</td>
+    <td>1</td>
+    <td>1</td>
+    <td>2</td>
+  </tr>
+   <tr>
+    <td>1 / 2</td>
+    <td>0</td>
+    <td>1 (MSB)</td>
+    <td>3</td>
+  </tr>
+
+</table>
+
+So (13)<sub>10</sub> = ( 1101 )<sub>2</sub>
+
+#### 2nd Process Powers of Two and Subtraction
+
+Steps:
+
+1. Write a power of 2 as 1 which is near to number and substract from it ,get substrant
+2. now get a power of 2 near to substrant and mark as 1 and substract it from substrant , get new substrant
+3. do all these steps ,until it becomes 0.
+
+<ul class="box-together scroll padding-top-2rem">
+  <li class="bit_box ">
+    0
+    <p class="rep">
+      2<sup>7</sup>=128
+    </p>
+  </li>
+  <li class="bit_box">
+    0
+    <p class="rep">
+      2<sup>6</sup>=64
+    </p>
+  </li>
+  <li class="bit_box ">
+    0
+    <p class="rep">
+      2<sup>5</sup>=32
+    </p>
+  </li>
+  <li class="bit_box ">
+    1
+    <p class="rep">
+      2<sup>4</sup>=16
+    </p>
+  </li>
+  <li class="bit_box">
+    0
+    <p class="rep">
+      2<sup>3</sup>=8
+    </p>
+  </li>
+  <li class="bit_box ">
+    0
+    <p class="rep">
+      2<sup>2</sup>=4
+    </p>
+  </li>
+  <li class="bit_box ">
+    1
+    <p class="rep">
+      2<sup>1</sup>=2
+    </p>
+  </li>
+  <li class="bit_box">
+    1
+    <p class="rep">
+      2<sup>0</sup>=1
+    </p>
+  </li>
+</ul>
+
+<Callouts name="warning ">1 Byte is equal to 8 Bits <br></br>
+
+2<sup>8</sup> = 256
+
+<ul class="box-together scroll">
+  <li class="bit_box border-red">0,1</li>
+  <li class="bit_box border-blue">0,1</li>
+  <li class="bit_box border-blue">0,1</li>
+  <li class="bit_box border-blue">0,1</li>
+  <li class="bit_box border-blue">0,1</li>
+  <li class="bit_box border-blue">0,1</li>
+  <li class="bit_box border-blue">0,1</li>
+  <li class="bit_box border-blue">0,1</li>
+</ul>
+Last bit(Red Color) Indicated sign of a number( + , -) and remaining all represents
+number
+
+So it is not 2<sup>8</sup> , it is 2 <sup>7</sup> = 128
+
+a Byte's range is -128 to +127.
+
+</Callouts>
+<Callouts name="success ">
+For Positive Numbers, Last Bit will be 0 .
+For Negative Numbers, Last Bit wil be 1 .
+</Callouts>
+
+(13)<sub>10</sub> = ( 1101)<sub>2</sub>
+
+<ul class="box-together scroll padding-top-2rem">
+  <li class="bit_box ">
+    0<p class="rep">128</p>
+  </li>
+  <li class="bit_box">
+    0<p class="rep">64</p>
+  </li>
+  <li class="bit_box ">
+    0<p class="rep">32</p>
+  </li>
+  <li class="bit_box ">
+    0<p class="rep">16</p>
+  </li>
+  <li class="bit_box">
+    1<p class="rep">8</p>
+  </li>
+  <li class="bit_box ">
+    1<p class="rep">4</p>
+  </li>
+  <li class="bit_box ">
+    0<p class="rep">2</p>
+  </li>
+  <li class="bit_box">
+    1<p class="rep">1</p>
+  </li>
+</ul>
+
+(-13)<sub>10</sub> = ( 10001101)<sub>2</sub>
+
+<ul class="box-together scroll padding-top-2rem">
+  <li class="bit_box ">
+    1<p class="rep">128</p>
+  </li>
+  <li class="bit_box">
+    1<p class="rep">64</p>
+  </li>
+  <li class="bit_box ">
+    1<p class="rep">32</p>
+  </li>
+  <li class="bit_box ">
+    1<p class="rep">16</p>
+  </li>
+  <li class="bit_box">
+    0<p class="rep">8</p>
+  </li>
+  <li class="bit_box ">
+    0<p class="rep">4</p>
+  </li>
+  <li class="bit_box ">
+    1<p class="rep">2</p>
+  </li>
+  <li class="bit_box">
+    1<p class="rep">1</p>
+  </li>
+</ul>
+
+## Negative Number to Binary
+
+1.Get postive Number Binary of number i.e., (13) = 0000 1101
+
+2.Convert to 1's Complement , exchange 0 to 1 & 1 to 0
+
+0000 1101 ---> 1111 0010
+
+3.Now add 2's Complement , Add 1 to the Binary
+
+```css file=index.css show=false
+// In compared bits have diffferent then 1 , else 0
+
+1  1  1  1  0  0  1  0
++                    1
+-----------------------
+1  1  1  1  0  0  1  1
+```
+
+(1111 0011)<sub>2</sub> = (-13)<sub>10</sub>
+
+![How css Works Image](/decimal_to_binary.jpg)
+
+## Convert Floating Numbers into Binary Numbers
+
+Steps:
+
+1.First find the binary value of Integral part of number i.e., number which left to decimal point .<br></br> 2.Then find the binary value of Fractional part of number i.e., number which right to decimal point.
+
+EX: 4.25
+Where 4 is Integral part
+and 0.25 is a Fractional part
+
+Integral Part (4)<sub>10</sub> = ( 100)<sub>2</sub>
+
+Fractional Part (0.25)
+
+<strong>Steps :</strong> To Convert the Fractional part to Binary, multiply Fractional
+part with 2 and take the one bit which appears before the decimal point.
+
+2.follow the same procedure with after the decimal point (.) part until it becomes 1.0
+
+like
+
+0.25 \* 2 = 0.50 // take 0 & move 0.50 to next step
+
+0.50 \* 2 = 1.00 // take 1 & stop the process.
+
+(0.25)<sub>10</sub> = ( 01 )<sub>2</sub>
+
+Combine both Integral and Fractional
+
+(4.25)<sub>10</sub> = ( 100.01 )<sub>2</sub>
+
+<strong>Ex: 2.33 </strong>
+
+Integral part (2) = ( 10 )<sub>2</sub>
+
+Fractional Part :
+
+```js file=index.css show=false
+0.33 * 2 => 0.66 // take 0 & move 0.66 to next
+0.66 * 2 => 1.32 // take 1 & move 0.32 to next
+0.32 * 2 => 0.64 // take 0 & move 0.64 to next
+0.64 * 2 => 1.28 // take 1 & move 0.28 to next
+0.28 * 2 => 0.56 // take 0 & move 0.28 to next
+0.56 * 2 => 1.12 // take 1 & move 0.28 to next
+0.12 * 2 => 0.24 // take 0 & move 0.28 to next
+0.24 * 2 => 0.48 // take 0 & move 0.28 to next
+0.48 * 2 => 0.96 // take 0 & move 0.28 to next
+0.96 * 2 => 1.92 // take 1 & move 0.28 to next
+0.92 * 2 => 1.84 // take 1 & move 0.28 to next
+0.84 * 2 => 1.68 // take 1 & move 0.28 to next
+0.68 * 2 => 1.36 // take 1 & move 0.28 to next
+0.36 * 2 => 0.72 // take 0 & move 0.28 to next
+```
+
+<Callouts name="warning">
+  Some Fractional part Number will not end up with 1.0
+</Callouts>
+<Callouts name="info">
+  In floating number storage, computer will allocate 23 bits for Fractional
+  part.So its enough to do at max 23 times.
+</Callouts>
+
+(2.33)<sub>10</sub> = ( 10.010101000111001011 )<sub>2</sub>

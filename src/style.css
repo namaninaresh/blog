@@ -205,6 +205,9 @@
 .dark .show-menu {
   background: #0e0c0f !important;
 }
+.code__highlightBox {
+  padding-right: 1rem;
+}
 .dark .code,
 .dark .code__highlightBox,
 .dark pre {
@@ -2763,7 +2766,7 @@ li.tree-diagram__root::before {
 }
 
 ::-webkit-scrollbar {
-  height: 2px;
+  height: 0.5px;
   width: 3px;
 }
 
@@ -2788,6 +2791,10 @@ li.tree-diagram__root::before {
     overflow-x: scroll;
     padding-bottom: 2rem;
   }
+  .scroll {
+    overflow-x: scroll;
+    padding-bottom: 1rem;
+  }
 }
 table {
   border-collapse: collapse;
@@ -2802,4 +2809,29 @@ td {
 .table-border td,
 .table-border th {
   border: 0.2px solid;
+}
+.box-together {
+  display: flex;
+}
+.bit_box {
+  padding: 1rem 1.5rem;
+  position: relative;
+  width: 1rem;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgb(60, 60, 60);
+}
+.bit_box .rep {
+  position: absolute;
+  top: -2.9rem;
+}
+.padding-top-2rem {
+  padding-top: 2rem;
+}
+.border-red {
+  border: 1px solid red;
+}
+.border-blue {
+  border: 1px solid var(--color-blue-primary);
 }

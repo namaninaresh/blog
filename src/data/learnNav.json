@@ -57,6 +57,52 @@
       "link": "programming_language"
     },
     {
+      "name": "Number Systems",
+      "link": [
+        {
+          "name": "Binary Number System",
+          "link": "arrays"
+        },
+        {
+          "name": "Decimal Number System",
+          "link": "intro"
+        },
+        {
+          "name": "Octal Number System",
+          "link": "intro"
+        },
+        {
+          "name": "HexaDecimal Number System",
+          "link": "intro"
+        }
+      ]
+    },
+    {
+      "name": "Binary Operations",
+      "link": [
+        {
+          "name": "Introduction",
+          "link": "binary_operations"
+        },
+        {
+          "name": "Binary Addition",
+          "link": "binary_addition"
+        },
+        {
+          "name": "Binary Substraction",
+          "link": "binary_substraction"
+        },
+        {
+          "name": "Binary Multiplication",
+          "link": "intro"
+        },
+        {
+          "name": "Binary Division",
+          "link": "intro"
+        }
+      ]
+    },
+    {
       "name": "Bit Manipulation",
       "link": "bit_manipulation"
     },
