@@ -12,8 +12,9 @@ import Icon from "../components/Icons/Icon";
 import LearnSideDrawer from "../components/Toolbar/LearnSideDrawer";
 
 import learnNav from "../data/learnNav.json";
+import H2 from "../components/CustomMdx/H2";
 
-const shortcodes = { Callouts, Accordation, AccordationRoadMap };
+const shortcodes = { Callouts, Accordation, AccordationRoadMap, h2: H2 };
 
 // Components
 
