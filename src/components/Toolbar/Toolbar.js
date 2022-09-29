@@ -31,7 +31,6 @@ const Toolbar = ({ pageName }) => {
     classesList += "show-menu";
     backdrop = <div className="backdrop" onClick={drawerToggler}></div>;
   }
-
   return (
     <>
       <header className="toolbar">

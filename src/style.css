@@ -362,7 +362,7 @@ main {
   position: fixed;
   top: 0;
   right: -100%;
-  width: 50%;
+  width: 70%;
   height: 100vh;
   padding: 1rem 1rem 3rem;
   background-color: var(--color-dark);
@@ -1208,7 +1208,7 @@ img {
   background-color: var(--color-blockquote-bg);
   padding: 0.7rem 1.2rem;
   border-radius: 5px;
-  overflow: scroll;
+  overflow: auto;
   margin: 0;
   color: var(--color-blueGray-500);
 }
@@ -1594,6 +1594,8 @@ pre {
   justify-content: center;
   align-self: center;
   z-index: 1111;
+  border-radius: 50%;
+  background: rgba(73, 73, 73, 0.5);
 }
 .content__holder svg {
   stroke: #0d96f2 !important;

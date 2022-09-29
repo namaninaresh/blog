@@ -85,6 +85,9 @@ const Tags = ({ data, location, pageContext }) => {
   const drawerToggler = () => {
     setSideDrawer(!sideDrawerOpen);
   };
+  if (sideDrawerOpen) {
+    document.body.style.overflow = "hidden";
+  } else document.body.style.overflow = "visible";
   const navItems = learnNav[folderName].map((item, index) => (
     <ListItem key={index} {...item} folderName={folderName} />
   ));
@@ -105,7 +108,6 @@ const Tags = ({ data, location, pageContext }) => {
               className="toolbar_togglerIcon content__holder"
               onClick={drawerToggler}
             >
-              Menu
               <Icon name="sidebar" width={24} height={24} color="#027ffe" />
             </div>
             {/* <p> Posted on : {data.mdx.frontmatter.date}</p> */}

@@ -1,8 +1,8 @@
-import * as React from 'react'
+import * as React from "react";
 
-import Toolbar from './Toolbar/Toolbar';
+import Toolbar from "./Toolbar/Toolbar";
 // import SideDrawer from './Toolbar/SideDrawer';
-import Footer from './Toolbar/Footer';
+import Footer from "./Toolbar/Footer";
 
 // ... import statements
 
@@ -18,34 +18,29 @@ import Footer from './Toolbar/Footer';
 </ul>
 ; */
 
-
 const Layout = (props) => {
-    const [sideDrawerOpen, setSideDrawer] = React.useState(false);
+  const [sideDrawerOpen, setSideDrawer] = React.useState(false);
 
-   // let sideDrawer;
-    //let backdrop;
+  // let sideDrawer;
+  //let backdrop;
 
-    const drawerToggler =() =>{
-       setSideDrawer(!sideDrawerOpen)
-    }
-  
+  const drawerToggler = () => {
+    setSideDrawer(!sideDrawerOpen);
+  };
 
-   
-  
-    if(sideDrawerOpen)
-    {
-       // sideDrawer = <SideDrawer show={sideDrawerOpen} navItems={navItems} closeHandler={drawerToggler}/>
-       // backdrop =  <div className='backdrop' onClick={drawerToggler}></div>;
-    }
-    return (
-        <>
-      <Toolbar drawerToggler={drawerToggler}   pageName={props.pageName}  sideDrawerOpen={sideDrawerOpen} />
-      
+  if (sideDrawerOpen) {
+    // sideDrawer = <SideDrawer show={sideDrawerOpen} navItems={navItems} closeHandler={drawerToggler}/>
+    // backdrop =  <div className='backdrop' onClick={drawerToggler}></div>;
+  }
+  return (
+    <>
+      <Toolbar
+        drawerToggler={drawerToggler}
+        pageName={props.pageName}
+        sideDrawerOpen={sideDrawerOpen}
+      />
 
-        <div  className='container' style={{height:'100%'}}> 
-
-       
-       
+      <div className="container" style={{ height: "100%" }}>
         <main>
           {/* <h1 className="heading">{pageTitle}
          
@@ -54,10 +49,9 @@ const Layout = (props) => {
         </main>
       </div>
 
-      <Footer/>
-      </>
-    )
-    
-  }
-  
-  export default Layout
+      <Footer />
+    </>
+  );
+};
+
+export default Layout;
