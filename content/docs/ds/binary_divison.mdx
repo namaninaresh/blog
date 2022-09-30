@@ -1,0 +1,112 @@
+---
+title: "Binary Division"
+date: "2022-09-30"
+description: "Binary Division"
+tags: ["ds"]
+type: "tuts"
+---
+
+## Binary Division :
+
+process of diving two binary numbers.
+
+### Rules :
+
+<table class="table-space table-border">
+  <tr>
+    <th>Dividend</th>
+    <th></th>
+    <th>Divisor</th>
+    <th></th>
+    <th>Result</th>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>/</td>
+    <td>1</td>
+    <td>=</td>
+    <td>0</td>
+  </tr>
+   <tr>
+    <td>1</td>
+    <td>/</td>
+    <td>1</td>
+    <td>=</td>
+    <td>1</td>
+  </tr>
+
+</table>
+
+<Callouts name="danger">
+  Diving 0 by something gives Error , not mentioned in Rules.
+</Callouts>
+
+#### Note: Before learnig Binary division, please go through [Binary Substraction](/learn/ds/binary_substraction)
+
+### Steps : 011010 / 0101 =?
+
+<Callouts name="info">29 * 9 =? i.e., 11101 = 29 and 1001 = 9 </Callouts>
+
+1.Remove all the zeros from the most Significant Bit (MSB) or from left to rigt.
+
+Dividend = 11010<sub>2</sub> , Divisor = 101<sub>2</sub>
+
+2.Since Divisor is smaller, it will be multiplied with 1 and result will be the substrahend. while substracting ,follow binary Substraction rules.
+
+```javascript file=index.js show=false diff
+//Binary Divison of 11010 / 101
+             ➊
+      _____________
+  101 ) 1  ̷1̷ 0 1 0 ( 1
+  -     1  0 1
+      -------------
+        0  0 1
+```
+
+3.As per rules of division, the next lease Significant Bit comes down and divisor is multiplied by 1,
+since the result 101 is bigger than the minuend 0011 , this step cannot be performed ,then we have to multiply by 0
+
+```javascript file=index.js show=false diff
+//Binary Divison of 11010 / 101
+             ➊
+      _____________
+  101 ) 1  ̷1̷ 0 1 0 ( 1 0
+  -     1  0 1
+      -------------
+        0  0 1 1
+             0 0
+      -------------
+             1 1 0
+```
+
+4.write down 0 as next bit of quotient.
+
+5.Again divisor is multiplied by 1 .result is written as 101 \* 1 = 101
+
+6.In final step, as per binary Substraction.we substract 101<sub>2</sub> from 110<sub>2</sub>
+,we get 110-101 = 001<sub>2</sub>
+
+```javascript file=index.js show=false diff
+//Binary Divison of 11010 / 101
+             ➊
+      _____________
+  101 ) 1  ̷1̷ 0 1 0 ( 1 0 1
+  -     1  0 1
+      -------------
+        0  0 1 1
+      -      0 0
+      -------------
+             1 1 0
+      -      1 0 1
+      -------------
+                 1
+```
+
+Now Quotient = ( 101 )<sub>2</sub> , Remainder = 001 = 1.
+
+<Callouts name="success">
+  Answer : 101<sub>2</sub> = 5<sub>10</sub> 
+  
+<br></br>11010<sub>2</sub> = 25<sub>10</sub> / 101<sub>2</sub> = 5<sub>10</sub>
+
+</Callouts>

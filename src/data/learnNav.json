@@ -94,11 +94,11 @@
         },
         {
           "name": "Binary Multiplication",
-          "link": "intro"
+          "link": "binary_multiplication"
         },
         {
           "name": "Binary Division",
-          "link": "intro"
+          "link": "binary_divison"
         }
       ]
     },

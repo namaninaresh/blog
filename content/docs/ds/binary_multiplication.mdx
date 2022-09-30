@@ -1,0 +1,98 @@
+---
+title: "Binary Multiplication"
+date: "2022-09-30"
+description: "Binary Multiplication"
+tags: ["ds"]
+type: "tuts"
+---
+
+## Binary Multiplication :
+
+process of Multiplying binary numbers.
+
+### Rules :
+
+<table class="table-space table-border">
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th>product</th>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>*</td>
+    <td>0</td>
+    <td>=</td>
+    <td>0</td>
+  </tr>
+   <tr>
+    <td>0</td>
+    <td>*</td>
+    <td>1</td>
+    <td>=</td>
+    <td>0</td>
+  </tr>
+   <tr>
+    <td>1</td>
+    <td>*</td>
+    <td>0</td>
+    <td>=</td>
+    <td>0</td>
+  </tr>
+   <tr>
+    <td>1</td>
+    <td>*</td>
+    <td>1</td>
+    <td>=</td>
+    <td>1</td>
+  </tr>
+
+</table>
+
+#### Steps : 11101 \* 1001 =?
+
+<Callouts name="info">29 * 9 =? i.e., 11101 = 29 and 1001 = 9 </Callouts>
+
+1.write down the multiplicand (11101) & the Multiplier (1001) one below.
+
+2.Multiply the right most digit or the Least Significant Bit of the Multiplier (1) with all the digits
+of the multiplicand(11101)
+
+```javascript file=index.js show=false diff
+//Binary Multiplication of 11101 - 1001
+
+  1  1  1  0  1
+*    1  0  0  1
+-----------------
+  1  1  1  0  1
+              ⊗
+```
+
+3.Add a place holder any symbol ,before Multiplying next higher order digit of the Multiplier
+
+4.Repeat the same process for all the digits in the Multiplier until we reach the MSB (Most Significant Bit) or left most digits
+
+5.The product obtained in each row is called partial product.Finally we add all the partial products.To add all the binary numbers use the rules of binary addition.
+
+```javascript file=index.js show=false
+//Binary Multiplication
+              1   1   1   0   1      // <- Multiplicand
+              *   1   0   0   1      // <- Multiplier
+            ----------------------
+               1   1   1   0   1
+           0   0   0   0   0   ⊗
+       0   0   0   0   0   ⊗   ⊗
+   1   1   1   0   1   ⊗   ⊗   ⊗
++
+------------------------------------
+1  0   0   0   0   0   1   0   1      // <- Final Result
+```
+
+The product of (11101)<sub>2</sub> & (1001)<sub>2</sub> is (100000101)<sub>2</sub>
+
+<Callouts name="success">
+  Answer: 29 * 9 =261 <br></br>
+  (100000101)<sub>2</sub> = 261<sub>10</sub>
+</Callouts>
