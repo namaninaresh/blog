@@ -86,9 +86,11 @@ const Tags = ({ data, location, pageContext }) => {
   const drawerToggler = () => {
     setSideDrawer(!sideDrawerOpen);
   };
-  if (sideDrawerOpen) {
-    document.body.style.overflow = "hidden";
-  } else document.body.style.overflow = "visible";
+  if (typeof document !== undefined) {
+    if (sideDrawerOpen) {
+      document.body.style.overflow = "hidden";
+    } else document.body.style.overflow = "visible";
+  }
   const navItems = learnNav[folderName].map((item, index) => (
     <ListItem key={index} {...item} folderName={folderName} />
   ));

@@ -83,11 +83,11 @@ function App(props) {
           viewBox="0 0 24 24"
           fill="none"
           stroke="#fff"
-          stroke-width="2"
-          stroke-linecap="round"
+          strokeWidth="2"
+          strokeLinecap="round"
           onClick={toggleFullScreen}
-          stroke-linejoin="round"
-          class="feather feather-maximize"
+          strokeLinejoin="round"
+          className="feather feather-maximize"
         >
           <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path>
         </svg>
@@ -112,9 +112,9 @@ function App(props) {
             viewBox="0 0 24 24"
             fill="none"
             stroke="#fff"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           >
             <polygon points="13 19 22 12 13 5 13 19"></polygon>
             <polygon points="2 19 11 12 2 5 2 19"></polygon>
@@ -129,9 +129,9 @@ function App(props) {
               viewBox="0 0 24 24"
               fill="none"
               stroke="#fff"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             >
               <rect x="6" y="4" width="4" height="16"></rect>
               <rect x="14" y="4" width="4" height="16"></rect>
@@ -146,9 +146,9 @@ function App(props) {
               viewBox="0 0 24 24"
               fill="none"
               stroke="#fff"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             >
               <circle cx="12" cy="12" r="10"></circle>
               <polygon points="10 8 16 12 10 16 10 8"></polygon>
@@ -164,9 +164,9 @@ function App(props) {
             viewBox="0 0 24 24"
             fill="none"
             stroke="#fff"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           >
             <polygon points="13 19 22 12 13 5 13 19"></polygon>
             <polygon points="2 19 11 12 2 5 2 19"></polygon>
