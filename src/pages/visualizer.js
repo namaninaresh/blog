@@ -35,9 +35,9 @@ export default class SortingVisulizer extends React.Component {
     }
 
     for (let i = 0; i < newAnimations.length; i++) {
-      const arrayBars =
-        typeof document !== undefined &&
-        document.getElementsByClassName("array-bar");
+      var arrayBars;
+      if (typeof document !== "undefined" || typeof document !== undefined)
+        arrayBars = document.getElementsByClassName("array-bar");
       const isColorChange = i % 3 !== 2;
       if (isColorChange) {
         const [barOneIdx, barTwoidx] = newAnimations[i];

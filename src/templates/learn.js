@@ -86,7 +86,7 @@ const Tags = ({ data, location, pageContext }) => {
   const drawerToggler = () => {
     setSideDrawer(!sideDrawerOpen);
   };
-  if (typeof document !== undefined) {
+  if (typeof document !== "undefined" || typeof document !== undefined) {
     if (sideDrawerOpen) {
       document.body.style.overflow = "hidden";
     } else document.body.style.overflow = "visible";
