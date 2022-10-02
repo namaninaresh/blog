@@ -23,7 +23,8 @@ const Visualizer = (props) => {
       {val}
     </div>
   ));
-  const arrayContainer = document.getElementById("algoDisplayer");
+  const arrayContainer =
+    typeof document !== undefined && document.getElementById("algoDisplayer");
   React.useEffect(() => {
     let array_size = unsortedArray.length;
   }, []);
