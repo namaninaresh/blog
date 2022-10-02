@@ -1822,7 +1822,7 @@ pre {
   color: white;
 }
 .controlsIcons {
-  background: var(--color-blue-btn);
+  background: #027ffe4a;
 
   border-radius: 50%;
   padding: 1rem;

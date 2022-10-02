@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 import React from "react";
-import profileImg from '../images/2.jpg';
+import profileImg from "../images/2.jpg";
 import Icon from "./Icons/Icon";
 {
   /*import React from "react"
@@ -52,12 +52,11 @@ function App(props) {
     videoRef.current.currentTime -= 5;
   };
 
-  const toggleFullScreen = ()=>{
-    if(videoRef.current)
-    {
+  const toggleFullScreen = () => {
+    if (videoRef.current) {
       videoRef.current.requestFullscreen();
     }
-  }
+  };
 
   // window.setInterval(function () {
   //   setCurrentTime(videoRef.current?.currentTime);
@@ -68,6 +67,7 @@ function App(props) {
     <div className="app">
       <video
         id="video1"
+        poster={props.poster}
         ref={videoRef}
         className="videoPlayer"
         src={props.videoSrcURL}
@@ -97,7 +97,9 @@ function App(props) {
               ? hovered
                 ? "controls opacity_1"
                 : "controls opacity_4"
-              : "controls addBackdrop"
+              : hovered
+              ? "controls opacity_1"
+              : "controls opacity_4 addBackdrop"
           }
           onClick={() => setHovered(!hovered)}
         >

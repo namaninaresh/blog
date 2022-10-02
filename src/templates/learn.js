@@ -13,8 +13,9 @@ import LearnSideDrawer from "../components/Toolbar/LearnSideDrawer";
 
 import learnNav from "../data/learnNav.json";
 import H2 from "../components/CustomMdx/H2";
+import Video from "../components/Video";
 
-const shortcodes = { Callouts, Accordation, AccordationRoadMap, h2: H2 };
+const shortcodes = { Callouts, Accordation, AccordationRoadMap, h2: H2, Video };
 
 // Components
 
