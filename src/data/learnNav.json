@@ -45,7 +45,7 @@
   ],
   "ds": [
     {
-      "name": "introduction",
+      "name": "Introduction",
       "link": "intro"
     },
     {
@@ -136,6 +136,10 @@
         {
           "name": "Replacing",
           "link": "intro"
+        },
+        {
+          "name": "Dynamic Arrays",
+          "link": "intro"
         }
       ]
     },
@@ -151,6 +155,10 @@
           "link": "intro"
         },
         {
+          "name": "Types of Linked List",
+          "link": "intro"
+        },
+        {
           "name": "Adding Last",
           "link": "intro"
         },
@@ -159,7 +167,7 @@
           "link": "intro"
         },
         {
-          "name": "Finding Element index",
+          "name": "Finding Node and  Element index",
           "link": "intro"
         },
         {
@@ -179,22 +187,123 @@
           "link": "intro"
         },
         {
-          "name": "Types of Linked List",
+          "name": "Reversing a Linked List ",
           "link": "intro"
         },
         {
-          "name": "Reversing a Linked List ",
+          "name": "Finding Kth Node from the end",
           "link": "intro"
         }
       ]
     },
     {
-      "name": "Bit Manipulation",
-      "link": "bit_manipulation"
+      "name": "Stacks",
+      "link": [
+        {
+          "name": "What are stacks & usage ",
+          "link": "intro"
+        },
+        {
+          "name": "Stack implementation using arrays ",
+          "link": "intro"
+        },
+        {
+          "name": "Stack implementation using linked lists",
+          "link": "intro"
+        },
+        {
+          "name": "Reverse String",
+          "link": "intro"
+        }
+      ]
     },
     {
-      "name": "Bit Manipulation",
-      "link": "bit_manipulation"
+      "name": "Queues",
+      "link": [
+        {
+          "name": "What are Queues & usage ",
+          "link": "intro"
+        },
+        {
+          "name": "Building Queues using arrays ",
+          "link": "intro"
+        },
+        {
+          "name": "Building Queues using Stacks",
+          "link": "intro"
+        },
+        {
+          "name": "Priority Queues",
+          "link": "intro"
+        },
+        {
+          "name": "Implementing Circular Queues using Arrays",
+          "link": "intro"
+        }
+      ]
+    },
+    {
+      "name": "Hash Tables",
+      "link": [
+        {
+          "name": "Introduction",
+          "link": "intro"
+        },
+        {
+          "name": "Hash Functions ",
+          "link": "intro"
+        },
+        {
+          "name": "Collions",
+          "link": "intro"
+        },
+        {
+          "name": "Chaining",
+          "link": "intro"
+        },
+        {
+          "name": "Linear Probing",
+          "link": "intro"
+        },
+        {
+          "name": "Building Hash tables using Array",
+          "link": "intro"
+        },
+        {
+          "name": "Inserting",
+          "link": "intro"
+        },
+        {
+          "name": "Finding an element",
+          "link": "intro"
+        },
+        {
+          "name": "Removing an element",
+          "link": "intro"
+        }
+      ]
+    },
+    {
+      "name": "Non-Linear Data Structures",
+      "link": "non-linear-data-structures"
+    },
+    {
+      "name": "Graphs",
+      "link": [
+        {
+          "name": "What are Graphs and Usages ",
+          "link": "intro"
+        }
+      ]
+    },
+    {
+      "name": "Trees",
+      "link": [
+        {
+          "name": "What are Trees and Usages ",
+          "link": "intro"
+        }
+      ]
     }
   ]
 }
