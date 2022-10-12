@@ -19,7 +19,7 @@ const BlogPost = ({ data, location, pageContext }) => {
         description={data.mdx.frontmatter.description}
       />
 
-      <div className="blogPage ">
+      <article className="blogPage ">
         <div className="blogPage__header">
           <h1 className="blogPage__heading">{data.mdx.frontmatter.title}</h1>
 
@@ -36,7 +36,7 @@ const BlogPost = ({ data, location, pageContext }) => {
         <MDXProvider components={shortcodes}>
           <MDXRenderer>{data.mdx.body}</MDXRenderer>
         </MDXProvider>
-      </div>
+      </article>
     </Layout>
   );
 };

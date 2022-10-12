@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&display=swap");
 :root {
   --color-primary-bg: #011e3c;
   --color-secondary-bg: #0b1929;
@@ -14,7 +15,7 @@
   --color-blue-btn: #027ffe;
   --color-dark: #12081f;
   --color-white: #eff0f2;
-  --color-grey: #dadada;
+  --color-grey: #eeeeee;
 
   --color-blockquote-bg: #02274d;
   --color-black: #000;
@@ -167,10 +168,10 @@
   --color-primary-bg: #00090f;
   /* --color-primary-bg: #151419; */
   --color-blockquote-bg: rgb(44 51 63 / 50%);
-  --color-secondary-bg: #23222b;
+  --color-secondary-bg: #1f1f24ad;
   --color-block-bg: #23222b82;
   --color-block-bg-secondary: #011e3c;
-  --color-border: #4b4b4b;
+  --color-border: rgba(207, 207, 207, 0.12);
   --color-blue-primary: #0173e6;
   --color-dark: #011e3c;
   --color-dark-nav: #131215;
@@ -229,9 +230,10 @@
   padding-right: 1rem;
 }
 .dark .code,
+.dark .header,
 .dark .code__highlightBox,
 .dark pre {
-  background: #1a191d !important;
+  background: #161617 !important;
 }
 .dark .blogPage h3 {
   color: var(--color-blue-btn);
@@ -251,19 +253,21 @@ body {
   padding: 0;
   margin: 0;
   background: var(--color-primary-bg);
-  font-family: "Poppins", "Roboto", "Open Sans", "Segoe UI", sans-serif;
+  font-family: "Quicksand", "Poppins", "Roboto", "Open Sans", "Segoe UI",
+    sans-serif;
+  font-weight: 500;
   font-size: var(--normal-font-size);
   color: var(--color-grey);
 
   line-height: 1.7;
-  letter-spacing: 0.155px;
+  letter-spacing: 0.195px;
   transition: 0.3s;
   display: flex;
   flex-direction: column;
   /* background: #00090f; */
 }
 .border-outline {
-  border: 1px solid var(--color-border);
+  border: 1px solid rgba(207, 207, 207, 0.12);
   border-radius: 8px;
 }
 .heading {
@@ -283,8 +287,8 @@ h6 {
 h1,
 h2,
 h3 {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Poppins", "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 600;
 }
 
@@ -306,10 +310,11 @@ ul {
   list-style: none;
 }
 
-a {
+a,
+strong {
   text-decoration: none;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Poppins", "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 img {
@@ -800,6 +805,10 @@ main {
   border-radius: 5px;
   font-weight: 100;
   height: auto;
+}
+.about__desc {
+  margin: 1rem 0 !important;
+  text-align: left;
 }
 .about__description p span {
   color: #fcb32c;
@@ -1331,7 +1340,6 @@ pre {
   /* background: #181818 !important; */
   /* padding: 0.4rem 1rem; */
   padding-top: 1rem;
-  background: #011627 !important;
 }
 .blogPage {
   scrollbar-color: rebeccapurple green;
@@ -1355,7 +1363,7 @@ pre {
 }
 
 .code__language {
-  background: var(--color-blue-btn);
+  background: var(--code-style-carbon-background);
   margin-right: 1rem;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -1392,9 +1400,16 @@ pre {
   font-family: sans-serif;
   line-height: 1;
 }
+
 .highlight {
-  border-left: 5px solid #304a93a3;
-  background: #202944bd;
+  background: #5a10cd;
+  padding: 2px 10px;
+  border-radius: 5px;
+  color: white;
+}
+a.highlights {
+  color: #ffb918 !important;
+  font-weight: 600;
 }
 .token-line {
   padding-left: 1.6rem;
@@ -1915,8 +1930,8 @@ video::-webkit-media-controls-panel {
 }
 
 .profile__perfil {
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
   background: linear-gradient(
     180deg,
     hsla(var(--hue), var(--sat), var(--lig), 1) 0%,
@@ -1936,8 +1951,8 @@ video::-webkit-media-controls-panel {
 .profile__border {
   border: 3.5px solid var(--first-color);
   justify-self: center;
-  width: 115px;
-  height: 115px;
+  width: 215px;
+  height: 215px;
   border-radius: 50%;
   display: grid;
   place-items: center;
@@ -1946,7 +1961,9 @@ video::-webkit-media-controls-panel {
 
 .profile__name {
   font-size: var(--h2-font-size);
-  padding: 0.5rem 0;
+  padding: 0 !important;
+  font-weight: 700;
+  margin: 0.5rem 0 !important;
 }
 
 .profile__profession {
@@ -2017,7 +2034,16 @@ video::-webkit-media-controls-panel {
   padding: 1.15rem 1.5rem;
   border-radius: 0.5rem;
   transition: 0.3s;
-  box-shadow: 0 8px 24px hsla(var(--hue), var(--sat), var(--lig), 0.25);
+}
+.downloadCv {
+  display: inline-flex;
+  justify-content: center;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(14.5px);
+  -webkit-backdrop-filter: blur(14.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .button i {
@@ -2048,7 +2074,7 @@ video::-webkit-media-controls-panel {
 .profile__dev .container {
   width: 80%;
   display: flex;
-  height: 13rem;
+  height: 15rem;
   border-radius: 1rem;
   margin: auto;
   background: var(--color-block-bg);
@@ -2060,8 +2086,8 @@ video::-webkit-media-controls-panel {
   margin: 0;
 }
 .profile__dev .about__pic {
-  width: 100%;
-  height: 100%;
+  width: 110%;
+  height: 110%;
   border-radius: 1rem 0 0 1rem;
   margin: 0;
 }
@@ -2093,7 +2119,15 @@ video::-webkit-media-controls-panel {
 .profile .h2,
 .profile p {
   padding: 0;
-  margin: 0 !important;
+  margin: 0;
+}
+.profile_desc_p {
+  margin: 1rem 0 !important;
+  text-align: left;
+}
+.profile_desc_p svg {
+  margin-left: 0.5rem;
+  margin-top: -5px;
 }
 /*=============== FILTERS TABS===============*/
 .filters__content {
@@ -2119,7 +2153,7 @@ video::-webkit-media-controls-panel {
   border-radius: 0.75rem;
   cursor: pointer;
   background-color: transparent;
-  transition: 0.3s;
+  transition: 0.1s;
 }
 
 .filters__button:hover {
@@ -2740,7 +2774,7 @@ footer {
   font-size: 1.5rem;
   margin-top: 5vh;
   letter-spacing: 2px;
-  font-weight: 400;
+  font-weight: 600;
   text-decoration: none;
   text-transform: uppercase;
   color: var(--color-blue-btn);

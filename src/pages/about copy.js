@@ -21,16 +21,17 @@ const AboutPage = (props) => {
           <div className="about__description">
             <p style={{ textAlign: "center" }}>
               Hi, I'm <span>NARESH NAMANI </span>
-              
             </p>
-            <p>Im a front end developer and I love to code the beautiful websites
-              and learning new technologies</p>
+            <p>
+              Im a front end developer and I love to code the beautiful websites
+              and learning new technologies
+            </p>
             <div className="about__exp">
-              <div class="icon">
+              <div className="icon">
                 <Icon name="work" />
               </div>
-              <span class="open-sans-font educationyear">Present</span>
-              <div class="content">
+              <span className="open-sans-font educationyear">Present</span>
+              <div className="content">
                 <h5>Front End Developer </h5>
                 <p>- Tata Consultancy Services</p>
               </div>
@@ -41,14 +42,16 @@ const AboutPage = (props) => {
         </div>
         <div className="skills__section">
           <h3>Skills</h3>
-          <p style={{paddingLeft:"1rem"}}>    HTML ,CSS , JavaScript , React , Java</p>
-          
+          <p style={{ paddingLeft: "1rem" }}>
+            {" "}
+            HTML ,CSS , JavaScript , React , Java
+          </p>
         </div>
 
         <div className="designs__section">
           <h3>UI Designs</h3>
           <div>
-            <ul class="gallery caption-2">
+            <ul className="gallery caption-2">
               <li>
                 <figure>
                   <Link to="#">
@@ -62,7 +65,7 @@ const AboutPage = (props) => {
                     </figcaption>
                   </Link>
                 </figure>
-              </li> 
+              </li>
 
               <li>
                 <figure>
@@ -124,7 +127,7 @@ const AboutPage = (props) => {
                 </figure>
               </li>
 
-              <li >
+              <li>
                 <figure>
                   <Link to="#">
                     <img
@@ -138,7 +141,7 @@ const AboutPage = (props) => {
                   </Link>
                 </figure>
               </li>
-              <li >
+              <li>
                 <figure>
                   <Link to="#">
                     <img
@@ -156,7 +159,14 @@ const AboutPage = (props) => {
           </div>
 
           <div className="center">
-            <Link to="https://dribbble.com/naresh_namani" target={"_blank"} className="about__see-more"> <Icon name="dribble"/> See more on Dribble</Link>
+            <Link
+              to="https://dribbble.com/naresh_namani"
+              target={"_blank"}
+              className="about__see-more"
+            >
+              {" "}
+              <Icon name="dribble" /> See more on Dribble
+            </Link>
           </div>
         </div>
         <div></div>
