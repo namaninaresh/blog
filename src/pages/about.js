@@ -6,9 +6,10 @@ import CovidWebApp from "../images/covidwebapp.png";
 
 import CovidMobileApp from "../images/covidmobileapp.png";
 import FinanceApp from "../images/financetracker.png";
+import Resume from "../resume/Naresh_Java_Full_Stack.pdf";
 
 const AboutPage = (props) => {
-  const [tabActive, setTabStatus] = React.useState("skills");
+  const [tabActive, setTabStatus] = React.useState("projects");
 
   return (
     <Layout pageTitle="About Naresh Namani" pageName={props.path}>
@@ -26,7 +27,7 @@ const AboutPage = (props) => {
                   Naresh Namani <i className="username">@nareshnamani</i>
                 </h2>
                 <p className="profile_desc_p">
-                  Enthusiastic Software Engineer with 2+ years of experience at{" "}
+                  Enthusiastic Software Engineer with 4+ years of experience at{" "}
                   <Icon name="work" /> Tata Consultancy Services, passionate
                   about sharing programming knowledge and empowering aspiring
                   developers through this blog.
@@ -53,7 +54,7 @@ const AboutPage = (props) => {
 
                   <a
                     download=""
-                    href="assets/pdf/nareshnamani.pdf"
+                    href= {Resume}
                     className="button "
                   >
                     <Icon name="download" strokeWidth="1" />
@@ -228,7 +229,7 @@ const AboutPage = (props) => {
                   <strong className="skills__title__alt">
                     BACKEND DEVELOPMENT
                   </strong>
-                  | Java | Spring Boot | Restfull API
+                  | Java | Spring Boot | Spring MVC | Spring Security | Restfull API | Docker
                 </p>
 
                 <p className="skills_text">
@@ -240,7 +241,7 @@ const AboutPage = (props) => {
 
                 <p className="skills_text">
                   <strong className="skills__title__alt">MISCELLANEOUS</strong>|
-                  Data Structures | System Design | Problem Solving
+                  Data Structures | Apache Kafka | Oracle | MySql | System Design | Problem Solving
                 </p>
               </div>
             </div>
